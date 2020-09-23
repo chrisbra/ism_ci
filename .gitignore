@@ -1,3 +1,6 @@
+# Logfiles from testing
 Transforms/*.gxp/test_transform_result
-server/
 Flows/*/test_process_flow_result
+
+# iIT started iSM server within the project
+server/
