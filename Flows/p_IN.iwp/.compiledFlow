@@ -1,0 +1,83 @@
+
+<flow compiler="8.0.3" format="3" edition="community">
+   <pflow configId="iWay Registry" server="GER-9RMW9G2" iwayversion="8.0.3">p_IN
+      <return>success
+         <start key="1" flowcharttype="FLOWCHART_STARTUP_START" oclass="start" xdebuglow="1" xdebughigh="1" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="start_Start" active="true">
+            <parm name="Debug">true</parm>
+            <parm name="timeout"/>
+            <parm name="debug"/>
+            <return>$complete
+               <agent key="4" flowcharttype="FLOWCHART_CATCH" oclass="catch" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Catch" active="true">com.ibi.agents.XDCatchAgent
+                  <parm name="maxerr">1</parm>
+                  <return>$complete
+                     <agent key="5" flowcharttype="FLOWCHART_SERVER_AGENT" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_BAM Tax" active="false">com.ibi.agents.XDXALogBizErr
+                        <parm name="sev">bizerror</parm>
+                        <parm name="message">Calculating MwST</parm>
+                        <parm name="transaction">false</parm>
+                        <return>success
+                           <agent key="10" flowcharttype="FLOWCHART_TRANSFORM" oclass="agent" xdebuglow="1" xdebughigh="99999" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_XML MWST" active="true">com.ibi.agents.XDTransformAgent
+                              <parm name="engine">iway</parm>
+                              <parm name="transform">XML_MWST_XML</parm>
+                              <parm name="intype">all</parm>
+                              <parm name="shouldTrimParm">false</parm>
+                              <parm name="outtype">xml</parm>
+                              <parm name="stat">status</parm>
+                              <return>success
+                                 <agent key="3" flowcharttype="FLOWCHART_STARTUP_OUTQUEUE" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Queue_OUT" active="true">com.ibi.agents.XDInternalEmitAgent
+                                    <parm name="trans">true</parm>
+                                    <parm name="timeout">0</parm>
+                                    <parm name="returnresponse">status</parm>
+                                    <parm name="priority">4</parm>
+                                    <parm name="puttimeout">3000</parm>
+                                    <parm name="wantuser">true</parm>
+                                    <parm name="replytoreqns">*</parm>
+                                    <parm name="queue">OUT</parm>
+                                    <return>success
+                                       <end key="2" flowcharttype="FLOWCHART_STARTUP_END" oclass="end" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="end_End" active="true" count="1">
+                                          <parm name="terminate">false</parm>
+                                       </end>
+                                    </return>
+                                 </agent>
+                              </return>
+                           </agent>
+                        </return>
+                     </agent>
+                  </return>
+                  <return>$error,error_retry
+                     <agent key="8" flowcharttype="FLOWCHART_STARTUP_OUTQUEUE" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Queue ERROR" active="true">com.ibi.agents.XDInternalEmitAgent
+                        <parm name="trans">true</parm>
+                        <parm name="timeout">0</parm>
+                        <parm name="returnresponse">status</parm>
+                        <parm name="priority">4</parm>
+                        <parm name="puttimeout">3000</parm>
+                        <parm name="wantuser">true</parm>
+                        <parm name="replytoreqns">*</parm>
+                        <parm name="queue">ERROR</parm>
+                        <return>success,$fail,$error,fail_parse,notfound,timeout,cancelled,fail_notfound,fail_operation
+                           <end key="6" flowcharttype="FLOWCHART_STARTUP_END" oclass="end" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="end_End Error" active="true" count="1"/>
+                        </return>
+                     </agent>
+                  </return>
+               </agent>
+            </return>
+         </start>
+      </return>
+   </pflow>
+   <warnings/>
+   <errors/>
+   <dependencies>
+      <item type="agent" name="com.ibi.agents.XDCatchAgent"/>
+      <item type="agent" name="com.ibi.agents.XDXALogBizErr"/>
+      <item type="agent" name="com.ibi.agents.XDTransformAgent"/>
+      <item type="agent" name="com.ibi.agents.XDInternalEmitAgent"/>
+      <item type="transform" name="XML_MWST_XML"/>
+   </dependencies>
+   <trace>
+      <item>No providers defined</item>
+      <item>Compiling for repository</item>
+      <item>start recognized at 1</item>
+      <item>end recognized for &apos;End&apos; at 2</item>
+      <item>end recognized for &apos;End Error&apos; at 6</item>
+      <item>There are 7 relations</item>
+   </trace>
+</flow>

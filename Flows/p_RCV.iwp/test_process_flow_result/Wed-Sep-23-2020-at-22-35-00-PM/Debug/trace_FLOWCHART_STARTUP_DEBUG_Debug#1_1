@@ -1,0 +1,33 @@
+Name=Debug  Type=Agent  InEdge=OnCompletion  From=Catch  Not nested
+Registers
+             ibse-port           [CFG]   54777
+             engine              [SYS]   ismci
+             iway.channel        [SYS]   ExecProcess
+             iway.channelname    [SYS]   ExecProcess
+             iway.config         [SYS]   ismci
+             iway.inletname      [SYS]   
+             iway.lastnode       [SYS]   Debug
+             iway.listener       [SYS]   ExecProcess
+             iway.pid            [SYS]   16296
+             iway.priornode      [SYS]   Start
+             iway.serverfullhost [SYS]   GER-9RMW9G2.emea.ibi.com
+             iway.serverhost     [SYS]   GER-9RMW9G2
+             iway.serverip       [SYS]   169.254.161.203
+             iway.startup.time   [SYS]   1600893125013
+             iway.workdir        [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             iwayconfig          [SYS]   ismci
+             iwaydata            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayhome            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayversion         [SYS]   8.0.3
+             iwayworkdir         [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             jce.unlimited       [SYS]   true
+             name                [SYS]   ExecProcess
+             protocol            [SYS]   Lcl
+             iway.flowname       [DOC]   p_RCV
+             iway.threadname     [DOC]   W.ExecProcess.1~p_RCV
+             tid                 [DOC]   7d496a26-dd62-4e30-a5b9-c59c0e9fe99e
+             dbg.5.ex.st.time    [USR]   8964371434700
+     ADDED > dbg.6.ex.st.time    [USR]   8964373218600
+     ADDED > dbg.6.ex.time       [USR]   22897000
+Content of document
+	Form=xml  Contents did not vary

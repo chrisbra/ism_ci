@@ -1,0 +1,369 @@
+system name is: ismci
+Iwayhome is C:/ibi/iIT-8.0.3/workspace/ism_CI/server/
+Iwaydata is C:/ibi/iIT-8.0.3/workspace/ism_CI/server/
+'C:\ibi\iIT-8.0.3\workspace\ism_CI\server\config\config.xml' has not changed since the last backup.
+'C:\ibi\iIT-8.0.3\workspace\ism_CI\server\config\security.xml' has not changed since the last backup.
+Generic XPath iFL functions use full XPath 1.0 syntax
+XPath 1.0 iFL functions use iWay's full syntax implementation
+Encoding from iflows context is: Cp1252
+Encoding from Error_Queue:inlet.1:listener.1 context is: UTF-8
+Encoding from IN_Queue:inlet.1:listener.1 context is: UTF-8
+Encoding from OUT_Queue:inlet.1:listener.1 context is: UTF-8
+Encoding from ExecProcess context is: Cp1252
+No providers defined
+start recognized at 1
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.5.ex.st.time))
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.11.ex.st.time))
+end recognized for 'End Error' at 7
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.6.ex.st.time))
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.4.ex.st.time))
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.9.ex.st.time))
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.10.ex.st.time))
+Request to compile _timer(nanoseconds)
+Request to compile _isub(_timer(nanoseconds),_sreg(dbg.3.ex.st.time))
+end recognized for 'End' at 2
+There are 9 relations
+No flow timeout specified, so default of 10 seconds has been set for this test. To change, set a specific flow timeout property.
+setting flow variable xtrack=full
+setting flow variable Debug=true
+setting flow variable timeout=null
+setting flow variable debug=null
+node Start returned edges: success,
+node Catch returned edges: success,
+init: startingOffset[0], maxLength[-1]
+XDQAAgent.execute: fWhenToDo[ONALWAYS], doNow[true], thePattern[null]
+Agent in transaction 4d8a7568-d9fd-4368-9700-c6bf987b452a
+output dir is: C:\ibi\iIT-8.0.3\workspace\ism_CI\server\processing\debug and pattern is: *_trace.xml
+docIn.isFlat(): false and docIn.isBytes(): false hasContent: true
+XDQAAgent.execute: input[<excel file="bytes">
+  <sheet name="logasst_bsp" index="1">
+    <recdef>
+      <colname name="conolg1" maxlen="1"/>
+      <colname name="docnilg1" maxlen="10"/>
+      <colname name="docnelg1" maxlen="10"/>
+      <colname name="poslg" maxlen="1"/>
+      <colname name="bookdatlg1" maxlen="10"/>
+      <colname name="docdatlg1" maxlen="10"/>
+      <colname name="acclg1" maxlen="6"/>
+      <colname name="calg1" maxlen="0"/>
+      <colname name="colg1" maxlen="0"/>
+      <colname name="corlg1" maxlen="0"/>
+      <colname name="wolg1" maxlen="0"/>
+      <colname name="fundlg1" maxlen="0"/>
+      <colname name="accruallg1" maxlen="0"/>
+      <colname name="grossamtlg1" maxlen="5"/>
+      <colname name="vatplg1" maxlen="1"/>
+      <colname name="txt1lg1" maxlen="14"/>
+      <colname name="txt2lg1" maxlen="0"/>
+      <colname name="zdvlg1" maxlen="9"/>
+      <colname name="zdblg1" maxlen="10"/>
+      <colname name="testlg1" maxlen="1"/>
+      <colname name="pstslg1" maxlen="1"/>
+      <colname name="cusrlg1" maxlen="10"/>
+      <colname name="ctstlg1" maxlen="13"/>
+    </recdef>
+    <rows count="2">
+      <row index="1">
+        <column name="conolg1">
+          4
+        </column>
+        <column name="docnilg1">
+          LG12100004
+        </column>
+        <column name="docnelg1">
+          LG12100004
+        </column>
+        <column name="poslg">
+          1
+        </column>
+        <column name="bookdatlg1">
+          11/29/2019
+        </column>
+        <column name="docdatlg1">
+          12/31/2019
+        </column>
+        <column name="acclg1">
+          154100
+        </column>
+        <column name="calg1"/>
+        <column name="colg1"/>
+        <column name="corlg1"/>
+        <column name="wolg1"/>
+        <column name="fundlg1"/>
+        <column name="accruallg1"/>
+        <column name="grossamtlg1">
+          -1000
+        </column>
+        <column name="vatplg1">
+          0
+        </column>
+        <column name="txt1lg1">
+          Daten aus LOGA
+        </column>
+        <column name="txt2lg1"/>
+        <column name="zdvlg1">
+          12/1/2019
+        </column>
+        <column name="zdblg1">
+          12/31/2019
+        </column>
+        <column name="testlg1">
+          T
+        </column>
+        <column name="pstslg1">
+          0
+        </column>
+        <column name="cusrlg1">
+          TGLAUSW496
+        </column>
+        <column name="ctstlg1">
+          12/14/19 7:45
+        </column>
+      </row>
+      <row index="2">
+        <column name="conolg1">
+          4
+        </column>
+        <column name="docnilg1">
+          LG12100004
+        </column>
+        <column name="docnelg1">
+          LG12100004
+        </column>
+        <column name="poslg">
+          2
+        </column>
+        <column name="bookdatlg1">
+          11/29/2019
+        </column>
+        <column name="docdatlg1">
+          12/31/2019
+        </column>
+        <column name="acclg1">
+          377999
+        </column>
+        <column name="calg1"/>
+        <column name="colg1"/>
+        <column name="corlg1"/>
+        <column name="wolg1"/>
+        <column name="fundlg1"/>
+        <column name="accruallg1"/>
+        <column name="grossamtlg1">
+          1000
+        </column>
+        <column name="vatplg1">
+          0
+        </column>
+        <column name="txt1lg1">
+          Daten aus LOGA
+        </column>
+        <column name="txt2lg1"/>
+        <column name="zdvlg1">
+          12/1/2019
+        </column>
+        <column name="zdblg1">
+          12/31/2019
+        </column>
+        <column name="testlg1">
+          T
+        </column>
+        <column name="pstslg1">
+          0
+        </column>
+        <column name="cusrlg1">
+          TGLAUSW496
+        </column>
+        <column name="ctstlg1">
+          12/14/19 7:45
+        </column>
+      </row>
+    </rows>
+  </sheet>
+</excel>]
+node Debug returned edges: success,
+node Variables returned edges: success,
+Template base url is:file:/C:/ibi/iIT-8.0.3/workspace/ism_CI/server/config/ismci/transforms/DD7241E6A0D1AD04D7A843BB6A2C8D4A/EXCEL_to_XML.gxp
+Template alias 'EXCEL_to_XML' = url(file:/C:/ibi/iIT-8.0.3/workspace/ism_CI/server/config/ismci/transforms/DD7241E6A0D1AD04D7A843BB6A2C8D4A/EXCEL_to_XML.gxp) will be set into Transformer Manager.
+Applying iway transform[3] 'EXCEL_to_XML'
+Transform input: <?xml version="1.0" encoding="UTF-8" ?><excel file="bytes">
+  <sheet name="logasst_bsp" index="1">
+    <recdef>
+      <colname name="conolg1" maxlen="1"/>
+      <colname name="docnilg1" maxlen="10"/>
+      <colname name="docnelg1" maxlen="10"/>
+      <colname name="poslg" maxlen="1"/>
+      <colname name="bookdatlg1" maxlen="10"/>
+      <colname name="docdatlg1" maxlen="10"/>
+      <colname name="acclg1" maxlen="6"/>
+      <colname name="calg1" maxlen="0"/>
+      <colname name="colg1" maxlen="0"/>
+      <colname name="corlg1" maxlen="0"/>
+      <colname name="wolg1" maxlen="0"/>
+      <colname name="fundlg1" maxlen="0"/>
+      <colname name="accruallg1" maxlen="0"/>
+      <colname name="grossamtlg1" maxlen="5"/>
+      <colname name="vatplg1" maxlen="1"/>
+      <colname name="txt1lg1" maxlen="14"/>
+      <colname name="txt2lg1" maxlen="0"/>
+      <colname name="zdvlg1" maxlen="9"/>
+      <colname name="zdblg1" maxlen="10"/>
+      <colname name="testlg1" maxlen="1"/>
+      <colname name="pstslg1" maxlen="1"/>
+      <colname name="cusrlg1" maxlen="10"/>
+      <colname name="ctstlg1" maxlen="13"/>
+    </recdef>
+    <rows count="2">
+      <row index="1">
+        <column name="conolg1">
+          4
+        </column>
+        <column name="docnilg1">
+          LG12100004
+        </column>
+        <column name="docnelg1">
+          LG12100004
+        </column>
+        <column name="poslg">
+          1
+        </column>
+        <column name="bookdatlg1">
+          11/29/2019
+        </column>
+        <column name="docdatlg1">
+          12/31/2019
+        </column>
+        <column name="acclg1">
+          154100
+        </column>
+        <column name="calg1"/>
+        <column name="colg1"/>
+        <column name="corlg1"/>
+        <column name="wolg1"/>
+        <column name="fundlg1"/>
+        <column name="accruallg1"/>
+        <column name="grossamtlg1">
+          -1000
+        </column>
+        <column name="vatplg1">
+          0
+        </column>
+        <column name="txt1lg1">
+          Daten aus LOGA
+        </column>
+        <column name="txt2lg1"/>
+        <column name="zdvlg1">
+          12/1/2019
+        </column>
+        <column name="zdblg1">
+          12/31/2019
+        </column>
+        <column name="testlg1">
+          T
+        </column>
+        <column name="pstslg1">
+          0
+        </column>
+        <column name="cusrlg1">
+          TGLAUSW496
+        </column>
+        <column name="ctstlg1">
+          12/14/19 7:45
+        </column>
+      </row>
+      <row index="2">
+        <column name="conolg1">
+          4
+        </column>
+        <column name="docnilg1">
+          LG12100004
+        </column>
+        <column name="docnelg1">
+          LG12100004
+        </column>
+        <column name="poslg">
+          2
+        </column>
+        <column name="bookdatlg1">
+          11/29/2019
+        </column>
+        <column name="docdatlg1">
+          12/31/2019
+        </column>
+        <column name="acclg1">
+          377999
+        </column>
+        <column name="calg1"/>
+        <column name="colg1"/>
+        <column name="corlg1"/>
+        <column name="wolg1"/>
+        <column name="fundlg1"/>
+        <column name="accruallg1"/>
+        <column name="grossamtlg1">
+          1000
+        </column>
+        <column name="vatplg1">
+          0
+        </column>
+        <column name="txt1lg1">
+          Daten aus LOGA
+        </column>
+        <column name="txt2lg1"/>
+        <column name="zdvlg1">
+          12/1/2019
+        </column>
+        <column name="zdblg1">
+          12/31/2019
+        </column>
+        <column name="testlg1">
+          T
+        </column>
+        <column name="pstslg1">
+          0
+        </column>
+        <column name="cusrlg1">
+          TGLAUSW496
+        </column>
+        <column name="ctstlg1">
+          12/14/19 7:45
+        </column>
+      </row>
+    </rows>
+  </sheet>
+</excel>
+[TRANSFORM DEBUG] Base URL:file:/C:/ibi/iIT-8.0.3/workspace/ism_CI/server/config/ismci/transforms/DD7241E6A0D1AD04D7A843BB6A2C8D4A/EXCEL_to_XML.gxp
+[TRANSFORM DEBUG] Transform process started:
+[TRANSFORM DEBUG] Base url: file:/C:/ibi/iIT-8.0.3/workspace/ism_CI/server/config/ismci/transforms/DD7241E6A0D1AD04D7A843BB6A2C8D4A/EXCEL_to_XML.gxp
+[TRANSFORM DEBUG] Input format:XML
+[TRANSFORM DEBUG] Input source type: Node
+[TRANSFORM DEBUG] Output format:XML
+[TRANSFORM DEBUG] Output configuration format:XML
+[TRANSFORM DEBUG] Output target type: Content Handler
+[TRANSFORM DEBUG] Is pipelining enabled? :false
+[TRANSFORM DEBUG] Is the declaration needed in the output? :true
+[TRANSFORM DEBUG] Output Formatter to be used: null
+[TRANSFORM DEBUG] Started writing to Content Handler
+[TRANSFORM DEBUG] Transform process ended
+node EXCEL to XML returned edges: success,
+Agent in transaction 4d8a7568-d9fd-4368-9700-c6bf987b452a
+no preemitters, emitting contents of doc, usestream=false encoding=UTF-8
+node Queue IN returned edges: success,
+Pflow thread stopping at End
+Ending pflow, number of subthreads still running=0
+back from pflow, doc count=8
+commit is set to TRUE; pflow will be COMMITTED
+Issuing local transaction commit
+Into emitter Transctl commit (size 1)
+Tearing down XDManager
+shutting down system scheduler
+system scheduler stopped
+first wave of provider termination done
+enter stopall fromChild=false state=inactive
+already stopped[2]...; state=inactive
+console master stopped
+second wave of provider termination done

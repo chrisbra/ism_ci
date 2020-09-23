@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c:ConfigContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:c="http://eclipse.iwaysoftware.com/config/model">
-    <connectorCategories name="awsconnector">
+  <connectorCategories name="awsconnector">
     <connectorTypes type="amazons3config"/>
     <connectorTypes type="dynamodbconfig"/>
   </connectorCategories>
   <connectorCategories name="bigdata">
     <connectorTypes type="avroconfig"/>
-	<connectorTypes type="hbaseconfig"/>
+    <connectorTypes type="hbaseconfig"/>
     <connectorTypes type="hdfsconfig"/>
     <connectorTypes type="kafkaconfig"/>
   </connectorCategories>
   <connectorCategories name="connector">
     <connectorTypes type="blockconfig"/>
-    <connectorTypes type="emailconfig"/>
+    <connectorTypes type="emailconfig">
+      <configs name="email.1">
+        <parameters name="usessl" value="none"/>
+        <parameters name="host" value="localhost"/>
+      </configs>
+    </connectorTypes>
     <connectorTypes type="ftpconfig"/>
     <connectorTypes type="iotconfig"/>
     <connectorTypes type="jdbcconfig"/>
     <connectorTypes type="mongoconfig"/>
     <connectorTypes type="queueinconfig"/>
-    <connectorTypes type="queueoutconfig"/>
+    <connectorTypes type="queueoutconfig">
+      <configs name="queue_error" id="8">
+        <parameters name="priority" value="4"/>
+        <parameters name="puttimeout" value="3000"/>
+        <parameters name="wantuser" value="true"/>
+        <parameters name="replytoreqns" value="*"/>
+        <parameters name="queue" value="ERROR"/>
+      </configs>
+      <configs name="queue_in" id="8">
+        <parameters name="priority" value="4"/>
+        <parameters name="puttimeout" value="3000"/>
+        <parameters name="wantuser" value="true"/>
+        <parameters name="replytoreqns" value="*"/>
+        <parameters name="queue" value="IN"/>
+      </configs>
+      <configs name="queue_out" id="8">
+        <parameters name="priority" value="4"/>
+        <parameters name="puttimeout" value="3000"/>
+        <parameters name="wantuser" value="true"/>
+        <parameters name="replytoreqns" value="*"/>
+        <parameters name="queue" value="OUT"/>
+      </configs>
+    </connectorTypes>
     <connectorTypes type="redisconfig"/>
     <connectorTypes type="restconfig"/>
     <connectorTypes type="sftpconfig"/>
     <connectorTypes type="slackconfig"/>
     <connectorTypes type="soapconfig"/>
-    <connectorTypes type="tcpconfig"/>   
+    <connectorTypes type="tcpconfig"/>
     <connectorTypes type="twilioconfig"/>
     <connectorTypes type="twitterconfig"/>
   </connectorCategories>
@@ -61,7 +88,7 @@
     <connectorTypes type="chaincodeconfig"/>
     <connectorTypes type="datasourceconfig"/>
   </connectorCategories>
-    <connectorCategories name="control">
+  <connectorCategories name="control">
     <connectorTypes type="iterconfig"/>
   </connectorCategories>
   <connectorCategories name="authentication">
@@ -70,7 +97,13 @@
     <connectorTypes type="oauthconfig"/>
   </connectorCategories>
   <connectorCategories name="trace">
-    <connectorTypes type="debugconfig"/>
+    <connectorTypes type="debugconfig">
+      <configs name="debug.1">
+        <parameters name="when" value="always"/>
+        <parameters name="where" value="_sreg(iwayhome)processing/debug/*_trace.xml"/>
+        <parameters name="physloc" value="_sreg(iwayhome)processing/debug/*_payload.xml"/>
+      </configs>
+    </connectorTypes>
   </connectorCategories>
   <providers>
     <authenticationRealmProviders/>

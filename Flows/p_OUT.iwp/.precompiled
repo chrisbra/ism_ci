@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:iway xmlns:model="http://www.iwaysoftware.com/designer/model">
+  <model:server name="iWay Registry">
+    <model:processflow description="" iwayversion="8.0.3" name="p_OUT">
+      <model:objects>
+        <model:object class="start" deactivate="false" defer="false" etap="false" id="start" key="1" name="Start" type="FLOWCHART_STARTUP_START" useglobalobj="false" xdebughigh="1" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="General">
+                <model:propertyitem display="No" itemtype="boolean" label="Debug" name="Debug" required="false" value="true" valuetype="boolean"/>
+                <model:propertyitem name="roottag" value=""/>
+              </model:group>
+            </model:properties>
+          </model:user>
+          <model:runtimevariables/>
+        </model:object>
+        <model:object class="end" deactivate="false" defer="false" etap="false" id="end" key="2" name="End" type="FLOWCHART_STARTUP_END" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="General">
+                <model:propertyitem name="roottag" value=""/>
+                <model:propertyitem name="terminate" value="false"/>
+                <model:propertyitem name="ctype" value=""/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDFileEmitAgent" deactivate="false" defer="false" etap="false" id="file" key="3" name="save file" type="FLOWCHART_STARTUP_FILE" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Source">
+                <model:propertyitem description="Value or expression to represent a data source. If not set, defaults to the input document." name="location" required="false"/>
+              </model:group>
+              <model:group name="Source Settings">
+                <model:propertyitem description="Provider for the mapping between XML namespace prefix and namespace URI within XPath expressions." name="nsmapprov" required="false"/>
+              </model:group>
+              <model:group name="Target">
+                <model:propertyitem description="The target directory of the output file." name="directory" required="true" value="_concat(_sreg(iwayhome), 'processing/output/')"/>
+                <model:propertyitem description="The output target file name; supports '*' which expands to a file timestamp." name="pattern" required="true" value="_concat(_sreg(user_file_in), '_*.xml')"/>
+              </model:group>
+              <model:group name="Target Settings">
+                <model:propertyitem description="Encoding to apply to the target output file being written. Does not apply when output is bas64." name="outenc" required="false" value="UTF-8"/>
+                <model:propertyitem description="If set, the value is assumed to be in base64 notation. Only applicable if a specific write value is specified." name="b64" required="false" value="false"/>
+                <model:propertyitem description="If set to true, the output will be appended to the file if it already exists" name="append" required="false" value="false"/>
+                <model:propertyitem description="If set to true, a carriage return and a line feed will be written at end of target file." name="appendcrlf" required="false" value="false"/>
+                <model:propertyitem description="If true, emit empty files if the process creates them." name="outputzero" required="false" value="false"/>
+              </model:group>
+              <model:group name="Post Action">
+                <model:propertyitem description="Output document of the object." name="return" required="false" value="status"/>
+              </model:group>
+              <model:group name="hidden">
+                <model:propertyitem description="Id of the className" name="classNameId"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="end" classname="" deactivate="false" defer="false" etap="false" id="end" key="4" name="Error End" type="FLOWCHART_STARTUP_END" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="General">
+                <model:propertyitem name="terminate"/>
+                <model:propertyitem name="ctype"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDInternalEmitAgent" deactivate="false" defer="false" etap="false" id="queueout" key="11" name="Queue ERROR" type="FLOWCHART_STARTUP_OUTQUEUE" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Queue Settings">
+                <model:propertyitem description="If set, the emit respects the transactionality of the channel.  If not set, the emit is always done." name="trans" required="false" value="true"/>
+                <model:propertyitem description="How many seconds to wait for synchronous response.  Set to 0 or leave blank to wait indefinitely." name="timeout" required="false" value="0"/>
+              </model:group>
+              <model:group name="Post Action">
+                <model:propertyitem description="Return from this object." name="returnresponse" required="true" value="status"/>
+              </model:group>
+              <model:group name="hidden">
+                <model:propertyitem description="{&quot;name&quot;:&quot;Configuration (queue_in)&quot;,&quot;propertyGroups&quot;:[{&quot;name&quot;:&quot;Queue Settings&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;Name&quot;,&quot;value&quot;:&quot;IN&quot;,&quot;description&quot;:&quot;Name of the internal queue to post messages to&quot;},{&quot;name&quot;:&quot;Priority&quot;,&quot;value&quot;:&quot;4&quot;,&quot;description&quot;:&quot;The priority is an integer between 0 and 9 inclusive. The lowest priority is 0. The highest most expedited priority is 9.&quot;},{&quot;name&quot;:&quot;Put Timeout&quot;,&quot;value&quot;:&quot;3000&quot;,&quot;description&quot;:&quot;Time, in milliseconds, to wait for queue to become available when attempting to put a message on the queue.  You can enter 0 for an unlimited wait, but this is not recommended.  If no value is supplied, timeout will be set to 3000 milliseconds.&quot;}]},{&quot;name&quot;:&quot;Registers (Sent)&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;Apply&quot;,&quot;value&quot;:&quot;true&quot;,&quot;description&quot;:&quot;User registers are processing variables and their values. If you want these registers to be emitted with the message set this to true.  In resubmit operations, usually this is set to false.&quot;},{&quot;name&quot;:&quot;Namespace&quot;,&quot;value&quot;:&quot;*&quot;,&quot;description&quot;:&quot;List of register namespaces that will be made available to the ordered queue.&quot;}]}]}" name="queueoutconfig" value="queue_in"/>
+                <model:propertyitem description="Id of the className" name="classNameId"/>
+                <model:propertyitem name="priority" value="4"/>
+                <model:propertyitem name="puttimeout" value="3000"/>
+                <model:propertyitem name="wantuser" value="true"/>
+                <model:propertyitem name="replytoreqns" value="*"/>
+                <model:propertyitem name="queue" value="IN"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="catch" classname="com.ibi.agents.XDCatchAgent" deactivate="false" defer="false" etap="false" id="catch" key="5" name="Catch" type="FLOWCHART_CATCH" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Settings">
+                <model:propertyitem description="Maximum number of times a CATCH will be effected per 'forward' entry." name="maxerr" required="false" value="1"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+      </model:objects>
+      <model:relations startinstance="1">
+        <model:relation completion="OnCompletion" frominstance="11" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="4">
+          <model:relationlabel/>
+        </model:relation>
+        <model:relation completion="OnCompletion" frominstance="1" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="5">
+          <model:relationlabel/>
+        </model:relation>
+        <model:relation completion="OnCustom" event="$error,error_retry" frominstance="5" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="11">
+          <model:customevents>
+            <model:event check="true" type="Stock" value="$error"/>
+            <model:event check="true" type="Custom" value="error_retry"/>
+          </model:customevents>
+          <model:relationlabel label="Error"/>
+          <lineColor blue="0" green="0" red="255"/>
+        </model:relation>
+        <model:relation completion="OnCustom" event="$success" frominstance="3" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="2">
+          <model:customevents>
+            <model:event check="true" type="Stock" value="$success"/>
+            <model:event check="false" type="Stock" value="$fail"/>
+            <model:event check="false" type="Stock" value="$error"/>
+            <model:event check="false" type="Custom" value="fail_parse"/>
+            <model:event check="false" type="Custom" value="fail_operation"/>
+            <model:event check="false" type="Custom" value="notfound"/>
+          </model:customevents>
+          <model:relationlabel/>
+        </model:relation>
+        <model:relation completion="OnCompletion" frominstance="5" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="3">
+          <model:relationlabel/>
+        </model:relation>
+      </model:relations>
+    </model:processflow>
+  </model:server>
+  <model:globalvariables/>
+</model:iway>

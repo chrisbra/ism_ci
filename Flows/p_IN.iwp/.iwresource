@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwresource:IWResource xmlns:iwresource="http://iwresource.iwaysoftware.com/model/emf/iwresource" valid="true">
+  <Name>p_IN</Name>
+  <Type>process</Type>
+  <File>p_IN.iwp</File>
+  <Description></Description>
+  <GUID>CF2437FF955FB19A782CC1DC178CAEF2</GUID>
+  <targetServer>8.0.3</targetServer>
+  <Features>
+    <Feature Code="saperp" UsageCount="3"/>
+    <Feature Code="mscrm" UsageCount="1"/>
+  </Features>
+</iwresource:IWResource>

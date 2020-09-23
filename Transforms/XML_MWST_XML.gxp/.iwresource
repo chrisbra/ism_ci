@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwresource:IWResource xmlns:iwresource="http://iwresource.iwaysoftware.com/model/emf/iwresource" valid="true">
+  <Name>XML_MWST_XML</Name>
+  <Type>transform</Type>
+  <File>XML_MWST_XML.gxp</File>
+  <Description></Description>
+  <GUID>307834AADE5218B13BBC28D18242F6F6</GUID>
+  <targetServer>8.0.3</targetServer>
+  <Dependencies/>
+</iwresource:IWResource>

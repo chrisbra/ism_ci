@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<invoice> name="logasst_bsp">
+	<lineitem>
+		<item>
+			<conolg1>4</conolg1>
+			<docnilg1>LG12100004</docnilg1>
+			<docnelg1>LG12100004</docnelg1>
+			<poslg>1</poslg>
+			<bookdatlg1>11/29/2019</bookdatlg1>
+			<docdatlg1>12/31/2019</docdatlg1>
+			<acclg1>154100</acclg1>
+			<calg1>62194</calg1>
+			<colg1/>
+			<corlg1>12678</corlg1>
+			<wolg1>10</wolg1>
+			<fundlg1>10</fundlg1>
+			<accruallg1>10</accruallg1> 
+			<grossamtlg1>2.33</grossamtlg1>
+			<vatplg1>19</vatplg1>
+			<txt1lg1>Record 1</txt1lg1>
+			<txt2lg1>LOREM IPSUM FOOBAR</txt2lg1>
+			<zdvlg1>12/1/2019</zdvlg1>
+			<zdblg1>12/31/2019</zdblg1>
+			<testlg1>T</testlg1>
+			<pstslg1>0</pstslg1>
+			<cusrlg1>TGLAUSW496</cusrlg1>
+			<ctstlg1>Timestamp</ctstlg1>
+			<gusrlg1>TGLAUSW496</gusrlg1>
+			<gtstlg1>Timestamp</gtstlg1>
+		</item>
+	</lineitem>
+	<lineitem>
+		<item>
+			<conolg1>4</conolg1>
+			<docnilg1>LG12100004</docnilg1>
+			<docnelg1>LG12100004</docnelg1>
+			<poslg>1</poslg>
+			<bookdatlg1>11/29/2019</bookdatlg1>
+			<docdatlg1>12/31/2019</docdatlg1>
+			<acclg1>154100</acclg1>
+			<calg1>10</calg1>
+			<colg1>4806882</colg1>
+			<corlg1>11311</corlg1>
+			<wolg1>10</wolg1>
+			<fundlg1>10</fundlg1>
+			<accruallg1>10</accruallg1>
+			<grossamtlg1>-2.33 €</grossamtlg1>
+			<vatplg1>19</vatplg1>
+			<txt1lg1>Record 2</txt1lg1>
+			<txt2lg1>LOREM IPSUM FOOBAR</txt2lg1>
+			<zdvlg1>12/1/2019</zdvlg1>
+			<zdblg1>12/31/2019</zdblg1>
+			<testlg1>T</testlg1>
+			<pstslg1>0</pstslg1>
+			<cusrlg1>TGLAUSW496</cusrlg1>
+		</item>
+	</lineitem>
+	<lineitem>
+		<item>
+			<conolg1>4</conolg1>
+			<docnilg1>LG12100005</docnilg1>
+			<docnelg1>LG12100005</docnelg1>
+			<poslg>2</poslg>
+			<bookdatlg1>11/29/2019</bookdatlg1>
+			<docdatlg1>12/31/2019</docdatlg1>
+			<acclg1>154100</acclg1>
+			<calg1>10</calg1>
+			<colg1>4806882</colg1>
+			<corlg1>11311</corlg1>
+			<wolg1>10</wolg1>
+			<fundlg1>10</fundlg1>
+			<accruallg1>10</accruallg1>
+			<grossamtlg1>1234.50</grossamtlg1>
+			<vatplg1>19</vatplg1>
+			<txt1lg1>Record 3</txt1lg1>
+			<txt2lg1>LOREM IPSUM FOOBAR</txt2lg1>
+			<zdvlg1>12/1/2019</zdvlg1>
+			<zdblg1>12/31/2019</zdblg1>
+			<testlg1>T</testlg1>
+			<pstslg1>0</pstslg1>
+			<cusrlg1>TGLAUSW496</cusrlg1>
+		</item>
+	</lineitem>
+	<lineitem>
+		<item>
+			<conolg1>4</conolg1>
+			<docnilg1>LG12100005</docnilg1>
+			<docnelg1>LG12100005</docnelg1>
+			<poslg>2</poslg>
+			<bookdatlg1>11/29/2019</bookdatlg1>
+			<docdatlg1>12/31/2019</docdatlg1>
+			<acclg1>154100</acclg1>
+			<calg1>10</calg1>
+			<colg1>4806882</colg1>
+			<corlg1/>
+			<wolg1>10</wolg1>
+			<fundlg1>10</fundlg1>
+			<accruallg1>10</accruallg1>
+			<grossamtlg1>-1234.50</grossamtlg1>
+			<vatplg1>19</vatplg1>
+			<txt1lg1>Record 4</txt1lg1>
+			<txt2lg1>LOREM IPSUM FOOBAR</txt2lg1>
+			<zdvlg1>12/1/2019</zdvlg1>
+			<zdblg1>12/31/2019</zdblg1>
+			<testlg1>T</testlg1>
+			<pstslg1>0</pstslg1>
+			<cusrlg1>TGLAUSW496</cusrlg1>
+		</item>
+	</lineitem>
+</invoice>

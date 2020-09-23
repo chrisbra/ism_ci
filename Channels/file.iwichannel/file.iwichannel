@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rep:rInlineChannel xmlns:rep="http://consolesm.ibi.com/xml/repository" description="" name="file" targetServer="8.0.3" uid="051E81C852D344733166EE0147918CB4" type="dynamic">
+  <Inlet description="Inlets are conduits which represent the entry into a channel. Inlets contain a Listener, Decryptor, and Preparsers." name="inlet.1">
+    <rListener className="file" description="Accepts documents from files in directories" name="listener.1">
+      <Parameter name="active" value="true"/>
+      <Parameter name="suffixin" value="xls,xlsx"/>
+      <Parameter name="scansubs" value="false"/>
+      <Parameter name="nounzip" value="false"/>
+      <Parameter name="sort" value="false"/>
+      <Parameter name="maxfilesize" value="0"/>
+      <Parameter name="batchmode" value="false"/>
+      <Parameter name="acceptzero" value="false"/>
+      <Parameter name="outputzero" value="false"/>
+      <Parameter name="reqhdrns" value="default"/>
+      <Parameter name="maxinputs" value="0"/>
+      <Parameter name="payload" value="data"/>
+      <Parameter name="duration" value="86400"/>
+      <Parameter name="retry" value="600"/>
+      <Parameter name="count" value="1"/>
+      <Parameter name="maxcount" value="1"/>
+      <Parameter name="optimize" value="performance"/>
+      <Parameter name="timeout" value="2.0"/>
+      <Parameter name="whitespace" value="preserve"/>
+      <Parameter name="flat" value="flat"/>
+      <Parameter name="encoding" value="UTF-8"/>
+      <Parameter name="precedence" value="1"/>
+      <Parameter name="autoReply" value="false"/>
+      <Parameter name="errpremit" value="false"/>
+      <Parameter name="localtrans" value="false"/>
+      <Parameter name="xalog" value="true"/>
+      <Parameter name="file" value="_sreg(iwayhome)processing/input/"/>
+      <Parameter name="destination" value="_sreg(iwayhome)processing/output/*.xml"/>
+      <Parameter name="removal" value="_sreg(iwayhome)processing/archive/_sreg(filename)"/>
+    </rListener>
+    <rPreparser className="com.ibi.preparsers.XDReadExcelPreParser" description="Reads Excel workbook sheet to XML" name="preparser.1">
+      <Parameter name="dif" value="true"/>
+      <Parameter name="termonerror" value="true"/>
+    </rPreparser>
+  </Inlet>
+  <Route description="A route is used to define the path a particular message takes through a channel. A Route is defined as a sequence of: a transformer, followed by a process, followed by another transformer, followed by zero or more outlets." name="route.1" isDefault="true">
+    <ProcessRef name="p_RCV" refId="0C2BB369DB0C8CFC78952A9F36D69C20" resourcePath="Flows\p_RCV.iwp\p_RCV.iwp"/>
+  </Route>
+  <Outlet description="Outlets are conduits which contain Preemitters, Encryptors, and an Emitter." name="outlet.1"/>
+</rep:rInlineChannel>

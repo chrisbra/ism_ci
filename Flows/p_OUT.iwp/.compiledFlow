@@ -1,0 +1,66 @@
+
+<flow compiler="8.0.3" format="3" edition="community">
+   <pflow configId="iWay Registry" server="GER-9RMW9G2" iwayversion="8.0.3">p_OUT
+      <return>success
+         <start key="1" flowcharttype="FLOWCHART_STARTUP_START" oclass="start" xdebuglow="1" xdebughigh="1" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="start_Start" active="true">
+            <parm name="Debug">true</parm>
+            <parm name="timeout"/>
+            <parm name="debug"/>
+            <return>$complete
+               <agent key="5" flowcharttype="FLOWCHART_CATCH" oclass="catch" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Catch" active="true">com.ibi.agents.XDCatchAgent
+                  <parm name="maxerr">1</parm>
+                  <return>$error,error_retry
+                     <agent key="11" flowcharttype="FLOWCHART_STARTUP_OUTQUEUE" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Queue ERROR" active="true">com.ibi.agents.XDInternalEmitAgent
+                        <parm name="trans">true</parm>
+                        <parm name="timeout">0</parm>
+                        <parm name="returnresponse">status</parm>
+                        <parm name="priority">4</parm>
+                        <parm name="puttimeout">3000</parm>
+                        <parm name="wantuser">true</parm>
+                        <parm name="replytoreqns">*</parm>
+                        <parm name="queue">IN</parm>
+                        <return>$complete
+                           <end key="4" flowcharttype="FLOWCHART_STARTUP_END" oclass="end" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="end_Error End" active="true" count="1"/>
+                        </return>
+                     </agent>
+                  </return>
+                  <return>$complete
+                     <agent key="3" flowcharttype="FLOWCHART_STARTUP_FILE" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_save file" active="true">com.ibi.agents.XDFileEmitAgent
+                        <parm name="directory">_concat(_sreg(iwayhome), &apos;processing/output/&apos;)</parm>
+                        <parm name="pattern">_concat(_sreg(user_file_in), &apos;_*.xml&apos;)</parm>
+                        <parm name="outenc">UTF-8</parm>
+                        <parm name="b64">false</parm>
+                        <parm name="append">false</parm>
+                        <parm name="appendcrlf">false</parm>
+                        <parm name="outputzero">false</parm>
+                        <parm name="return">status</parm>
+                        <return>success
+                           <end key="2" flowcharttype="FLOWCHART_STARTUP_END" oclass="end" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="end_End" active="true" count="1">
+                              <parm name="terminate">false</parm>
+                           </end>
+                        </return>
+                     </agent>
+                  </return>
+               </agent>
+            </return>
+         </start>
+      </return>
+   </pflow>
+   <warnings>
+      <warning key="11" code="446" level="0" text="OnComplete is only edge from service that has specific edges available (e.g. &apos;success&apos;, &apos;fail_parse&apos;, &apos;notfound&apos;,...). This can result in unexpected flow routing"/>
+   </warnings>
+   <errors/>
+   <dependencies>
+      <item type="agent" name="com.ibi.agents.XDCatchAgent"/>
+      <item type="agent" name="com.ibi.agents.XDInternalEmitAgent"/>
+      <item type="agent" name="com.ibi.agents.XDFileEmitAgent"/>
+   </dependencies>
+   <trace>
+      <item>No providers defined</item>
+      <item>Compiling for repository</item>
+      <item>start recognized at 1</item>
+      <item>end recognized for &apos;Error End&apos; at 4</item>
+      <item>end recognized for &apos;End&apos; at 2</item>
+      <item>There are 5 relations</item>
+   </trace>
+</flow>

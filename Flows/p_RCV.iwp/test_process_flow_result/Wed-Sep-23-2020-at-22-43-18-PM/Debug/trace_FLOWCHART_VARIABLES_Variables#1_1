@@ -1,0 +1,39 @@
+Name=Variables  Type=Agent  InEdge=OnCompletion  From=Debug  Not nested
+Registers
+             ibse-port           [CFG]   54777
+             doclocation         [SYS]   config_de
+             engine              [SYS]   ismci
+             iway.channel        [SYS]   ExecProcess
+             iway.channelname    [SYS]   ExecProcess
+             iway.config         [SYS]   ismci
+             iway.inletname      [SYS]   
+             iway.lastnode       [SYS]   Variables
+             iway.listener       [SYS]   ExecProcess
+             iway.pid            [SYS]   16296
+             iway.priornode      [SYS]   Debug
+             iway.serverfullhost [SYS]   GER-9RMW9G2.emea.ibi.com
+             iway.serverhost     [SYS]   GER-9RMW9G2
+             iway.serverip       [SYS]   169.254.161.203
+             iway.startup.time   [SYS]   1600893125013
+             iway.workdir        [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             iwayconfig          [SYS]   ismci
+             iwaydata            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayhome            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayversion         [SYS]   8.0.3
+             iwayworkdir         [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             jce.unlimited       [SYS]   true
+             locale              [SYS]   de_de
+             name                [SYS]   ExecProcess
+             protocol            [SYS]   Lcl
+             iway.flowname       [DOC]   p_RCV
+             iway.threadname     [DOC]   W.ExecProcess.1~p_RCV
+             tid                 [DOC]   4d8a7568-d9fd-4368-9700-c6bf987b452a
+     ADDED > user_source         [DOC]   LOGA
+     ADDED > user_target         [DOC]   Dynamics
+     ADDED > dbg.4.ex.st.time    [USR]   9463710720400
+     ADDED > dbg.4.ex.time       [USR]   817300
+             dbg.5.ex.st.time    [USR]   9463698050500
+             dbg.6.ex.st.time    [USR]   9463698410500
+             dbg.6.ex.time       [USR]   11720400
+Content of document
+	Form=xml  Contents did not vary

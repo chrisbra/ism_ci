@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwresource:IWResource xmlns:iwresource="http://iwresource.iwaysoftware.com/model/emf/iwresource" valid="true">
+  <Name>IN_Queue</Name>
+  <Type>channel</Type>
+  <File>IN_Queue.iwichannel</File>
+  <Description></Description>
+  <GUID>618ED3CBA09193F952DC4D8F34E3B4AB</GUID>
+  <targetServer>8.0.3</targetServer>
+  <Dependencies>
+    <Dependency>
+      <Name>p_IN</Name>
+      <Type>process</Type>
+      <GUID>CF2437FF955FB19A782CC1DC178CAEF2</GUID>
+      <Path>/ism_CI/Flows/p_IN.iwp/p_IN.iwp</Path>
+      <UsageCount>2</UsageCount>
+    </Dependency>
+  </Dependencies>
+  <Features>
+    <Feature Code="core" UsageCount="13"/>
+  </Features>
+</iwresource:IWResource>

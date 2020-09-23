@@ -1,0 +1,1202 @@
+Name=EXCEL to XML  Type=Agent  InEdge=OnSuccess  From=Variables  Not nested
+Registers
+             ibse-port           [CFG]   54777
+             engine              [SYS]   ismci
+             iway.channel        [SYS]   ExecProcess
+             iway.channelname    [SYS]   ExecProcess
+             iway.config         [SYS]   ismci
+             iway.inletname      [SYS]   
+             iway.lastnode       [SYS]   EXCEL to XML
+             iway.listener       [SYS]   ExecProcess
+             iway.pid            [SYS]   16296
+             iway.priornode      [SYS]   Variables
+             iway.serverfullhost [SYS]   GER-9RMW9G2.emea.ibi.com
+             iway.serverhost     [SYS]   GER-9RMW9G2
+             iway.serverip       [SYS]   169.254.161.203
+             iway.startup.time   [SYS]   1600893125013
+             iway.workdir        [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             iwayconfig          [SYS]   ismci
+             iwaydata            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayhome            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayversion         [SYS]   8.0.3
+             iwayworkdir         [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             jce.unlimited       [SYS]   true
+             name                [SYS]   ExecProcess
+             protocol            [SYS]   Lcl
+             iway.flowname       [DOC]   p_RCV
+             iway.threadname     [DOC]   W.ExecProcess.1~p_RCV
+             tid                 [DOC]   7d496a26-dd62-4e30-a5b9-c59c0e9fe99e
+             user_source         [DOC]   LOGA
+             user_target         [DOC]   Dynamics
+             dbg.4.ex.st.time    [USR]   8964396808000
+             dbg.4.ex.time       [USR]   1051000
+             dbg.5.ex.st.time    [USR]   8964371434700
+             dbg.6.ex.st.time    [USR]   8964373218600
+             dbg.6.ex.time       [USR]   22897000
+     ADDED > dbg.9.ex.st.time    [USR]   8964398344000
+     ADDED > dbg.9.ex.time       [USR]   529516200
+Content of document
+	Form=xml
+	<?xml version="1.0" encoding="UTF-8" ?>
+<invoice>
+   <lineitem>
+      <item>
+         <conolg1>4</conolg1>
+         <docnilg1>4</docnilg1>
+         <docnelg1>4</docnelg1>
+         <poslg>4</poslg>
+         <bookdatlg1>4</bookdatlg1>
+         <docdatlg1>4</docdatlg1>
+         <acclg1>4</acclg1>
+         <calg1>4</calg1>
+         <colg1>4</colg1>
+         <corlg1>4</corlg1>
+         <wolg1>4</wolg1>
+         <fundlg1>4</fundlg1>
+         <accruallg1>4</accruallg1>
+         <grossamtlg1>4</grossamtlg1>
+         <vatplg1>4</vatplg1>
+         <txt1lg1>4</txt1lg1>
+         <txt2lg1>4</txt2lg1>
+         <zdvlg1>4</zdvlg1>
+         <zdblg1>4</zdblg1>
+         <testlg1>4</testlg1>
+         <pstslg1>4</pstslg1>
+         <cusrlg1>4</cusrlg1>
+         <ctstlg1>4</ctstlg1>
+         <gusrlg1>4</gusrlg1>
+         <gtstlg1>4</gtstlg1>
+         <conolg1>LG12100004</conolg1>
+         <docnilg1>LG12100004</docnilg1>
+         <docnelg1>LG12100004</docnelg1>
+         <poslg>LG12100004</poslg>
+         <bookdatlg1>LG12100004</bookdatlg1>
+         <docdatlg1>LG12100004</docdatlg1>
+         <acclg1>LG12100004</acclg1>
+         <calg1>LG12100004</calg1>
+         <colg1>LG12100004</colg1>
+         <corlg1>LG12100004</corlg1>
+         <wolg1>LG12100004</wolg1>
+         <fundlg1>LG12100004</fundlg1>
+         <accruallg1>LG12100004</accruallg1>
+         <grossamtlg1>LG12100004</grossamtlg1>
+         <vatplg1>LG12100004</vatplg1>
+         <txt1lg1>LG12100004</txt1lg1>
+         <txt2lg1>LG12100004</txt2lg1>
+         <zdvlg1>LG12100004</zdvlg1>
+         <zdblg1>LG12100004</zdblg1>
+         <testlg1>LG12100004</testlg1>
+         <pstslg1>LG12100004</pstslg1>
+         <cusrlg1>LG12100004</cusrlg1>
+         <ctstlg1>LG12100004</ctstlg1>
+         <gusrlg1>LG12100004</gusrlg1>
+         <gtstlg1>LG12100004</gtstlg1>
+         <conolg1>LG12100004</conolg1>
+         <docnilg1>LG12100004</docnilg1>
+         <docnelg1>LG12100004</docnelg1>
+         <poslg>LG12100004</poslg>
+         <bookdatlg1>LG12100004</bookdatlg1>
+         <docdatlg1>LG12100004</docdatlg1>
+         <acclg1>LG12100004</acclg1>
+         <calg1>LG12100004</calg1>
+         <colg1>LG12100004</colg1>
+         <corlg1>LG12100004</corlg1>
+         <wolg1>LG12100004</wolg1>
+         <fundlg1>LG12100004</fundlg1>
+         <accruallg1>LG12100004</accruallg1>
+         <grossamtlg1>LG12100004</grossamtlg1>
+         <vatplg1>LG12100004</vatplg1>
+         <txt1lg1>LG12100004</txt1lg1>
+         <txt2lg1>LG12100004</txt2lg1>
+         <zdvlg1>LG12100004</zdvlg1>
+         <zdblg1>LG12100004</zdblg1>
+         <testlg1>LG12100004</testlg1>
+         <pstslg1>LG12100004</pstslg1>
+         <cusrlg1>LG12100004</cusrlg1>
+         <ctstlg1>LG12100004</ctstlg1>
+         <gusrlg1>LG12100004</gusrlg1>
+         <gtstlg1>LG12100004</gtstlg1>
+         <conolg1>1</conolg1>
+         <docnilg1>1</docnilg1>
+         <docnelg1>1</docnelg1>
+         <poslg>1</poslg>
+         <bookdatlg1>1</bookdatlg1>
+         <docdatlg1>1</docdatlg1>
+         <acclg1>1</acclg1>
+         <calg1>1</calg1>
+         <colg1>1</colg1>
+         <corlg1>1</corlg1>
+         <wolg1>1</wolg1>
+         <fundlg1>1</fundlg1>
+         <accruallg1>1</accruallg1>
+         <grossamtlg1>1</grossamtlg1>
+         <vatplg1>1</vatplg1>
+         <txt1lg1>1</txt1lg1>
+         <txt2lg1>1</txt2lg1>
+         <zdvlg1>1</zdvlg1>
+         <zdblg1>1</zdblg1>
+         <testlg1>1</testlg1>
+         <pstslg1>1</pstslg1>
+         <cusrlg1>1</cusrlg1>
+         <ctstlg1>1</ctstlg1>
+         <gusrlg1>1</gusrlg1>
+         <gtstlg1>1</gtstlg1>
+         <conolg1>11/29/2019</conolg1>
+         <docnilg1>11/29/2019</docnilg1>
+         <docnelg1>11/29/2019</docnelg1>
+         <poslg>11/29/2019</poslg>
+         <bookdatlg1>11/29/2019</bookdatlg1>
+         <docdatlg1>11/29/2019</docdatlg1>
+         <acclg1>11/29/2019</acclg1>
+         <calg1>11/29/2019</calg1>
+         <colg1>11/29/2019</colg1>
+         <corlg1>11/29/2019</corlg1>
+         <wolg1>11/29/2019</wolg1>
+         <fundlg1>11/29/2019</fundlg1>
+         <accruallg1>11/29/2019</accruallg1>
+         <grossamtlg1>11/29/2019</grossamtlg1>
+         <vatplg1>11/29/2019</vatplg1>
+         <txt1lg1>11/29/2019</txt1lg1>
+         <txt2lg1>11/29/2019</txt2lg1>
+         <zdvlg1>11/29/2019</zdvlg1>
+         <zdblg1>11/29/2019</zdblg1>
+         <testlg1>11/29/2019</testlg1>
+         <pstslg1>11/29/2019</pstslg1>
+         <cusrlg1>11/29/2019</cusrlg1>
+         <ctstlg1>11/29/2019</ctstlg1>
+         <gusrlg1>11/29/2019</gusrlg1>
+         <gtstlg1>11/29/2019</gtstlg1>
+         <conolg1>12/31/2019</conolg1>
+         <docnilg1>12/31/2019</docnilg1>
+         <docnelg1>12/31/2019</docnelg1>
+         <poslg>12/31/2019</poslg>
+         <bookdatlg1>12/31/2019</bookdatlg1>
+         <docdatlg1>12/31/2019</docdatlg1>
+         <acclg1>12/31/2019</acclg1>
+         <calg1>12/31/2019</calg1>
+         <colg1>12/31/2019</colg1>
+         <corlg1>12/31/2019</corlg1>
+         <wolg1>12/31/2019</wolg1>
+         <fundlg1>12/31/2019</fundlg1>
+         <accruallg1>12/31/2019</accruallg1>
+         <grossamtlg1>12/31/2019</grossamtlg1>
+         <vatplg1>12/31/2019</vatplg1>
+         <txt1lg1>12/31/2019</txt1lg1>
+         <txt2lg1>12/31/2019</txt2lg1>
+         <zdvlg1>12/31/2019</zdvlg1>
+         <zdblg1>12/31/2019</zdblg1>
+         <testlg1>12/31/2019</testlg1>
+         <pstslg1>12/31/2019</pstslg1>
+         <cusrlg1>12/31/2019</cusrlg1>
+         <ctstlg1>12/31/2019</ctstlg1>
+         <gusrlg1>12/31/2019</gusrlg1>
+         <gtstlg1>12/31/2019</gtstlg1>
+         <conolg1>154100</conolg1>
+         <docnilg1>154100</docnilg1>
+         <docnelg1>154100</docnelg1>
+         <poslg>154100</poslg>
+         <bookdatlg1>154100</bookdatlg1>
+         <docdatlg1>154100</docdatlg1>
+         <acclg1>154100</acclg1>
+         <calg1>154100</calg1>
+         <colg1>154100</colg1>
+         <corlg1>154100</corlg1>
+         <wolg1>154100</wolg1>
+         <fundlg1>154100</fundlg1>
+         <accruallg1>154100</accruallg1>
+         <grossamtlg1>154100</grossamtlg1>
+         <vatplg1>154100</vatplg1>
+         <txt1lg1>154100</txt1lg1>
+         <txt2lg1>154100</txt2lg1>
+         <zdvlg1>154100</zdvlg1>
+         <zdblg1>154100</zdblg1>
+         <testlg1>154100</testlg1>
+         <pstslg1>154100</pstslg1>
+         <cusrlg1>154100</cusrlg1>
+         <ctstlg1>154100</ctstlg1>
+         <gusrlg1>154100</gusrlg1>
+         <gtstlg1>154100</gtstlg1>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1>-1000</conolg1>
+         <docnilg1>-1000</docnilg1>
+         <docnelg1>-1000</docnelg1>
+         <poslg>-1000</poslg>
+         <bookdatlg1>-1000</bookdatlg1>
+         <docdatlg1>-1000</docdatlg1>
+         <acclg1>-1000</acclg1>
+         <calg1>-1000</calg1>
+         <colg1>-1000</colg1>
+         <corlg1>-1000</corlg1>
+         <wolg1>-1000</wolg1>
+         <fundlg1>-1000</fundlg1>
+         <accruallg1>-1000</accruallg1>
+         <grossamtlg1>-1000</grossamtlg1>
+         <vatplg1>-1000</vatplg1>
+         <txt1lg1>-1000</txt1lg1>
+         <txt2lg1>-1000</txt2lg1>
+         <zdvlg1>-1000</zdvlg1>
+         <zdblg1>-1000</zdblg1>
+         <testlg1>-1000</testlg1>
+         <pstslg1>-1000</pstslg1>
+         <cusrlg1>-1000</cusrlg1>
+         <ctstlg1>-1000</ctstlg1>
+         <gusrlg1>-1000</gusrlg1>
+         <gtstlg1>-1000</gtstlg1>
+         <conolg1>0</conolg1>
+         <docnilg1>0</docnilg1>
+         <docnelg1>0</docnelg1>
+         <poslg>0</poslg>
+         <bookdatlg1>0</bookdatlg1>
+         <docdatlg1>0</docdatlg1>
+         <acclg1>0</acclg1>
+         <calg1>0</calg1>
+         <colg1>0</colg1>
+         <corlg1>0</corlg1>
+         <wolg1>0</wolg1>
+         <fundlg1>0</fundlg1>
+         <accruallg1>0</accruallg1>
+         <grossamtlg1>0</grossamtlg1>
+         <vatplg1>0</vatplg1>
+         <txt1lg1>0</txt1lg1>
+         <txt2lg1>0</txt2lg1>
+         <zdvlg1>0</zdvlg1>
+         <zdblg1>0</zdblg1>
+         <testlg1>0</testlg1>
+         <pstslg1>0</pstslg1>
+         <cusrlg1>0</cusrlg1>
+         <ctstlg1>0</ctstlg1>
+         <gusrlg1>0</gusrlg1>
+         <gtstlg1>0</gtstlg1>
+         <conolg1>Daten aus LOGA</conolg1>
+         <docnilg1>Daten aus LOGA</docnilg1>
+         <docnelg1>Daten aus LOGA</docnelg1>
+         <poslg>Daten aus LOGA</poslg>
+         <bookdatlg1>Daten aus LOGA</bookdatlg1>
+         <docdatlg1>Daten aus LOGA</docdatlg1>
+         <acclg1>Daten aus LOGA</acclg1>
+         <calg1>Daten aus LOGA</calg1>
+         <colg1>Daten aus LOGA</colg1>
+         <corlg1>Daten aus LOGA</corlg1>
+         <wolg1>Daten aus LOGA</wolg1>
+         <fundlg1>Daten aus LOGA</fundlg1>
+         <accruallg1>Daten aus LOGA</accruallg1>
+         <grossamtlg1>Daten aus LOGA</grossamtlg1>
+         <vatplg1>Daten aus LOGA</vatplg1>
+         <txt1lg1>Daten aus LOGA</txt1lg1>
+         <txt2lg1>Daten aus LOGA</txt2lg1>
+         <zdvlg1>Daten aus LOGA</zdvlg1>
+         <zdblg1>Daten aus LOGA</zdblg1>
+         <testlg1>Daten aus LOGA</testlg1>
+         <pstslg1>Daten aus LOGA</pstslg1>
+         <cusrlg1>Daten aus LOGA</cusrlg1>
+         <ctstlg1>Daten aus LOGA</ctstlg1>
+         <gusrlg1>Daten aus LOGA</gusrlg1>
+         <gtstlg1>Daten aus LOGA</gtstlg1>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1>12/1/2019</conolg1>
+         <docnilg1>12/1/2019</docnilg1>
+         <docnelg1>12/1/2019</docnelg1>
+         <poslg>12/1/2019</poslg>
+         <bookdatlg1>12/1/2019</bookdatlg1>
+         <docdatlg1>12/1/2019</docdatlg1>
+         <acclg1>12/1/2019</acclg1>
+         <calg1>12/1/2019</calg1>
+         <colg1>12/1/2019</colg1>
+         <corlg1>12/1/2019</corlg1>
+         <wolg1>12/1/2019</wolg1>
+         <fundlg1>12/1/2019</fundlg1>
+         <accruallg1>12/1/2019</accruallg1>
+         <grossamtlg1>12/1/2019</grossamtlg1>
+         <vatplg1>12/1/2019</vatplg1>
+         <txt1lg1>12/1/2019</txt1lg1>
+         <txt2lg1>12/1/2019</txt2lg1>
+         <zdvlg1>12/1/2019</zdvlg1>
+         <zdblg1>12/1/2019</zdblg1>
+         <testlg1>12/1/2019</testlg1>
+         <pstslg1>12/1/2019</pstslg1>
+         <cusrlg1>12/1/2019</cusrlg1>
+         <ctstlg1>12/1/2019</ctstlg1>
+         <gusrlg1>12/1/2019</gusrlg1>
+         <gtstlg1>12/1/2019</gtstlg1>
+         <conolg1>12/31/2019</conolg1>
+         <docnilg1>12/31/2019</docnilg1>
+         <docnelg1>12/31/2019</docnelg1>
+         <poslg>12/31/2019</poslg>
+         <bookdatlg1>12/31/2019</bookdatlg1>
+         <docdatlg1>12/31/2019</docdatlg1>
+         <acclg1>12/31/2019</acclg1>
+         <calg1>12/31/2019</calg1>
+         <colg1>12/31/2019</colg1>
+         <corlg1>12/31/2019</corlg1>
+         <wolg1>12/31/2019</wolg1>
+         <fundlg1>12/31/2019</fundlg1>
+         <accruallg1>12/31/2019</accruallg1>
+         <grossamtlg1>12/31/2019</grossamtlg1>
+         <vatplg1>12/31/2019</vatplg1>
+         <txt1lg1>12/31/2019</txt1lg1>
+         <txt2lg1>12/31/2019</txt2lg1>
+         <zdvlg1>12/31/2019</zdvlg1>
+         <zdblg1>12/31/2019</zdblg1>
+         <testlg1>12/31/2019</testlg1>
+         <pstslg1>12/31/2019</pstslg1>
+         <cusrlg1>12/31/2019</cusrlg1>
+         <ctstlg1>12/31/2019</ctstlg1>
+         <gusrlg1>12/31/2019</gusrlg1>
+         <gtstlg1>12/31/2019</gtstlg1>
+         <conolg1>T</conolg1>
+         <docnilg1>T</docnilg1>
+         <docnelg1>T</docnelg1>
+         <poslg>T</poslg>
+         <bookdatlg1>T</bookdatlg1>
+         <docdatlg1>T</docdatlg1>
+         <acclg1>T</acclg1>
+         <calg1>T</calg1>
+         <colg1>T</colg1>
+         <corlg1>T</corlg1>
+         <wolg1>T</wolg1>
+         <fundlg1>T</fundlg1>
+         <accruallg1>T</accruallg1>
+         <grossamtlg1>T</grossamtlg1>
+         <vatplg1>T</vatplg1>
+         <txt1lg1>T</txt1lg1>
+         <txt2lg1>T</txt2lg1>
+         <zdvlg1>T</zdvlg1>
+         <zdblg1>T</zdblg1>
+         <testlg1>T</testlg1>
+         <pstslg1>T</pstslg1>
+         <cusrlg1>T</cusrlg1>
+         <ctstlg1>T</ctstlg1>
+         <gusrlg1>T</gusrlg1>
+         <gtstlg1>T</gtstlg1>
+         <conolg1>0</conolg1>
+         <docnilg1>0</docnilg1>
+         <docnelg1>0</docnelg1>
+         <poslg>0</poslg>
+         <bookdatlg1>0</bookdatlg1>
+         <docdatlg1>0</docdatlg1>
+         <acclg1>0</acclg1>
+         <calg1>0</calg1>
+         <colg1>0</colg1>
+         <corlg1>0</corlg1>
+         <wolg1>0</wolg1>
+         <fundlg1>0</fundlg1>
+         <accruallg1>0</accruallg1>
+         <grossamtlg1>0</grossamtlg1>
+         <vatplg1>0</vatplg1>
+         <txt1lg1>0</txt1lg1>
+         <txt2lg1>0</txt2lg1>
+         <zdvlg1>0</zdvlg1>
+         <zdblg1>0</zdblg1>
+         <testlg1>0</testlg1>
+         <pstslg1>0</pstslg1>
+         <cusrlg1>0</cusrlg1>
+         <ctstlg1>0</ctstlg1>
+         <gusrlg1>0</gusrlg1>
+         <gtstlg1>0</gtstlg1>
+         <conolg1>TGLAUSW496</conolg1>
+         <docnilg1>TGLAUSW496</docnilg1>
+         <docnelg1>TGLAUSW496</docnelg1>
+         <poslg>TGLAUSW496</poslg>
+         <bookdatlg1>TGLAUSW496</bookdatlg1>
+         <docdatlg1>TGLAUSW496</docdatlg1>
+         <acclg1>TGLAUSW496</acclg1>
+         <calg1>TGLAUSW496</calg1>
+         <colg1>TGLAUSW496</colg1>
+         <corlg1>TGLAUSW496</corlg1>
+         <wolg1>TGLAUSW496</wolg1>
+         <fundlg1>TGLAUSW496</fundlg1>
+         <accruallg1>TGLAUSW496</accruallg1>
+         <grossamtlg1>TGLAUSW496</grossamtlg1>
+         <vatplg1>TGLAUSW496</vatplg1>
+         <txt1lg1>TGLAUSW496</txt1lg1>
+         <txt2lg1>TGLAUSW496</txt2lg1>
+         <zdvlg1>TGLAUSW496</zdvlg1>
+         <zdblg1>TGLAUSW496</zdblg1>
+         <testlg1>TGLAUSW496</testlg1>
+         <pstslg1>TGLAUSW496</pstslg1>
+         <cusrlg1>TGLAUSW496</cusrlg1>
+         <ctstlg1>TGLAUSW496</ctstlg1>
+         <gusrlg1>TGLAUSW496</gusrlg1>
+         <gtstlg1>TGLAUSW496</gtstlg1>
+         <conolg1>12/14/19 7:45</conolg1>
+         <docnilg1>12/14/19 7:45</docnilg1>
+         <docnelg1>12/14/19 7:45</docnelg1>
+         <poslg>12/14/19 7:45</poslg>
+         <bookdatlg1>12/14/19 7:45</bookdatlg1>
+         <docdatlg1>12/14/19 7:45</docdatlg1>
+         <acclg1>12/14/19 7:45</acclg1>
+         <calg1>12/14/19 7:45</calg1>
+         <colg1>12/14/19 7:45</colg1>
+         <corlg1>12/14/19 7:45</corlg1>
+         <wolg1>12/14/19 7:45</wolg1>
+         <fundlg1>12/14/19 7:45</fundlg1>
+         <accruallg1>12/14/19 7:45</accruallg1>
+         <grossamtlg1>12/14/19 7:45</grossamtlg1>
+         <vatplg1>12/14/19 7:45</vatplg1>
+         <txt1lg1>12/14/19 7:45</txt1lg1>
+         <txt2lg1>12/14/19 7:45</txt2lg1>
+         <zdvlg1>12/14/19 7:45</zdvlg1>
+         <zdblg1>12/14/19 7:45</zdblg1>
+         <testlg1>12/14/19 7:45</testlg1>
+         <pstslg1>12/14/19 7:45</pstslg1>
+         <cusrlg1>12/14/19 7:45</cusrlg1>
+         <ctstlg1>12/14/19 7:45</ctstlg1>
+         <gusrlg1>12/14/19 7:45</gusrlg1>
+         <gtstlg1>12/14/19 7:45</gtstlg1>
+      </item>
+   </lineitem>
+</invoice>
+<invoice>
+   <lineitem>
+      <item>
+         <conolg1>4</conolg1>
+         <docnilg1>4</docnilg1>
+         <docnelg1>4</docnelg1>
+         <poslg>4</poslg>
+         <bookdatlg1>4</bookdatlg1>
+         <docdatlg1>4</docdatlg1>
+         <acclg1>4</acclg1>
+         <calg1>4</calg1>
+         <colg1>4</colg1>
+         <corlg1>4</corlg1>
+         <wolg1>4</wolg1>
+         <fundlg1>4</fundlg1>
+         <accruallg1>4</accruallg1>
+         <grossamtlg1>4</grossamtlg1>
+         <vatplg1>4</vatplg1>
+         <txt1lg1>4</txt1lg1>
+         <txt2lg1>4</txt2lg1>
+         <zdvlg1>4</zdvlg1>
+         <zdblg1>4</zdblg1>
+         <testlg1>4</testlg1>
+         <pstslg1>4</pstslg1>
+         <cusrlg1>4</cusrlg1>
+         <ctstlg1>4</ctstlg1>
+         <gusrlg1>4</gusrlg1>
+         <gtstlg1>4</gtstlg1>
+         <conolg1>LG12100004</conolg1>
+         <docnilg1>LG12100004</docnilg1>
+         <docnelg1>LG12100004</docnelg1>
+         <poslg>LG12100004</poslg>
+         <bookdatlg1>LG12100004</bookdatlg1>
+         <docdatlg1>LG12100004</docdatlg1>
+         <acclg1>LG12100004</acclg1>
+         <calg1>LG12100004</calg1>
+         <colg1>LG12100004</colg1>
+         <corlg1>LG12100004</corlg1>
+         <wolg1>LG12100004</wolg1>
+         <fundlg1>LG12100004</fundlg1>
+         <accruallg1>LG12100004</accruallg1>
+         <grossamtlg1>LG12100004</grossamtlg1>
+         <vatplg1>LG12100004</vatplg1>
+         <txt1lg1>LG12100004</txt1lg1>
+         <txt2lg1>LG12100004</txt2lg1>
+         <zdvlg1>LG12100004</zdvlg1>
+         <zdblg1>LG12100004</zdblg1>
+         <testlg1>LG12100004</testlg1>
+         <pstslg1>LG12100004</pstslg1>
+         <cusrlg1>LG12100004</cusrlg1>
+         <ctstlg1>LG12100004</ctstlg1>
+         <gusrlg1>LG12100004</gusrlg1>
+         <gtstlg1>LG12100004</gtstlg1>
+         <conolg1>LG12100004</conolg1>
+         <docnilg1>LG12100004</docnilg1>
+         <docnelg1>LG12100004</docnelg1>
+         <poslg>LG12100004</poslg>
+         <bookdatlg1>LG12100004</bookdatlg1>
+         <docdatlg1>LG12100004</docdatlg1>
+         <acclg1>LG12100004</acclg1>
+         <calg1>LG12100004</calg1>
+         <colg1>LG12100004</colg1>
+         <corlg1>LG12100004</corlg1>
+         <wolg1>LG12100004</wolg1>
+         <fundlg1>LG12100004</fundlg1>
+         <accruallg1>LG12100004</accruallg1>
+         <grossamtlg1>LG12100004</grossamtlg1>
+         <vatplg1>LG12100004</vatplg1>
+         <txt1lg1>LG12100004</txt1lg1>
+         <txt2lg1>LG12100004</txt2lg1>
+         <zdvlg1>LG12100004</zdvlg1>
+         <zdblg1>LG12100004</zdblg1>
+         <testlg1>LG12100004</testlg1>
+         <pstslg1>LG12100004</pstslg1>
+         <cusrlg1>LG12100004</cusrlg1>
+         <ctstlg1>LG12100004</ctstlg1>
+         <gusrlg1>LG12100004</gusrlg1>
+         <gtstlg1>LG12100004</gtstlg1>
+         <conolg1>2</conolg1>
+         <docnilg1>2</docnilg1>
+         <docnelg1>2</docnelg1>
+         <poslg>2</poslg>
+         <bookdatlg1>2</bookdatlg1>
+         <docdatlg1>2</docdatlg1>
+         <acclg1>2</acclg1>
+         <calg1>2</calg1>
+         <colg1>2</colg1>
+         <corlg1>2</corlg1>
+         <wolg1>2</wolg1>
+         <fundlg1>2</fundlg1>
+         <accruallg1>2</accruallg1>
+         <grossamtlg1>2</grossamtlg1>
+         <vatplg1>2</vatplg1>
+         <txt1lg1>2</txt1lg1>
+         <txt2lg1>2</txt2lg1>
+         <zdvlg1>2</zdvlg1>
+         <zdblg1>2</zdblg1>
+         <testlg1>2</testlg1>
+         <pstslg1>2</pstslg1>
+         <cusrlg1>2</cusrlg1>
+         <ctstlg1>2</ctstlg1>
+         <gusrlg1>2</gusrlg1>
+         <gtstlg1>2</gtstlg1>
+         <conolg1>11/29/2019</conolg1>
+         <docnilg1>11/29/2019</docnilg1>
+         <docnelg1>11/29/2019</docnelg1>
+         <poslg>11/29/2019</poslg>
+         <bookdatlg1>11/29/2019</bookdatlg1>
+         <docdatlg1>11/29/2019</docdatlg1>
+         <acclg1>11/29/2019</acclg1>
+         <calg1>11/29/2019</calg1>
+         <colg1>11/29/2019</colg1>
+         <corlg1>11/29/2019</corlg1>
+         <wolg1>11/29/2019</wolg1>
+         <fundlg1>11/29/2019</fundlg1>
+         <accruallg1>11/29/2019</accruallg1>
+         <grossamtlg1>11/29/2019</grossamtlg1>
+         <vatplg1>11/29/2019</vatplg1>
+         <txt1lg1>11/29/2019</txt1lg1>
+         <txt2lg1>11/29/2019</txt2lg1>
+         <zdvlg1>11/29/2019</zdvlg1>
+         <zdblg1>11/29/2019</zdblg1>
+         <testlg1>11/29/2019</testlg1>
+         <pstslg1>11/29/2019</pstslg1>
+         <cusrlg1>11/29/2019</cusrlg1>
+         <ctstlg1>11/29/2019</ctstlg1>
+         <gusrlg1>11/29/2019</gusrlg1>
+         <gtstlg1>11/29/2019</gtstlg1>
+         <conolg1>12/31/2019</conolg1>
+         <docnilg1>12/31/2019</docnilg1>
+         <docnelg1>12/31/2019</docnelg1>
+         <poslg>12/31/2019</poslg>
+         <bookdatlg1>12/31/2019</bookdatlg1>
+         <docdatlg1>12/31/2019</docdatlg1>
+         <acclg1>12/31/2019</acclg1>
+         <calg1>12/31/2019</calg1>
+         <colg1>12/31/2019</colg1>
+         <corlg1>12/31/2019</corlg1>
+         <wolg1>12/31/2019</wolg1>
+         <fundlg1>12/31/2019</fundlg1>
+         <accruallg1>12/31/2019</accruallg1>
+         <grossamtlg1>12/31/2019</grossamtlg1>
+         <vatplg1>12/31/2019</vatplg1>
+         <txt1lg1>12/31/2019</txt1lg1>
+         <txt2lg1>12/31/2019</txt2lg1>
+         <zdvlg1>12/31/2019</zdvlg1>
+         <zdblg1>12/31/2019</zdblg1>
+         <testlg1>12/31/2019</testlg1>
+         <pstslg1>12/31/2019</pstslg1>
+         <cusrlg1>12/31/2019</cusrlg1>
+         <ctstlg1>12/31/2019</ctstlg1>
+         <gusrlg1>12/31/2019</gusrlg1>
+         <gtstlg1>12/31/2019</gtstlg1>
+         <conolg1>377999</conolg1>
+         <docnilg1>377999</docnilg1>
+         <docnelg1>377999</docnelg1>
+         <poslg>377999</poslg>
+         <bookdatlg1>377999</bookdatlg1>
+         <docdatlg1>377999</docdatlg1>
+         <acclg1>377999</acclg1>
+         <calg1>377999</calg1>
+         <colg1>377999</colg1>
+         <corlg1>377999</corlg1>
+         <wolg1>377999</wolg1>
+         <fundlg1>377999</fundlg1>
+         <accruallg1>377999</accruallg1>
+         <grossamtlg1>377999</grossamtlg1>
+         <vatplg1>377999</vatplg1>
+         <txt1lg1>377999</txt1lg1>
+         <txt2lg1>377999</txt2lg1>
+         <zdvlg1>377999</zdvlg1>
+         <zdblg1>377999</zdblg1>
+         <testlg1>377999</testlg1>
+         <pstslg1>377999</pstslg1>
+         <cusrlg1>377999</cusrlg1>
+         <ctstlg1>377999</ctstlg1>
+         <gusrlg1>377999</gusrlg1>
+         <gtstlg1>377999</gtstlg1>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1>1000</conolg1>
+         <docnilg1>1000</docnilg1>
+         <docnelg1>1000</docnelg1>
+         <poslg>1000</poslg>
+         <bookdatlg1>1000</bookdatlg1>
+         <docdatlg1>1000</docdatlg1>
+         <acclg1>1000</acclg1>
+         <calg1>1000</calg1>
+         <colg1>1000</colg1>
+         <corlg1>1000</corlg1>
+         <wolg1>1000</wolg1>
+         <fundlg1>1000</fundlg1>
+         <accruallg1>1000</accruallg1>
+         <grossamtlg1>1000</grossamtlg1>
+         <vatplg1>1000</vatplg1>
+         <txt1lg1>1000</txt1lg1>
+         <txt2lg1>1000</txt2lg1>
+         <zdvlg1>1000</zdvlg1>
+         <zdblg1>1000</zdblg1>
+         <testlg1>1000</testlg1>
+         <pstslg1>1000</pstslg1>
+         <cusrlg1>1000</cusrlg1>
+         <ctstlg1>1000</ctstlg1>
+         <gusrlg1>1000</gusrlg1>
+         <gtstlg1>1000</gtstlg1>
+         <conolg1>0</conolg1>
+         <docnilg1>0</docnilg1>
+         <docnelg1>0</docnelg1>
+         <poslg>0</poslg>
+         <bookdatlg1>0</bookdatlg1>
+         <docdatlg1>0</docdatlg1>
+         <acclg1>0</acclg1>
+         <calg1>0</calg1>
+         <colg1>0</colg1>
+         <corlg1>0</corlg1>
+         <wolg1>0</wolg1>
+         <fundlg1>0</fundlg1>
+         <accruallg1>0</accruallg1>
+         <grossamtlg1>0</grossamtlg1>
+         <vatplg1>0</vatplg1>
+         <txt1lg1>0</txt1lg1>
+         <txt2lg1>0</txt2lg1>
+         <zdvlg1>0</zdvlg1>
+         <zdblg1>0</zdblg1>
+         <testlg1>0</testlg1>
+         <pstslg1>0</pstslg1>
+         <cusrlg1>0</cusrlg1>
+         <ctstlg1>0</ctstlg1>
+         <gusrlg1>0</gusrlg1>
+         <gtstlg1>0</gtstlg1>
+         <conolg1>Daten aus LOGA</conolg1>
+         <docnilg1>Daten aus LOGA</docnilg1>
+         <docnelg1>Daten aus LOGA</docnelg1>
+         <poslg>Daten aus LOGA</poslg>
+         <bookdatlg1>Daten aus LOGA</bookdatlg1>
+         <docdatlg1>Daten aus LOGA</docdatlg1>
+         <acclg1>Daten aus LOGA</acclg1>
+         <calg1>Daten aus LOGA</calg1>
+         <colg1>Daten aus LOGA</colg1>
+         <corlg1>Daten aus LOGA</corlg1>
+         <wolg1>Daten aus LOGA</wolg1>
+         <fundlg1>Daten aus LOGA</fundlg1>
+         <accruallg1>Daten aus LOGA</accruallg1>
+         <grossamtlg1>Daten aus LOGA</grossamtlg1>
+         <vatplg1>Daten aus LOGA</vatplg1>
+         <txt1lg1>Daten aus LOGA</txt1lg1>
+         <txt2lg1>Daten aus LOGA</txt2lg1>
+         <zdvlg1>Daten aus LOGA</zdvlg1>
+         <zdblg1>Daten aus LOGA</zdblg1>
+         <testlg1>Daten aus LOGA</testlg1>
+         <pstslg1>Daten aus LOGA</pstslg1>
+         <cusrlg1>Daten aus LOGA</cusrlg1>
+         <ctstlg1>Daten aus LOGA</ctstlg1>
+         <gusrlg1>Daten aus LOGA</gusrlg1>
+         <gtstlg1>Daten aus LOGA</gtstlg1>
+         <conolg1/>
+         <docnilg1/>
+         <docnelg1/>
+         <poslg/>
+         <bookdatlg1/>
+         <docdatlg1/>
+         <acclg1/>
+         <calg1/>
+         <colg1/>
+         <corlg1/>
+         <wolg1/>
+         <fundlg1/>
+         <accruallg1/>
+         <grossamtlg1/>
+         <vatplg1/>
+         <txt1lg1/>
+         <txt2lg1/>
+         <zdvlg1/>
+         <zdblg1/>
+         <testlg1/>
+         <pstslg1/>
+         <cusrlg1/>
+         <ctstlg1/>
+         <gusrlg1/>
+         <gtstlg1/>
+         <conolg1>12/1/2019</conolg1>
+         <docnilg1>12/1/2019</docnilg1>
+         <docnelg1>12/1/2019</docnelg1>
+         <poslg>12/1/2019</poslg>
+         <bookdatlg1>12/1/2019</bookdatlg1>
+         <docdatlg1>12/1/2019</docdatlg1>
+         <acclg1>12/1/2019</acclg1>
+         <calg1>12/1/2019</calg1>
+         <colg1>12/1/2019</colg1>
+         <corlg1>12/1/2019</corlg1>
+         <wolg1>12/1/2019</wolg1>
+         <fundlg1>12/1/2019</fundlg1>
+         <accruallg1>12/1/2019</accruallg1>
+         <grossamtlg1>12/1/2019</grossamtlg1>
+         <vatplg1>12/1/2019</vatplg1>
+         <txt1lg1>12/1/2019</txt1lg1>
+         <txt2lg1>12/1/2019</txt2lg1>
+         <zdvlg1>12/1/2019</zdvlg1>
+         <zdblg1>12/1/2019</zdblg1>
+         <testlg1>12/1/2019</testlg1>
+         <pstslg1>12/1/2019</pstslg1>
+         <cusrlg1>12/1/2019</cusrlg1>
+         <ctstlg1>12/1/2019</ctstlg1>
+         <gusrlg1>12/1/2019</gusrlg1>
+         <gtstlg1>12/1/2019</gtstlg1>
+         <conolg1>12/31/2019</conolg1>
+         <docnilg1>12/31/2019</docnilg1>
+         <docnelg1>12/31/2019</docnelg1>
+         <poslg>12/31/2019</poslg>
+         <bookdatlg1>12/31/2019</bookdatlg1>
+         <docdatlg1>12/31/2019</docdatlg1>
+         <acclg1>12/31/2019</acclg1>
+         <calg1>12/31/2019</calg1>
+         <colg1>12/31/2019</colg1>
+         <corlg1>12/31/2019</corlg1>
+         <wolg1>12/31/2019</wolg1>
+         <fundlg1>12/31/2019</fundlg1>
+         <accruallg1>12/31/2019</accruallg1>
+         <grossamtlg1>12/31/2019</grossamtlg1>
+         <vatplg1>12/31/2019</vatplg1>
+         <txt1lg1>12/31/2019</txt1lg1>
+         <txt2lg1>12/31/2019</txt2lg1>
+         <zdvlg1>12/31/2019</zdvlg1>
+         <zdblg1>12/31/2019</zdblg1>
+         <testlg1>12/31/2019</testlg1>
+         <pstslg1>12/31/2019</pstslg1>
+         <cusrlg1>12/31/2019</cusrlg1>
+         <ctstlg1>12/31/2019</ctstlg1>
+         <gusrlg1>12/31/2019</gusrlg1>
+         <gtstlg1>12/31/2019</gtstlg1>
+         <conolg1>T</conolg1>
+         <docnilg1>T</docnilg1>
+         <docnelg1>T</docnelg1>
+         <poslg>T</poslg>
+         <bookdatlg1>T</bookdatlg1>
+         <docdatlg1>T</docdatlg1>
+         <acclg1>T</acclg1>
+         <calg1>T</calg1>
+         <colg1>T</colg1>
+         <corlg1>T</corlg1>
+         <wolg1>T</wolg1>
+         <fundlg1>T</fundlg1>
+         <accruallg1>T</accruallg1>
+         <grossamtlg1>T</grossamtlg1>
+         <vatplg1>T</vatplg1>
+         <txt1lg1>T</txt1lg1>
+         <txt2lg1>T</txt2lg1>
+         <zdvlg1>T</zdvlg1>
+         <zdblg1>T</zdblg1>
+         <testlg1>T</testlg1>
+         <pstslg1>T</pstslg1>
+         <cusrlg1>T</cusrlg1>
+         <ctstlg1>T</ctstlg1>
+         <gusrlg1>T</gusrlg1>
+         <gtstlg1>T</gtstlg1>
+         <conolg1>0</conolg1>
+         <docnilg1>0</docnilg1>
+         <docnelg1>0</docnelg1>
+         <poslg>0</poslg>
+         <bookdatlg1>0</bookdatlg1>
+         <docdatlg1>0</docdatlg1>
+         <acclg1>0</acclg1>
+         <calg1>0</calg1>
+         <colg1>0</colg1>
+         <corlg1>0</corlg1>
+         <wolg1>0</wolg1>
+         <fundlg1>0</fundlg1>
+         <accruallg1>0</accruallg1>
+         <grossamtlg1>0</grossamtlg1>
+         <vatplg1>0</vatplg1>
+         <txt1lg1>0</txt1lg1>
+         <txt2lg1>0</txt2lg1>
+         <zdvlg1>0</zdvlg1>
+         <zdblg1>0</zdblg1>
+         <testlg1>0</testlg1>
+         <pstslg1>0</pstslg1>
+         <cusrlg1>0</cusrlg1>
+         <ctstlg1>0</ctstlg1>
+         <gusrlg1>0</gusrlg1>
+         <gtstlg1>0</gtstlg1>
+         <conolg1>TGLAUSW496</conolg1>
+         <docnilg1>TGLAUSW496</docnilg1>
+         <docnelg1>TGLAUSW496</docnelg1>
+         <poslg>TGLAUSW496</poslg>
+         <bookdatlg1>TGLAUSW496</bookdatlg1>
+         <docdatlg1>TGLAUSW496</docdatlg1>
+         <acclg1>TGLAUSW496</acclg1>
+         <calg1>TGLAUSW496</calg1>
+         <colg1>TGLAUSW496</colg1>
+         <corlg1>TGLAUSW496</corlg1>
+         <wolg1>TGLAUSW496</wolg1>
+         <fundlg1>TGLAUSW496</fundlg1>
+         <accruallg1>TGLAUSW496</accruallg1>
+         <grossamtlg1>TGLAUSW496</grossamtlg1>
+         <vatplg1>TGLAUSW496</vatplg1>
+         <txt1lg1>TGLAUSW496</txt1lg1>
+         <txt2lg1>TGLAUSW496</txt2lg1>
+         <zdvlg1>TGLAUSW496</zdvlg1>
+         <zdblg1>TGLAUSW496</zdblg1>
+         <testlg1>TGLAUSW496</testlg1>
+         <pstslg1>TGLAUSW496</pstslg1>
+         <cusrlg1>TGLAUSW496</cusrlg1>
+         <ctstlg1>TGLAUSW496</ctstlg1>
+         <gusrlg1>TGLAUSW496</gusrlg1>
+         <gtstlg1>TGLAUSW496</gtstlg1>
+         <conolg1>12/14/19 7:45</conolg1>
+         <docnilg1>12/14/19 7:45</docnilg1>
+         <docnelg1>12/14/19 7:45</docnelg1>
+         <poslg>12/14/19 7:45</poslg>
+         <bookdatlg1>12/14/19 7:45</bookdatlg1>
+         <docdatlg1>12/14/19 7:45</docdatlg1>
+         <acclg1>12/14/19 7:45</acclg1>
+         <calg1>12/14/19 7:45</calg1>
+         <colg1>12/14/19 7:45</colg1>
+         <corlg1>12/14/19 7:45</corlg1>
+         <wolg1>12/14/19 7:45</wolg1>
+         <fundlg1>12/14/19 7:45</fundlg1>
+         <accruallg1>12/14/19 7:45</accruallg1>
+         <grossamtlg1>12/14/19 7:45</grossamtlg1>
+         <vatplg1>12/14/19 7:45</vatplg1>
+         <txt1lg1>12/14/19 7:45</txt1lg1>
+         <txt2lg1>12/14/19 7:45</txt2lg1>
+         <zdvlg1>12/14/19 7:45</zdvlg1>
+         <zdblg1>12/14/19 7:45</zdblg1>
+         <testlg1>12/14/19 7:45</testlg1>
+         <pstslg1>12/14/19 7:45</pstslg1>
+         <cusrlg1>12/14/19 7:45</cusrlg1>
+         <ctstlg1>12/14/19 7:45</ctstlg1>
+         <gusrlg1>12/14/19 7:45</gusrlg1>
+         <gtstlg1>12/14/19 7:45</gtstlg1>
+      </item>
+   </lineitem>
+</invoice>

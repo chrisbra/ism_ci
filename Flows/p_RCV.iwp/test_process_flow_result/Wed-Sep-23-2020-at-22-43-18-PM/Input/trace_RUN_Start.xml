@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<excel file="bytes">
+  <sheet name="logasst_bsp" index="1">
+    <recdef>
+      <colname name="conolg1" maxlen="1"/>
+      <colname name="docnilg1" maxlen="10"/>
+      <colname name="docnelg1" maxlen="10"/>
+      <colname name="poslg" maxlen="1"/>
+      <colname name="bookdatlg1" maxlen="10"/>
+      <colname name="docdatlg1" maxlen="10"/>
+      <colname name="acclg1" maxlen="6"/>
+      <colname name="calg1" maxlen="0"/>
+      <colname name="colg1" maxlen="0"/>
+      <colname name="corlg1" maxlen="0"/>
+      <colname name="wolg1" maxlen="0"/>
+      <colname name="fundlg1" maxlen="0"/>
+      <colname name="accruallg1" maxlen="0"/>
+      <colname name="grossamtlg1" maxlen="5"/>
+      <colname name="vatplg1" maxlen="1"/>
+      <colname name="txt1lg1" maxlen="14"/>
+      <colname name="txt2lg1" maxlen="0"/>
+      <colname name="zdvlg1" maxlen="9"/>
+      <colname name="zdblg1" maxlen="10"/>
+      <colname name="testlg1" maxlen="1"/>
+      <colname name="pstslg1" maxlen="1"/>
+      <colname name="cusrlg1" maxlen="10"/>
+      <colname name="ctstlg1" maxlen="13"/>
+    </recdef>
+    <rows count="2">
+      <row index="1">
+        <column name="conolg1">
+          4
+        </column>
+        <column name="docnilg1">
+          LG12100004
+        </column>
+        <column name="docnelg1">
+          LG12100004
+        </column>
+        <column name="poslg">
+          1
+        </column>
+        <column name="bookdatlg1">
+          11/29/2019
+        </column>
+        <column name="docdatlg1">
+          12/31/2019
+        </column>
+        <column name="acclg1">
+          154100
+        </column>
+        <column name="calg1"/>
+        <column name="colg1"/>
+        <column name="corlg1"/>
+        <column name="wolg1"/>
+        <column name="fundlg1"/>
+        <column name="accruallg1"/>
+        <column name="grossamtlg1">
+          -1000
+        </column>
+        <column name="vatplg1">
+          0
+        </column>
+        <column name="txt1lg1">
+          Daten aus LOGA
+        </column>
+        <column name="txt2lg1"/>
+        <column name="zdvlg1">
+          12/1/2019
+        </column>
+        <column name="zdblg1">
+          12/31/2019
+        </column>
+        <column name="testlg1">
+          T
+        </column>
+        <column name="pstslg1">
+          0
+        </column>
+        <column name="cusrlg1">
+          TGLAUSW496
+        </column>
+        <column name="ctstlg1">
+          12/14/19 7:45
+        </column>
+      </row>
+      <row index="2">
+        <column name="conolg1">
+          4
+        </column>
+        <column name="docnilg1">
+          LG12100004
+        </column>
+        <column name="docnelg1">
+          LG12100004
+        </column>
+        <column name="poslg">
+          2
+        </column>
+        <column name="bookdatlg1">
+          11/29/2019
+        </column>
+        <column name="docdatlg1">
+          12/31/2019
+        </column>
+        <column name="acclg1">
+          377999
+        </column>
+        <column name="calg1"/>
+        <column name="colg1"/>
+        <column name="corlg1"/>
+        <column name="wolg1"/>
+        <column name="fundlg1"/>
+        <column name="accruallg1"/>
+        <column name="grossamtlg1">
+          1000
+        </column>
+        <column name="vatplg1">
+          0
+        </column>
+        <column name="txt1lg1">
+          Daten aus LOGA
+        </column>
+        <column name="txt2lg1"/>
+        <column name="zdvlg1">
+          12/1/2019
+        </column>
+        <column name="zdblg1">
+          12/31/2019
+        </column>
+        <column name="testlg1">
+          T
+        </column>
+        <column name="pstslg1">
+          0
+        </column>
+        <column name="cusrlg1">
+          TGLAUSW496
+        </column>
+        <column name="ctstlg1">
+          12/14/19 7:45
+        </column>
+      </row>
+    </rows>
+  </sheet>
+</excel>

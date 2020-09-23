@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:iway xmlns:model="http://www.iwaysoftware.com/designer/model">
+  <model:server name="iWay Registry">
+    <model:processflow description="" iwayversion="8.0.3" name="p_Error">
+      <model:objects>
+        <model:object class="start" deactivate="false" defer="false" etap="false" id="start" key="1" name="Start" type="FLOWCHART_STARTUP_START" useglobalobj="false" xdebughigh="1" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="General">
+                <model:propertyitem display="No" itemtype="boolean" label="Debug" name="Debug" required="false" value="true" valuetype="boolean"/>
+                <model:propertyitem name="roottag" value=""/>
+              </model:group>
+            </model:properties>
+          </model:user>
+          <model:runtimevariables/>
+        </model:object>
+        <model:object class="end" deactivate="false" defer="false" etap="false" id="end" key="2" name="End" type="FLOWCHART_STARTUP_END" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="General">
+                <model:propertyitem name="roottag" value=""/>
+                <model:propertyitem name="terminate" value="true"/>
+                <model:propertyitem name="ctype" value=""/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDFileEmitAgent" deactivate="false" defer="false" etap="false" id="file" key="4" name="Dump Input" type="FLOWCHART_STARTUP_FILE" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Source">
+                <model:propertyitem description="Value or expression to represent a data source. If not set, defaults to the input document." name="location" required="false"/>
+              </model:group>
+              <model:group name="Source Settings">
+                <model:propertyitem description="Provider for the mapping between XML namespace prefix and namespace URI within XPath expressions." name="nsmapprov" required="false"/>
+              </model:group>
+              <model:group name="Target">
+                <model:propertyitem description="The target directory of the output file." name="directory" required="true" value="_sreg(iwayhome)processing/error/"/>
+                <model:propertyitem description="The output target file name; supports '*' which expands to a file timestamp." name="pattern" required="true" value="_sreg(basename)_*._sreg(extension)"/>
+              </model:group>
+              <model:group name="Target Settings">
+                <model:propertyitem description="Encoding to apply to the target output file being written. Does not apply when output is bas64." name="outenc" required="false" value="UTF-8"/>
+                <model:propertyitem description="If set, the value is assumed to be in base64 notation. Only applicable if a specific write value is specified." name="b64" required="false" value="false"/>
+                <model:propertyitem description="If set to true, the output will be appended to the file if it already exists" name="append" required="false" value="false"/>
+                <model:propertyitem description="If set to true, a carriage return and a line feed will be written at end of target file." name="appendcrlf" required="false" value="false"/>
+                <model:propertyitem description="If true, emit empty files if the process creates them." name="outputzero" required="false" value="false"/>
+              </model:group>
+              <model:group name="Post Action">
+                <model:propertyitem description="Output document of the object." name="return" required="false" value="input"/>
+              </model:group>
+              <model:group name="hidden">
+                <model:propertyitem description="Id of the className" name="classNameId"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDEmailEmitAgent" deactivate="true" defer="false" etap="false" id="email" key="5" name="Email" type="FLOWCHART_STARTUP_EMAIL" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Addresses">
+                <model:propertyitem description="The destination address of this email. Use ';' to delimit multiple addresses." name="to" required="true" value="cb@ibi.local"/>
+                <model:propertyitem description="The senders email address." name="from" required="false" value="eai@localhost"/>
+                <model:propertyitem description="The subject of this email." name="subject" required="false" value="iSM: Error in pFlow"/>
+                <model:propertyitem description="Email address to carbon copy to. Use ';' to delimit multiple addresses." name="cc" required="false"/>
+                <model:propertyitem description="Email address to send a blind copy to. Use ';' to delimit multiple addresses." name="bcc" required="false"/>
+                <model:propertyitem description="Address to replyto for this email. Use ';' to delimit multiple addresses." name="replyto" required="false"/>
+              </model:group>
+              <model:group name="Message">
+                <model:propertyitem description="Sets the emails message body. If not set, the incoming document will be uses as the message body." name="body" required="false" value="_concat('Opps, something bad happened!   &#xD;&#xA;', _flatof())"/>
+                <model:propertyitem description="MIME Type of the email" name="contenttype" required="false" value="text/plain"/>
+              </model:group>
+              <model:group name="Headers">
+                <model:propertyitem description="A register which contains additional email headers to be included in the email." name="mimehdrns" required="false"/>
+              </model:group>
+              <model:group name="Settings">
+                <model:propertyitem description="Marks the priority of the outgoing email." name="priority" required="false" value="3"/>
+                <model:propertyitem description="Marks the sensitivity of the outgoing email." name="sensitivity" required="false" value="normal"/>
+              </model:group>
+              <model:group name="Attachment(s)">
+                <model:propertyitem description="Name of email attachment. (Required when adding an email attachment)" name="docattachname" required="false"/>
+                <model:propertyitem description="MIME Type of the attachment." name="docattachctype" required="false"/>
+                <model:propertyitem description="Input document tag name that holds a path to a file to be attached." name="attach" required="false"/>
+                <model:propertyitem description="If true, the inbound document is treated as an attachment." name="docattach" required="false" value="false"/>
+              </model:group>
+              <model:group name="Post Action">
+                <model:propertyitem description="Sets the outbound document of this object." name="return" required="false" value="status"/>
+              </model:group>
+              <model:group name="hidden">
+                <model:propertyitem description="{&quot;name&quot;:&quot;Configuration (email.1)&quot;,&quot;propertyGroups&quot;:[{&quot;name&quot;:&quot;Server Information&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;Outgoing Server&quot;,&quot;value&quot;:&quot;localhost&quot;,&quot;description&quot;:&quot;Outgoing email host used to route outgoing e-mail (add :port for non-standard port)&quot;},{&quot;name&quot;:&quot;Security Protocol&quot;,&quot;value&quot;:&quot;none&quot;,&quot;description&quot;:&quot;Security protocol:&lt;br> none - clear SMTP connection.&lt;br> SSLv2 - SMTPS - connect to secure SMTP server.&lt;br> STARTTLS - connect to an unsecured SMTP server, then negotiate SSL/TLS connection&quot;}]}]}" name="emailconfig" value="email.1"/>
+                <model:propertyitem description="Id of the className" name="classNameId"/>
+                <model:propertyitem name="usessl" value="none"/>
+                <model:propertyitem name="host" value="localhost"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDDebugAgent" deactivate="true" defer="false" etap="false" id="debugger" key="6" name="Debug Email" type="FLOWCHART_STARTUP_DEBUG" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Snapshot Settings">
+                <model:propertyitem description="Trace identifier used to mark the current trace output." name="name" required="false" value="Error E-Mail"/>
+                <model:propertyitem description="Decode the contents of the current base64 document before logging to disk." name="b64" required="false" value="false"/>
+                <model:propertyitem description="If set, this is the starting offset within the data block to start the dump" name="startAt" required="false"/>
+                <model:propertyitem description="If set, this is the total number of bytes to dump." name="maximum" required="false"/>
+              </model:group>
+              <model:group name="hidden">
+                <model:propertyitem description="{&quot;name&quot;:&quot;Configuration (debug.1)&quot;,&quot;propertyGroups&quot;:[{&quot;name&quot;:&quot;Trace&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;File Path&quot;,&quot;value&quot;:&quot;_sreg(iwayhome)processing/debug/*_trace.xml&quot;,&quot;description&quot;:&quot;The absolute file path to write a trace file. File patterns are supported.&quot;}]},{&quot;name&quot;:&quot;Payload&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;File Path&quot;,&quot;value&quot;:&quot;_sreg(iwayhome)processing/debug/*_payload.xml&quot;,&quot;description&quot;:&quot;The absolute file path to write the payload. File patterns are supported.&quot;}]},{&quot;name&quot;:&quot;Trigger&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;When&quot;,&quot;value&quot;:&quot;always&quot;,&quot;description&quot;:&quot;When to perform the trace operation&quot;}]}]}" name="debugconfig" value="debug.1"/>
+                <model:propertyitem name="when" value="always"/>
+                <model:propertyitem name="where" value="_sreg(iwayhome)processing/debug/*_trace.xml"/>
+                <model:propertyitem name="physloc" value="_sreg(iwayhome)processing/debug/*_payload.xml"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDXALogBizErr" deactivate="true" defer="false" etap="false" id="serverAgent" key="3" name="Send to Monitoring" type="FLOWCHART_SERVER_AGENT" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Main">
+                <model:propertyitem description="What severity is this business error" name="sev" required="false" value="bizfatal"/>
+                <model:propertyitem description="A business error message to be added to the activity log" name="message" required="false" value="_concat('An error occured here: &#xD;&#xA;', _flatof())"/>
+                <model:propertyitem description="If set, this message is written only as part of a rollback of the flow" name="transaction" required="false" value="false"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+        <model:object class="agent" classname="com.ibi.agents.XDDebugAgent" deactivate="false" defer="false" etap="false" id="debugger" key="7" name="Debug" type="FLOWCHART_STARTUP_DEBUG" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+          <model:user>
+            <model:properties>
+              <model:group name="Snapshot Settings">
+                <model:propertyitem description="Trace identifier used to mark the current trace output." name="name" required="false" value="Error"/>
+                <model:propertyitem description="Decode the contents of the current base64 document before logging to disk." name="b64" required="false" value="false"/>
+                <model:propertyitem description="If set, this is the starting offset within the data block to start the dump" name="startAt" required="false"/>
+                <model:propertyitem description="If set, this is the total number of bytes to dump." name="maximum" required="false"/>
+              </model:group>
+              <model:group name="hidden">
+                <model:propertyitem description="{&quot;name&quot;:&quot;Configuration (debug.1)&quot;,&quot;propertyGroups&quot;:[{&quot;name&quot;:&quot;Trace&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;File Path&quot;,&quot;value&quot;:&quot;_sreg(iwayhome)processing/debug/*_trace.xml&quot;,&quot;description&quot;:&quot;The absolute file path to write a trace file. File patterns are supported.&quot;}]},{&quot;name&quot;:&quot;Payload&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;File Path&quot;,&quot;value&quot;:&quot;_sreg(iwayhome)processing/debug/*_payload.xml&quot;,&quot;description&quot;:&quot;The absolute file path to write the payload. File patterns are supported.&quot;}]},{&quot;name&quot;:&quot;Trigger&quot;,&quot;properties&quot;:[{&quot;name&quot;:&quot;When&quot;,&quot;value&quot;:&quot;always&quot;,&quot;description&quot;:&quot;When to perform the trace operation&quot;}]}]}" name="debugconfig" value="debug.1"/>
+                <model:propertyitem name="when" value="always"/>
+                <model:propertyitem name="where" value="_sreg(iwayhome)processing/debug/*_trace.xml"/>
+                <model:propertyitem name="physloc" value="_sreg(iwayhome)processing/debug/*_payload.xml"/>
+              </model:group>
+            </model:properties>
+          </model:user>
+        </model:object>
+      </model:objects>
+      <model:relations startinstance="1">
+        <model:relation completion="OnCompletion" deactivate="false" frominstance="4" lineid="FLOWCHART_DEFAULT_LINE" toinstance="5">
+          <model:customevents>
+            <model:event check="false" type="Stock" value="$success"/>
+            <model:event check="false" type="Stock" value="$fail"/>
+            <model:event check="false" type="Stock" value="$error"/>
+            <model:event check="false" type="Custom" value="fail_parse"/>
+            <model:event check="false" type="Custom" value="fail_operation"/>
+            <model:event check="false" type="Custom" value="notfound"/>
+          </model:customevents>
+        </model:relation>
+        <model:relation completion="OnCompletion" frominstance="6" lineid="FLOWCHART_DEFAULT_LINE" toinstance="2"/>
+        <model:relation completion="OnCompletion" deactivate="false" frominstance="5" lineid="FLOWCHART_DEFAULT_LINE" toinstance="6">
+          <model:customevents>
+            <model:event check="false" type="Stock" value="$success"/>
+            <model:event check="false" type="Stock" value="$fail"/>
+            <model:event check="false" type="Stock" value="$error"/>
+            <model:event check="false" type="Custom" value="fail_parse"/>
+            <model:event check="false" type="Custom" value="fail_connect"/>
+          </model:customevents>
+        </model:relation>
+        <model:relation completion="OnCompletion" frominstance="3" lineid="FLOWCHART_DEFAULT_LINE" toinstance="4">
+          <model:customevents>
+            <model:event check="false" type="Stock" value="$success"/>
+            <model:event check="false" type="Stock" value="$fail"/>
+            <model:event check="false" type="Stock" value="$error"/>
+            <model:event check="false" type="Custom" value="fail_parse"/>
+          </model:customevents>
+        </model:relation>
+        <model:relation completion="OnCompletion" frominstance="7" lineid="FLOWCHART_DEFAULT_LINE" toinstance="3"/>
+        <model:relation completion="OnCompletion" deactivate="false" frominstance="1" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="7"/>
+      </model:relations>
+    </model:processflow>
+  </model:server>
+  <model:globalvariables/>
+</model:iway>

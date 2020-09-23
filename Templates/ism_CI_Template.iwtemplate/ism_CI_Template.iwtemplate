@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Template xmlns:tns="http://eclipse.iwaysoftware.com/templates/model">
+  <Settings>
+    <BackupSettings>
+      <Parameter name="hbport" value="0"/>
+      <Parameter name="hbthreshold" value="10"/>
+    </BackupSettings>
+    <ConsoleSettings>
+      <Parameter name="idleLimit" value="20"/>
+      <Parameter name="authRealm" value="consolerealm"/>
+      <Parameter name="adminUser" value="iway"/>
+      <Parameter name="adminPassword" value="ENCR(3125313331043128315432252993169)"/>
+    </ConsoleSettings>
+    <DataSettings>
+      <Parameter name="encoding" value="137"/>
+    </DataSettings>
+    <GeneralSettings>
+      <Parameter name="ucxpath" value="true"/>
+      <Parameter name="tcache" value="server"/>
+      <Parameter name="workeralloc" value="FIFO"/>
+      <Parameter name="xmldtdhttp" value="false"/>
+      <Parameter name="backups" value="0"/>
+      <Parameter name="retryinterval" value="120"/>
+      <Parameter name="killinterval" value="60"/>
+    </GeneralSettings>
+    <JavaSettings/>
+    <LogSettings>
+      <Parameter name="log" value="true"/>
+      <Parameter name="logroot" value="log"/>
+      <Parameter name="logtz" value="local"/>
+      <Parameter name="maxlogsize" value="512"/>
+      <Parameter name="numlogstokeep" value="10"/>
+      <Parameter name="datadebugsize" value="4"/>
+    </LogSettings>
+    <PathSettings/>
+    <RegisterSettings/>
+    <TraceSettings>
+      <Parameter name="error" value="true"/>
+      <Parameter name="warn" value="true"/>
+      <Parameter name="info" value="true"/>
+      <Parameter name="debug" value="true"/>
+      <Parameter name="deepdebug" value="true"/>
+      <Parameter name="treedebug" value="true"/>
+      <Parameter name="datadebug" value="true"/>
+      <Parameter name="ruledebug" value="true"/>
+      <Parameter name="externaldebug" value="true"/>
+      <Parameter name="tracedefer" value="true"/>
+    </TraceSettings>
+  </Settings>
+  <Providers>
+    <AuthenticationRealmProviders/>
+    <DataProviders/>
+    <SecurityProviders/>
+  </Providers>
+  <Facilities>
+    <ActivityFacilities/>
+    <CorrelationFacilities/>
+  </Facilities>
+  <Applications>
+    <BusinessActivityMonitor>
+      <GeneralSettings>
+        <Parameter name="bamdbprovider" value="BAMDBProvider"/>
+        <Parameter name="wantevents" value="true"/>
+        <Parameter name="workercnt" value="3"/>
+        <Parameter name="batchlimit" value="0"/>
+        <Parameter name="highwater" value="0"/>
+        <Parameter name="lowwater" value="0"/>
+        <Parameter name="retries" value="5"/>
+        <Parameter name="retryinterval" value="5000"/>
+        <Parameter name="lostconbehavior" value="PERSIST"/>
+        <Parameter name="lostconflow" value="BAMLostConnection"/>
+        <Parameter name="logmsg101" value="always"/>
+        <Parameter name="emitmsg" value="never"/>
+        <Parameter name="logctx101" value="always"/>
+        <Parameter name="logctx181" value="always"/>
+        <Parameter name="logctx191" value="true"/>
+      </GeneralSettings>
+      <CorrelationSettings>
+        <Parameter name="jndifactory" value="com.ibi.jndi.XDInitialContextFactory"/>
+        <Parameter name="jndiname" value="jdbc/BAMDBProvider"/>
+        <Parameter name="table" value="BAM_CORREL_STATUS"/>
+        <Parameter name="historytable" value="BAM_CORREL_HISTORY"/>
+        <Parameter name="expire" value="1h"/>
+        <Parameter name="nslist" value="*"/>
+      </CorrelationSettings>
+    </BusinessActivityMonitor>
+    <TradingPartnerManager/>
+  </Applications>
+  <Resources/>
+  <Libraries/>
+  <Ebixes/>
+</tns:Template>

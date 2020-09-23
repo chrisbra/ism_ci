@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:al="http://eclipse.org/graphiti/mm/algorithms" xmlns:model="http://www.iwaysoftware.com/designer/model" xmlns:pi="http://eclipse.org/graphiti/mm/pictograms">
+  <pi:Diagram visible="true" gridUnit="10" diagramTypeId="designer" name="p_Error.iwp" snapToGrid="true" pictogramLinks="/0/@children.1/@children.0/@link /0/@children.2/@children.0/@link /0/@children.3/@children.0/@link /0/@children.4/@children.0/@link /0/@connections.0/@link /0/@children.5/@children.0/@link /0/@connections.1/@link /0/@connections.2/@link /0/@children.6/@children.0/@link /0/@connections.3/@link /0/@children.7/@children.0/@link /0/@connections.4/@link /0/@connections.5/@link" version="0.13.0">
+    <graphicsAlgorithm xsi:type="al:Rectangle" background="/0/@colors.1" foreground="/0/@colors.0" lineWidth="1" transparency="0.0" width="1000" height="1000"/>
+    <children xsi:type="pi:ContainerShape" active="true">
+      <properties key="TEST_RUN_ICON" value="true"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="32" height="32"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="0.0" width="32" height="32" id="testlab" stretchH="false" stretchV="false" proportional="false"/>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="15" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="0.0" width="32" height="32" x="25" y="10" id="start" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.0"/>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.5"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Start">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="695" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="0.0" width="32" height="32" x="25" y="10" id="endterminate" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.1"/>
+        <anchors xsi:type="pi:ChopboxAnchor" incomingConnections="/0/@connections.1"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="End">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="415" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="0.0" width="32" height="32" x="25" y="10" id="file" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.2"/>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.0" incomingConnections="/0/@connections.3"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Dump Input">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="535" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="60.0" width="32" height="32" x="25" y="10" id="email" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.3"/>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.2" incomingConnections="/0/@connections.0"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Email">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="625" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="60.0" width="32" height="32" x="25" y="10" id="debugger" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.4"/>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.1" incomingConnections="/0/@connections.2"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Debug Email">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="305" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="60.0" width="32" height="32" x="25" y="10" id="serverAgent" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.5"/>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.3" incomingConnections="/0/@connections.4"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Send to Monitoring">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+      <properties key="shapeName" value="containerShape"/>
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="100" x="155" y="200"/>
+      <children xsi:type="pi:ContainerShape" visible="true" active="true">
+        <properties key="isImageShape" value="true"/>
+        <properties key="hasContextPad" value="true"/>
+        <graphicsAlgorithm xsi:type="al:Image" lineWidth="1" transparency="0.0" width="32" height="32" x="25" y="10" id="debugger" stretchH="false" stretchV="false" proportional="false"/>
+        <link businessObjects="/1/@server/@processflow/@objects/@object.6"/>
+        <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="/0/@connections.4" incomingConnections="/0/@connections.5"/>
+      </children>
+      <children visible="true">
+        <graphicsAlgorithm xsi:type="al:MultiText" foreground="/0/@colors.2" lineWidth="1" filled="false" transparency="0.0" width="85" height="70" x="-3" y="30" font="/0/@fonts.1" horizontalAlignment="ALIGNMENT_CENTER" value="Debug">
+          <properties key="shapeName" value="designerObject"/>
+        </graphicsAlgorithm>
+      </children>
+    </children>
+    <connections xsi:type="pi:ManhattanConnection" visible="true" active="true" start="/0/@children.3/@children.0/@anchors.0" end="/0/@children.4/@children.0/@anchors.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="2" filled="false" transparency="0.0"/>
+      <link businessObjects="/1/@server/@processflow/@relations/@relation.0"/>
+      <connectionDecorators visible="true" locationRelative="true" location="1.0">
+        <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="2" lineStyle="UNSPECIFIED" filled="false">
+          <points x="-10" y="7"/>
+          <points x="1"/>
+          <points x="-10" y="-7"/>
+        </graphicsAlgorithm>
+      </connectionDecorators>
+    </connections>
+    <connections xsi:type="pi:ManhattanConnection" visible="true" active="true" start="/0/@children.5/@children.0/@anchors.0" end="/0/@children.2/@children.0/@anchors.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="2" filled="false" transparency="0.0"/>
+      <link businessObjects="/1/@server/@processflow/@relations/@relation.1"/>
+      <connectionDecorators visible="true" locationRelative="true" location="1.0">
+        <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="2" lineStyle="UNSPECIFIED" filled="false">
+          <points x="-10" y="7"/>
+          <points x="1"/>
+          <points x="-10" y="-7"/>
+        </graphicsAlgorithm>
+      </connectionDecorators>
+    </connections>
+    <connections xsi:type="pi:ManhattanConnection" visible="true" active="true" start="/0/@children.4/@children.0/@anchors.0" end="/0/@children.5/@children.0/@anchors.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="2" filled="false" transparency="0.0"/>
+      <link businessObjects="/1/@server/@processflow/@relations/@relation.2"/>
+      <connectionDecorators visible="true" locationRelative="true" location="1.0">
+        <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="2" lineStyle="UNSPECIFIED" filled="false">
+          <points x="-10" y="7"/>
+          <points x="1"/>
+          <points x="-10" y="-7"/>
+        </graphicsAlgorithm>
+      </connectionDecorators>
+    </connections>
+    <connections xsi:type="pi:ManhattanConnection" visible="true" active="true" start="/0/@children.6/@children.0/@anchors.0" end="/0/@children.3/@children.0/@anchors.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="2" filled="false" transparency="0.0"/>
+      <link businessObjects="/1/@server/@processflow/@relations/@relation.3"/>
+      <connectionDecorators visible="true" locationRelative="true" location="1.0">
+        <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="2" lineStyle="UNSPECIFIED" filled="false">
+          <points x="-10" y="7"/>
+          <points x="1"/>
+          <points x="-10" y="-7"/>
+        </graphicsAlgorithm>
+      </connectionDecorators>
+    </connections>
+    <connections xsi:type="pi:ManhattanConnection" visible="true" active="true" start="/0/@children.7/@children.0/@anchors.0" end="/0/@children.6/@children.0/@anchors.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="2" filled="false" transparency="0.0"/>
+      <link businessObjects="/1/@server/@processflow/@relations/@relation.4"/>
+      <connectionDecorators visible="true" locationRelative="true" location="1.0">
+        <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="2" lineStyle="UNSPECIFIED" filled="false">
+          <points x="-10" y="7"/>
+          <points x="1"/>
+          <points x="-10" y="-7"/>
+        </graphicsAlgorithm>
+      </connectionDecorators>
+    </connections>
+    <connections xsi:type="pi:ManhattanConnection" visible="true" active="true" start="/0/@children.1/@children.0/@anchors.0" end="/0/@children.7/@children.0/@anchors.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="/0/@colors.3" lineWidth="2" filled="false" transparency="0.0"/>
+      <link businessObjects="/1/@server/@processflow/@relations/@relation.5"/>
+      <connectionDecorators visible="true" locationRelative="true" location="1.0">
+        <graphicsAlgorithm xsi:type="al:Polyline" lineWidth="2" lineStyle="UNSPECIFIED" filled="false">
+          <points x="-10" y="7"/>
+          <points x="1"/>
+          <points x="-10" y="-7"/>
+        </graphicsAlgorithm>
+      </connectionDecorators>
+    </connections>
+    <colors red="227" green="238" blue="249"/>
+    <colors red="255" green="255" blue="255"/>
+    <colors/>
+    <colors red="98" green="131" blue="167"/>
+    <fonts name="Arial" size="8"/>
+    <fonts name="Arial" size="9"/>
+    <fonts name="Arial" size="8" italic="true"/>
+  </pi:Diagram>
+  <model:IwayType>
+    <server name="iWay Registry">
+      <processflow description="" iWayVersion="8.0.3" name="p_Error">
+        <objects>
+          <object class="start" deactivate="false" defer="false" etap="false" id="start" key="1" name="Start" type="FLOWCHART_STARTUP_START" useglobalobj="false" xdebughigh="1" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="General">
+                  <propertyitem display="No" itemtype="boolean" label="Debug" name="Debug" required="false" value="true" valuetype="boolean"/>
+                  <propertyitem name="roottag" value=""/>
+                </group>
+              </properties>
+            </user>
+            <runtimevariables/>
+            <xdebug xsi:nil="true"/>
+          </object>
+          <object class="end" deactivate="false" defer="false" etap="false" id="end" key="2" name="End" type="FLOWCHART_STARTUP_END" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="General">
+                  <propertyitem name="roottag" value=""/>
+                  <propertyitem name="terminate" value="true"/>
+                  <propertyitem name="ctype" value=""/>
+                </group>
+              </properties>
+            </user>
+            <xdebug xsi:nil="true"/>
+          </object>
+          <object class="agent" classname="com.ibi.agents.XDFileEmitAgent" deactivate="false" defer="false" etap="false" id="file" key="4" name="Dump Input" type="FLOWCHART_STARTUP_FILE" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="Source">
+                  <propertyitem description="Value or expression to represent a data source. If not set, defaults to the input document." name="location" required="false"/>
+                </group>
+                <group name="Source Settings">
+                  <propertyitem description="Provider for the mapping between XML namespace prefix and namespace URI within XPath expressions." name="nsmapprov" required="false"/>
+                </group>
+                <group name="Target">
+                  <propertyitem description="The target directory of the output file." name="directory" required="true" value="_sreg(iwayhome)processing/error/"/>
+                  <propertyitem description="The output target file name; supports '*' which expands to a file timestamp." name="pattern" required="true" value="_sreg(basename)_*._sreg(extension)"/>
+                </group>
+                <group name="Target Settings">
+                  <propertyitem description="Encoding to apply to the target output file being written. Does not apply when output is bas64." name="outenc" required="false" value="UTF-8"/>
+                  <propertyitem description="If set, the value is assumed to be in base64 notation. Only applicable if a specific write value is specified." name="b64" required="false" value="false"/>
+                  <propertyitem description="If set to true, the output will be appended to the file if it already exists" name="append" required="false" value="false"/>
+                  <propertyitem description="If set to true, a carriage return and a line feed will be written at end of target file." name="appendcrlf" required="false" value="false"/>
+                  <propertyitem description="If true, emit empty files if the process creates them." name="outputzero" required="false" value="false"/>
+                </group>
+                <group name="Post Action">
+                  <propertyitem description="Output document of the object." name="return" required="false" value="input"/>
+                </group>
+                <group name="hidden">
+                  <propertyitem description="Id of the className" name="classNameId"/>
+                </group>
+              </properties>
+            </user>
+            <xdebug xsi:nil="true"/>
+          </object>
+          <object class="agent" classname="com.ibi.agents.XDEmailEmitAgent" deactivate="true" defer="false" etap="false" id="email" key="5" name="Email" type="FLOWCHART_STARTUP_EMAIL" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="Addresses">
+                  <propertyitem description="The destination address of this email. Use ';' to delimit multiple addresses." name="to" required="true" value="cb@ibi.local"/>
+                  <propertyitem description="The senders email address." name="from" required="false" value="eai@localhost"/>
+                  <propertyitem description="The subject of this email." name="subject" required="false" value="iSM: Error in pFlow"/>
+                  <propertyitem description="Email address to carbon copy to. Use ';' to delimit multiple addresses." name="cc" required="false"/>
+                  <propertyitem description="Email address to send a blind copy to. Use ';' to delimit multiple addresses." name="bcc" required="false"/>
+                  <propertyitem description="Address to replyto for this email. Use ';' to delimit multiple addresses." name="replyto" required="false"/>
+                </group>
+                <group name="Message">
+                  <propertyitem description="Sets the emails message body. If not set, the incoming document will be uses as the message body." name="body" required="false" value="_concat('Opps, something bad happened!   &#xD;&#xA;', _flatof())"/>
+                  <propertyitem description="MIME Type of the email" name="contenttype" required="false" value="text/plain"/>
+                </group>
+                <group name="Headers">
+                  <propertyitem description="A register which contains additional email headers to be included in the email." name="mimehdrns" required="false"/>
+                </group>
+                <group name="Settings">
+                  <propertyitem description="Marks the priority of the outgoing email." name="priority" required="false" value="3"/>
+                  <propertyitem description="Marks the sensitivity of the outgoing email." name="sensitivity" required="false" value="normal"/>
+                </group>
+                <group name="Attachment(s)">
+                  <propertyitem description="Name of email attachment. (Required when adding an email attachment)" name="docattachname" required="false"/>
+                  <propertyitem description="MIME Type of the attachment." name="docattachctype" required="false"/>
+                  <propertyitem description="Input document tag name that holds a path to a file to be attached." name="attach" required="false"/>
+                  <propertyitem description="If true, the inbound document is treated as an attachment." name="docattach" required="false" value="false"/>
+                </group>
+                <group name="Post Action">
+                  <propertyitem description="Sets the outbound document of this object." name="return" required="false" value="status"/>
+                </group>
+                <group name="hidden">
+                  <propertyitem description="" name="emailconfig" value="email.1"/>
+                  <propertyitem description="Id of the className" name="classNameId"/>
+                </group>
+              </properties>
+            </user>
+            <xdebug xsi:nil="true"/>
+          </object>
+          <object class="agent" classname="com.ibi.agents.XDDebugAgent" deactivate="true" defer="false" etap="false" id="debugger" key="6" name="Debug Email" type="FLOWCHART_STARTUP_DEBUG" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="Snapshot Settings">
+                  <propertyitem description="Trace identifier used to mark the current trace output." name="name" required="false" value="Error E-Mail"/>
+                  <propertyitem description="Decode the contents of the current base64 document before logging to disk." name="b64" required="false" value="false"/>
+                  <propertyitem description="If set, this is the starting offset within the data block to start the dump" name="startAt" required="false"/>
+                  <propertyitem description="If set, this is the total number of bytes to dump." name="maximum" required="false"/>
+                </group>
+                <group name="hidden">
+                  <propertyitem description="" name="debugconfig" value="debug.1"/>
+                </group>
+              </properties>
+            </user>
+            <xdebug xsi:nil="true"/>
+          </object>
+          <object class="agent" classname="com.ibi.agents.XDXALogBizErr" deactivate="true" defer="false" etap="false" id="serverAgent" key="3" name="Send to Monitoring" type="FLOWCHART_SERVER_AGENT" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="Main">
+                  <propertyitem description="What severity is this business error" name="sev" required="false" value="bizfatal"/>
+                  <propertyitem description="A business error message to be added to the activity log" name="message" required="false" value="_concat('An error occured here: &#xD;&#xA;', _flatof())"/>
+                  <propertyitem description="If set, this message is written only as part of a rollback of the flow" name="transaction" required="false" value="false"/>
+                </group>
+              </properties>
+            </user>
+            <xdebug xsi:nil="true"/>
+          </object>
+          <object class="agent" classname="com.ibi.agents.XDDebugAgent" deactivate="false" defer="false" etap="false" id="debugger" key="7" name="Debug" type="FLOWCHART_STARTUP_DEBUG" useglobalobj="false" xdebughigh="10" xdebuglow="1">
+            <user>
+              <properties>
+                <group name="Snapshot Settings">
+                  <propertyitem description="Trace identifier used to mark the current trace output." name="name" required="false" value="Error"/>
+                  <propertyitem description="Decode the contents of the current base64 document before logging to disk." name="b64" required="false" value="false"/>
+                  <propertyitem description="If set, this is the starting offset within the data block to start the dump" name="startAt" required="false"/>
+                  <propertyitem description="If set, this is the total number of bytes to dump." name="maximum" required="false"/>
+                </group>
+                <group name="hidden">
+                  <propertyitem description="" name="debugconfig" value="debug.1"/>
+                </group>
+              </properties>
+            </user>
+            <xdebug xsi:nil="true"/>
+          </object>
+        </objects>
+        <relations startinstance="1">
+          <relation completion="OnCompletion" deactivate="false" frominstance="4" lineid="FLOWCHART_DEFAULT_LINE" toinstance="5">
+            <customevents>
+              <event check="false" type="Stock" value="$success"/>
+              <event check="false" type="Stock" value="$fail"/>
+              <event check="false" type="Stock" value="$error"/>
+              <event check="false" type="Custom" value="fail_parse"/>
+              <event check="false" type="Custom" value="fail_operation"/>
+              <event check="false" type="Custom" value="notfound"/>
+            </customevents>
+          </relation>
+          <relation completion="OnCompletion" frominstance="6" lineid="FLOWCHART_DEFAULT_LINE" toinstance="2"/>
+          <relation completion="OnCompletion" deactivate="false" frominstance="5" lineid="FLOWCHART_DEFAULT_LINE" toinstance="6">
+            <customevents>
+              <event check="false" type="Stock" value="$success"/>
+              <event check="false" type="Stock" value="$fail"/>
+              <event check="false" type="Stock" value="$error"/>
+              <event check="false" type="Custom" value="fail_parse"/>
+              <event check="false" type="Custom" value="fail_connect"/>
+            </customevents>
+          </relation>
+          <relation completion="OnCompletion" frominstance="3" lineid="FLOWCHART_DEFAULT_LINE" toinstance="4">
+            <customevents>
+              <event check="false" type="Stock" value="$success"/>
+              <event check="false" type="Stock" value="$fail"/>
+              <event check="false" type="Stock" value="$error"/>
+              <event check="false" type="Custom" value="fail_parse"/>
+            </customevents>
+          </relation>
+          <relation completion="OnCompletion" frominstance="7" lineid="FLOWCHART_DEFAULT_LINE" toinstance="3"/>
+          <relation completion="OnCompletion" deactivate="false" frominstance="1" linedisplay="OnCompletion" lineid="FLOWCHART_DEFAULT_LINE" toinstance="7"/>
+        </relations>
+      </processflow>
+    </server>
+    <globalvariables/>
+  </model:IwayType>
+</xmi:XMI>

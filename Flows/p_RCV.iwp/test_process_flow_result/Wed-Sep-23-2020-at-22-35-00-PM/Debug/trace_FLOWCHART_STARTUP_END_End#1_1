@@ -1,0 +1,41 @@
+Name=End  Type=Terminate  InEdge=OnCompletion  From=Queue IN  Not nested
+Registers
+             ibse-port           [CFG]   54777
+             engine              [SYS]   ismci
+             iway.channel        [SYS]   ExecProcess
+             iway.channelname    [SYS]   ExecProcess
+             iway.config         [SYS]   ismci
+             iway.inletname      [SYS]   
+             iway.lastnode       [SYS]   End
+             iway.listener       [SYS]   ExecProcess
+             iway.pid            [SYS]   16296
+             iway.priornode      [SYS]   Queue IN
+             iway.serverfullhost [SYS]   GER-9RMW9G2.emea.ibi.com
+             iway.serverhost     [SYS]   GER-9RMW9G2
+             iway.serverip       [SYS]   169.254.161.203
+             iway.startup.time   [SYS]   1600893125013
+             iway.workdir        [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             iwayconfig          [SYS]   ismci
+             iwaydata            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayhome            [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[41]
+             iwayversion         [SYS]   8.0.3
+             iwayworkdir         [SYS]   C:/ibi/iIT-8.0.3/workspace/ism_CI/serve...[53]
+             jce.unlimited       [SYS]   true
+             name                [SYS]   ExecProcess
+             protocol            [SYS]   Lcl
+             iway.emitid         [DOC]   868a85830dba4238ba91bf6f753c31d7
+             iway.flowname       [DOC]   p_RCV
+             iway.threadname     [DOC]   W.ExecProcess.1~p_RCV
+             tid                 [DOC]   7d496a26-dd62-4e30-a5b9-c59c0e9fe99e
+             user_source         [DOC]   LOGA
+             user_target         [DOC]   Dynamics
+             dbg.3.ex.st.time    [USR]   8964929197500
+             dbg.3.ex.time       [USR]   3910800
+             dbg.4.ex.st.time    [USR]   8964396808000
+             dbg.4.ex.time       [USR]   1051000
+             dbg.5.ex.st.time    [USR]   8964371434700
+             dbg.6.ex.st.time    [USR]   8964373218600
+             dbg.6.ex.time       [USR]   22897000
+             dbg.9.ex.st.time    [USR]   8964398344000
+             dbg.9.ex.time       [USR]   529516200
+Object type does not support document display

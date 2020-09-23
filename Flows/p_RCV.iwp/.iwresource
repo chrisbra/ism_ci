@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iwresource:IWResource xmlns:iwresource="http://iwresource.iwaysoftware.com/model/emf/iwresource" valid="true">
+  <Name>p_RCV</Name>
+  <Type>process</Type>
+  <File>p_RCV.iwp</File>
+  <Description></Description>
+  <GUID>0C2BB369DB0C8CFC78952A9F36D69C20</GUID>
+  <targetServer>8.0.3</targetServer>
+  <Features>
+    <Feature Code="core" UsageCount="15"/>
+    <Feature Code="saperp" UsageCount="4"/>
+    <Feature Code="mscrm" UsageCount="1"/>
+  </Features>
+</iwresource:IWResource>

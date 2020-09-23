@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rep:rApplication name="ismci" xmlns:rep="http://consolesm.ibi.com/xml/repository">
+  <InlineChannelRef refId="2D83667230A98FFA67420D005D20CD9A" autostart="true"/>
+  <InlineChannelRef refId="618ED3CBA09193F952DC4D8F34E3B4AB" autostart="true"/>
+  <InlineChannelRef refId="B48968540E48CF4287D5567FDC0AAFDE" autostart="true"/>
+  <InlineChannelRef refId="051E81C852D344733166EE0147918CB4" autostart="true"/>
+  <ProcessRef refId="BB1B1D6018FA12D8CDA65EAF727A338E" deploy="false" serviceName="p_Error" methodName="run" license="test"/>
+  <ProcessRef refId="56D0F930E382734E8DCFA819C15784DC" deploy="false" serviceName="p_OUT" methodName="run" license="test"/>
+  <ProcessRef refId="0C2BB369DB0C8CFC78952A9F36D69C20" deploy="false" serviceName="p_RCV" methodName="run" license="test"/>
+  <ProcessRef refId="CF2437FF955FB19A782CC1DC178CAEF2" deploy="false" serviceName="p_IN" methodName="run" license="test"/>
+  <TransformRef refId="DD7241E6A0D1AD04D7A843BB6A2C8D4A"/>
+  <TransformRef refId="307834AADE5218B13BBC28D18242F6F6"/>
+  <FileResource path="/ism_CI/Resources" projectRelativePath="true"/>
+</rep:rApplication>

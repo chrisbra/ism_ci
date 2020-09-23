@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="excel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sheet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="recdef">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="colname">
+                      <xs:complexType>
+                        <xs:attribute name="name" type="xs:string"></xs:attribute>
+                        <xs:attribute name="maxlen" type="xs:int"></xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="rows">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="row" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="column" maxOccurs="unbounded" type="xs:int">
+                            <xs:complexType>
+                              <xs:attribute name="name" type="xs:string"></xs:attribute>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="index" type="xs:int"></xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="count" type="xs:int"></xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string"></xs:attribute>
+            <xs:attribute name="index" type="xs:int"></xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="file" type="xs:string"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,92 @@
+
+<flow compiler="8.0.3" format="3" edition="community">
+   <pflow configId="iWay Registry" server="GER-9RMW9G2" iwayversion="8.0.3">p_Error
+      <return>success
+         <start key="1" flowcharttype="FLOWCHART_STARTUP_START" oclass="start" xdebuglow="1" xdebughigh="1" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="start_Start" active="true">
+            <parm name="Debug">true</parm>
+            <parm name="timeout"/>
+            <parm name="debug"/>
+            <return>$complete
+               <agent key="7" flowcharttype="FLOWCHART_STARTUP_DEBUG" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Debug" active="true">com.ibi.agents.XDDebugAgent
+                  <parm name="name">Error</parm>
+                  <parm name="b64">false</parm>
+                  <parm name="when">always</parm>
+                  <parm name="where">_sreg(iwayhome)processing/debug/*_trace.xml</parm>
+                  <parm name="physloc">_sreg(iwayhome)processing/debug/*_payload.xml</parm>
+                  <return>$complete
+                     <agent key="3" flowcharttype="FLOWCHART_SERVER_AGENT" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Send to Monitoring" active="false">com.ibi.agents.XDXALogBizErr
+                        <parm name="sev">bizfatal</parm>
+                        <parm name="message">_concat(&apos;An error occured here: &#xd;
+&apos;, _flatof())</parm>
+                        <parm name="transaction">false</parm>
+                        <return>$complete
+                           <agent key="4" flowcharttype="FLOWCHART_STARTUP_FILE" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Dump Input" active="true">com.ibi.agents.XDFileEmitAgent
+                              <parm name="directory">_sreg(iwayhome)processing/error/</parm>
+                              <parm name="pattern">_sreg(basename)_*._sreg(extension)</parm>
+                              <parm name="outenc">UTF-8</parm>
+                              <parm name="b64">false</parm>
+                              <parm name="append">false</parm>
+                              <parm name="appendcrlf">false</parm>
+                              <parm name="outputzero">false</parm>
+                              <parm name="return">input</parm>
+                              <return>$complete
+                                 <agent key="5" flowcharttype="FLOWCHART_STARTUP_EMAIL" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Email" active="false">com.ibi.agents.XDEmailEmitAgent
+                                    <parm name="to">cb@ibi.local</parm>
+                                    <parm name="from">eai@localhost</parm>
+                                    <parm name="subject">iSM: Error in pFlow</parm>
+                                    <parm name="body">_concat(&apos;Opps, something bad happened!   &#xd;
+&apos;, _flatof())</parm>
+                                    <parm name="contenttype">text/plain</parm>
+                                    <parm name="priority">3</parm>
+                                    <parm name="sensitivity">normal</parm>
+                                    <parm name="docattach">false</parm>
+                                    <parm name="return">status</parm>
+                                    <parm name="usessl">none</parm>
+                                    <parm name="host">localhost</parm>
+                                    <return>$complete
+                                       <agent key="6" flowcharttype="FLOWCHART_STARTUP_DEBUG" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_Debug Email" active="false">com.ibi.agents.XDDebugAgent
+                                          <parm name="name">Error E-Mail</parm>
+                                          <parm name="b64">false</parm>
+                                          <parm name="when">always</parm>
+                                          <parm name="where">_sreg(iwayhome)processing/debug/*_trace.xml</parm>
+                                          <parm name="physloc">_sreg(iwayhome)processing/debug/*_payload.xml</parm>
+                                          <return>$complete
+                                             <end key="2" flowcharttype="FLOWCHART_STARTUP_END" oclass="end" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="end_End" active="true" count="1">
+                                                <parm name="terminate">true</parm>
+                                             </end>
+                                          </return>
+                                       </agent>
+                                    </return>
+                                 </agent>
+                              </return>
+                           </agent>
+                        </return>
+                     </agent>
+                  </return>
+               </agent>
+            </return>
+         </start>
+      </return>
+   </pflow>
+   <warnings>
+      <warning key="6" code="446" level="0" text="OnComplete is only edge from service that has specific edges available (e.g. &apos;success&apos;, &apos;fail_parse&apos;). This can result in unexpected flow routing"/>
+      <warning key="5" code="446" level="0" text="OnComplete is only edge from service that has specific edges available (e.g. &apos;success&apos;, &apos;fail_parse&apos;, &apos;fail_connect&apos;). This can result in unexpected flow routing"/>
+      <warning key="4" code="446" level="0" text="OnComplete is only edge from service that has specific edges available (e.g. &apos;success&apos;, &apos;fail_parse&apos;, &apos;fail_operation&apos;,...). This can result in unexpected flow routing"/>
+      <warning key="3" code="446" level="0" text="OnComplete is only edge from service that has specific edges available (e.g. &apos;success&apos;, &apos;fail_parse&apos;). This can result in unexpected flow routing"/>
+      <warning key="7" code="446" level="0" text="OnComplete is only edge from service that has specific edges available (e.g. &apos;success&apos;, &apos;fail_parse&apos;). This can result in unexpected flow routing"/>
+   </warnings>
+   <errors/>
+   <dependencies>
+      <item type="agent" name="com.ibi.agents.XDDebugAgent"/>
+      <item type="agent" name="com.ibi.agents.XDXALogBizErr"/>
+      <item type="agent" name="com.ibi.agents.XDFileEmitAgent"/>
+      <item type="agent" name="com.ibi.agents.XDEmailEmitAgent"/>
+   </dependencies>
+   <trace>
+      <item>No providers defined</item>
+      <item>Compiling for repository</item>
+      <item>start recognized at 1</item>
+      <item>end recognized for &apos;End&apos; at 2</item>
+      <item>There are 6 relations</item>
+   </trace>
+</flow>

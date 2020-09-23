@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rep:rInlineChannel xmlns:rep="http://consolesm.ibi.com/xml/repository" description="" name="OUT_Queue" targetServer="8.0.3" uid="B48968540E48CF4287D5567FDC0AAFDE" type="dynamic">
+  <Inlet description="Inlets are conduits which represent the entry into a channel. Inlets contain a Listener, Decryptor, and Preparsers." name="inlet.1">
+    <rListener className="internal" description="Internal queue listener. Internal queues are used to pass messages between channels within a configuration. They facilitate the modularization of message processing." name="listener.1">
+      <Parameter name="active" value="true"/>
+      <Parameter name="queue" value="OUT"/>
+      <Parameter name="persistent" value="true"/>
+      <Parameter name="safestore" value=""/>
+      <Parameter name="deflate" value="speed"/>
+      <Parameter name="lowmark" value="0"/>
+      <Parameter name="highmark" value="0"/>
+      <Parameter name="ctllist" value=""/>
+      <Parameter name="canbeinhibited" value="false"/>
+      <Parameter name="extmark" value="0"/>
+      <Parameter name="duration" value="24h"/>
+      <Parameter name="pending" value="false"/>
+      <Parameter name="retry" value="600"/>
+      <Parameter name="count" value="1"/>
+      <Parameter name="maxcount" value="1"/>
+      <Parameter name="optimize" value="performance"/>
+      <Parameter name="timeout" value="2.0"/>
+      <Parameter name="expiredretryflow" value=""/>
+      <Parameter name="failedreplytoflow" value=""/>
+      <Parameter name="deadletterflow" value=""/>
+      <Parameter name="startupchanfailedflow" value=""/>
+      <Parameter name="parsefailedflow" value=""/>
+      <Parameter name="startupchanflow" value=""/>
+      <Parameter name="shutdownchanflow" value=""/>
+      <Parameter name="whitespace" value="preserve"/>
+      <Parameter name="flat" value="xml"/>
+      <Parameter name="maxlife" value=""/>
+      <Parameter name="encoding" value="UTF-8"/>
+      <Parameter name="precedence" value="1"/>
+      <Parameter name="autoReply" value="false"/>
+      <Parameter name="errpremit" value="false"/>
+      <Parameter name="localtrans" value="false"/>
+      <Parameter name="xalog" value="true"/>
+      <Parameter name="aeskey" value=""/>
+      <Parameter name="startupdependencies" value=""/>
+    </rListener>
+  </Inlet>
+  <Route description="A route is used to define the path a particular message takes through a channel. A Route is defined as a sequence of: a transformer, followed by a process, followed by another transformer, followed by zero or more outlets." name="route.1" isDefault="true">
+    <ProcessRef name="p_OUT" refId="56D0F930E382734E8DCFA819C15784DC" resourcePath="Flows\p_OUT.iwp\p_OUT.iwp"/>
+  </Route>
+  <Outlet description="Outlets are conduits which contain Preemitters, Encryptors, and an Emitter." name="outlet.1"/>
+</rep:rInlineChannel>

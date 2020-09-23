@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+    <Template>
+        <TransformTemplate>
+            <TemplateMetadata>
+                <ModifiedDate>Dec 30, 2019</ModifiedDate>
+            </TemplateMetadata>
+            <CustomerExtensions>
+                <ProcessingInstruction/>
+                <NamespaceDeclaration>
+                    <Namespace prefix="xsi"  id="1"  uri="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Namespace prefix="xs"  id="2"  uri="http://www.w3.org/2001/XMLSchema" />
+                </NamespaceDeclaration>
+                <ReplaceFunctions>
+                    <ReplaceFunction busedefaultMatchValueID="false"  name="comma_to_dot" >
+                        <Value match=","  replace="." />
+                    </ReplaceFunction>
+                </ReplaceFunctions>
+            </CustomerExtensions>
+            <Mapping>
+                <Input format="XML" >
+                    <Parameter name="Namespace"  value="false" />
+                    <Parameter name="Trim"  value="true" />
+                    <Parameter name="Validate"  value="false" />
+                </Input>
+                <Output format="XML" >
+                    <Parameter name="Namespace"  value="false" />
+                    <Parameter name="Indent"  value="4" />
+                    <Parameter name="NullTag"  value="true" />
+                    <Parameter name="encoding"  value="UTF-8" />
+                    <Parameter name="Declaration"  value="true" />
+                    <Parameter name="DtdDeclaration"  value="false" />
+                    <Parameter name="Footer"  value="" />
+                    <Parameter name="Header"  value="" />
+                </Output>
+                <MapStructure>
+                    <Table>
+                        <Rules>
+                            <MapRule  output="invoice"  input="@PARENT()"  loop="False" />
+                                <MapRule  output="lineitem"  input="@PARENT()"  sortType="None"  unique=""  sort="" />
+                                    <MapRule  output="item"  input="@PARENT()"  sortType="None"  loop="False"  unique=""  sort="" />
+                                        <MapRule  output="conolg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="docnilg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="docnelg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="poslg"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="bookdatlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="docdatlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="acclg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="calg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="colg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="corlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="wolg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="fundlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="accruallg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="grossamtlg1"  input="@REPLACE(excel/sheet/rows/row/column,'comma_to_dot')" />
+                                        <MapRule  output="vatplg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="txt1lg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="txt2lg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="zdvlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="zdblg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="testlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="pstslg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="cusrlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="ctstlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="gusrlg1"  input="excel/sheet/rows/row/column" />
+                                        <MapRule  output="gtstlg1"  input="excel/sheet/rows/row/column" />
+                                    <MapRule output="item" input="@ENDPARENT()"/>
+                                <MapRule output="lineitem" input="@ENDPARENT()"/>
+                            <MapRule output="invoice" input="@ENDPARENT()"/>
+                        </Rules>
+                    </Table>
+                </MapStructure>
+            </Mapping>
+        </TransformTemplate>
+    </Template>
+    <Inputs>
+        <TransformationFile encoding="UTF-8" >input_sample.xml</TransformationFile>
+        <StructureFile schemaRoot="#excel"  display="../../../Bavaria_EAI/Resources/input_sample.xsd/input_sample.xsd"  guid="0FAACB35B7C77B6DD07A0D310869E868"  type="xsd"  encoding="UTF-8" >../../schemas/0FAACB35B7C77B6DD07A0D310869E868/input_sample.xsd</StructureFile>
+    </Inputs>
+    <Output>
+        <StructureFile type="xml"  encoding="UTF-8" >target_invoice.xml</StructureFile>
+    </Output>
+</Project>

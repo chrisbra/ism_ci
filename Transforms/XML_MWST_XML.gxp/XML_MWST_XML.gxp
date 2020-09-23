@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+    <Template>
+        <TransformTemplate>
+            <TemplateMetadata>
+                <ModifiedDate>Dec 30, 2019</ModifiedDate>
+            </TemplateMetadata>
+            <CustomerExtensions>
+                <ProcessingInstruction/>
+                <NamespaceDeclaration>
+                    <Namespace prefix="xsi"  id="1"  uri="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Namespace prefix="xs"  id="2"  uri="http://www.w3.org/2001/XMLSchema" />
+                </NamespaceDeclaration>
+                <Functions/>
+                <Mappings>
+                    <ConstantMapping>
+                        <Parameter name="EscapeCharSupport"  value="false" />
+                    </ConstantMapping>
+                </Mappings>
+            </CustomerExtensions>
+            <Mapping>
+                <Input format="XML" >
+                    <Parameter name="Namespace"  value="false" />
+                    <Parameter name="Trim"  value="true" />
+                    <Parameter name="Validate"  value="false" />
+                </Input>
+                <Output format="XML" >
+                    <Parameter name="Namespace"  value="false" />
+                    <Parameter name="Indent"  value="4" />
+                    <Parameter name="NullTag"  value="true" />
+                    <Parameter name="encoding"  value="UTF-8" />
+                    <Parameter name="Declaration"  value="true" />
+                    <Parameter name="DtdDeclaration"  value="false" />
+                    <Parameter name="Footer"  value="" />
+                    <Parameter name="Header"  value="" />
+                </Output>
+                <MapStructure>
+                    <Table>
+                        <Rules>
+                            <MapRule  output="invoice"  input="@PARENT()" />
+                                <MapRule  output="lineitem"  input="@PARENT()" />
+                                    <MapRule  output="item"  input="@PARENT()" />
+                                        <MapRule  output="conolg1"  input="invoice/lineitem/item/conolg1" />
+                                        <MapRule  output="docnilg1"  input="invoice/lineitem/item/docnilg1" />
+                                        <MapRule  output="docnelg1"  input="invoice/lineitem/item/docnelg1" />
+                                        <MapRule  output="poslg"  input="invoice/lineitem/item/poslg" />
+                                        <MapRule  output="bookdatlg1"  input="invoice/lineitem/item/bookdatlg1" />
+                                        <MapRule  output="docdatlg1"  input="invoice/lineitem/item/docdatlg1" />
+                                        <MapRule  output="acclg1"  input="invoice/lineitem/item/acclg1" />
+                                        <MapRule  output="calg1"  input="invoice/lineitem/item/calg1" />
+                                        <MapRule  output="colg1"  input="invoice/lineitem/item/colg1" />
+                                        <MapRule  output="corlg1"  input="invoice/lineitem/item/corlg1" />
+                                        <MapRule  output="wolg1"  input="invoice/lineitem/item/wolg1" />
+                                        <MapRule  output="fundlg1"  input="invoice/lineitem/item/fundlg1" />
+                                        <MapRule  output="accruallg1"  input="invoice/lineitem/item/accruallg1" />
+                                        <MapRule  output="grossamtlg1"  input="invoice/lineitem/item/grossamtlg1" />
+                                        <MapRule  output="vatplg1"  input="@IF(@SREG_EXISTS('user_mwst') == 'false','19','7')" />
+                                        <MapRule  output="txt1lg1"  input="invoice/lineitem/item/txt1lg1" />
+                                        <MapRule  output="txt2lg1"  input="invoice/lineitem/item/txt2lg1" />
+                                        <MapRule  output="zdvlg1"  input="invoice/lineitem/item/zdvlg1" />
+                                        <MapRule  output="zdblg1"  input="invoice/lineitem/item/zdblg1" />
+                                        <MapRule  output="testlg1"  input="invoice/lineitem/item/testlg1" />
+                                        <MapRule  output="pstslg1"  input="invoice/lineitem/item/pstslg1" />
+                                        <MapRule  output="cusrlg1"  input="invoice/lineitem/item/cusrlg1" />
+                                        <MapRule  output="ctstlg1"  input="invoice/lineitem/item/ctstlg1" />
+                                        <MapRule  output="gusrlg1"  input="invoice/lineitem/item/gusrlg1" />
+                                        <MapRule  output="gtstlg1"  input="invoice/lineitem/item/gtstlg1" />
+                                    <MapRule output="item" input="@ENDPARENT()"/>
+                                <MapRule output="lineitem" input="@ENDPARENT()"/>
+                            <MapRule output="invoice" input="@ENDPARENT()"/>
+                        </Rules>
+                    </Table>
+                </MapStructure>
+            </Mapping>
+        </TransformTemplate>
+    </Template>
+    <Inputs>
+        <TransformationFile encoding="UTF-8" >target_invoice.xml</TransformationFile>
+        <StructureFile type="xml"  encoding="UTF-8" >target_invoice.xml</StructureFile>
+    </Inputs>
+    <Output>
+        <StructureFile type="xml"  encoding="UTF-8" >target_invoice.xml</StructureFile>
+    </Output>
+</Project>
