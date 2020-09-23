@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c:ConfigContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:c="http://eclipse.iwaysoftware.com/config/model">
+    <connectorCategories name="awsconnector">
+    <connectorTypes type="amazons3config"/>
+    <connectorTypes type="dynamodbconfig"/>
+  </connectorCategories>
+  <connectorCategories name="bigdata">
+    <connectorTypes type="avroconfig"/>
+	<connectorTypes type="hbaseconfig"/>
+    <connectorTypes type="hdfsconfig"/>
+    <connectorTypes type="kafkaconfig"/>
+  </connectorCategories>
+  <connectorCategories name="connector">
+    <connectorTypes type="blockconfig"/>
+    <connectorTypes type="emailconfig"/>
+    <connectorTypes type="ftpconfig"/>
+    <connectorTypes type="iotconfig"/>
+    <connectorTypes type="jdbcconfig"/>
+    <connectorTypes type="mongoconfig"/>
+    <connectorTypes type="queueinconfig"/>
+    <connectorTypes type="queueoutconfig"/>
+    <connectorTypes type="redisconfig"/>
+    <connectorTypes type="restconfig"/>
+    <connectorTypes type="sftpconfig"/>
+    <connectorTypes type="slackconfig"/>
+    <connectorTypes type="soapconfig"/>
+    <connectorTypes type="tcpconfig"/>   
+    <connectorTypes type="twilioconfig"/>
+    <connectorTypes type="twitterconfig"/>
+  </connectorCategories>
+  <connectorCategories name="adapter">
+    <connectorTypes type="jdeconfig"/>
+    <connectorTypes type="jdeworldconfig"/>
+    <connectorTypes type="mscrmconfig"/>
+    <connectorTypes type="msexchangeconfig"/>
+    <connectorTypes type="oracleconfig"/>
+    <connectorTypes type="psconfig"/>
+    <connectorTypes type="salesforceconfig"/>
+    <connectorTypes type="sapconfig"/>
+    <connectorTypes type="siebelconfig"/>
+  </connectorCategories>
+  <connectorCategories name="legacyadapter">
+    <connectorTypes type="cicsconfig"/>
+    <connectorTypes type="imsconfig"/>
+  </connectorCategories>
+  <connectorCategories name="techadapter">
+    <connectorTypes type="dotnetconfig"/>
+    <connectorTypes type="javaconfig"/>
+    <connectorTypes type="rdbmsconfig"/>
+  </connectorCategories>
+  <connectorCategories name="bi">
+    <connectorTypes type="reportcasterconfig"/>
+    <connectorTypes type="webfocusconfig"/>
+  </connectorCategories>
+  <connectorCategories name="dataquality">
+    <connectorTypes type="dqconfig"/>
+  </connectorCategories>
+  <connectorCategories name="component">
+    <connectorTypes type="dataflowconfig"/>
+    <connectorTypes type="etlconfig"/>
+    <connectorTypes type="chaincodeconfig"/>
+    <connectorTypes type="datasourceconfig"/>
+  </connectorCategories>
+    <connectorCategories name="control">
+    <connectorTypes type="iterconfig"/>
+  </connectorCategories>
+  <connectorCategories name="authentication">
+    <connectorTypes type="basicauthconfig"/>
+    <connectorTypes type="ntlmconfig"/>
+    <connectorTypes type="oauthconfig"/>
+  </connectorCategories>
+  <connectorCategories name="trace">
+    <connectorTypes type="debugconfig"/>
+  </connectorCategories>
+  <providers>
+    <authenticationRealmProviders/>
+    <dataProviders/>
+    <securityProviders/>
+  </providers>
+</c:ConfigContainer>

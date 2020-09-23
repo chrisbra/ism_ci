@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<project name="iaa" default="build" basedir=".">
+	<property environment="env"/>
+	<property name="iway.home" location="${env.IWAY8}"/>
+	<property name="new.template.name" value="uploaded" />
+	<property name="template.file.name" value="missing.ita" />
+	<property name="publishedtemplate.name" value="publishedtemplate" />	
+	<property name="server.url" value="http://localhost:9000" />
+	<property name="server.user" value="iway"/>
+	<property name="server.password" value="ENCR(3237324531043128310632252993121)"/>
+	<property name="templateFile.path" value="${basedir}/../../mytemplate.ita" />
+	
+
+	<import file="${iway.home}/etc/manager/deployment/iia/iway-ant-tasks.xml" optional="true" />
+
+	<!-- A sample target for building an IAA -->
+	<target name="build" description="Build an application archive">
+		<iwbuild />
+	</target>
+
+
+	<!-- A sample target for uploading an IAA -->
+	<!-- Add applicationFile parameter to upload an IIA other than the local one -->
+	<!--     (Example: applicationFile="c:\my_application.iia") -->
+	<target name="upload" description="Upload an application archive to the server"> 
+		<iwupload 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+		/>
+	</target>
+
+	<!-- A sample target for deleting a deployed IIA -->
+	<target name="undeploy" description="Undeploy an application">
+		<iwdelete 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+		/>
+	</target>
+
+	<!-- A sample target for deploying an IIA -->
+	<target name="deploy" description="Deploy an application">
+		<iwdeploy 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+		/>
+	</target>
+	
+	<!-- A sample target for deploying an IIA -->
+	<target name="deploywithlocaltemplate" description="Deploy an application using template">
+		<iwdeploy 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+			templateArchiveFile="${templateFile.path}"
+		/>
+	</target>
+	
+	<target name="deploywithpublishedtemplate" description="Deploy an application using a published template">
+		<iwdeploy 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+			templateName="${publishedtemplate.name}"
+		/>
+	</target>
+	
+	<!-- A sample target for starting a deployed IIA -->
+	<target name="start"  description="Start deployed application">
+		<iwstart 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+		  /> 
+	</target>
+
+	<!-- A sample target for stopping a deployed IIA -->
+	<target name="stop" description="Stop deployed application">
+		<iwstop 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+
+		  />
+	</target>
+
+	<!-- A sample target for uploading a Template -->
+	<target name="addtemplate" description="Upload an application archive to the server">
+		<iwaddtemplate 
+			templateName="${new.template.name}" 
+			fileName="${template.file.name}" 
+			serverURL="${server.url}" 
+			userName="${server.user}" 
+			password="${server.password}"
+		/>
+	</target>
+
+</project>
