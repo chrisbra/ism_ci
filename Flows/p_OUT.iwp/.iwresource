@@ -9,5 +9,6 @@
   <Features>
     <Feature Code="saperp" UsageCount="1"/>
     <Feature Code="mscrm" UsageCount="2"/>
+    <Feature Code="dqs" UsageCount="6"/>
   </Features>
 </iwresource:IWResource>

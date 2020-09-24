@@ -6,13 +6,5 @@
   <Description></Description>
   <GUID>DD7241E6A0D1AD04D7A843BB6A2C8D4A</GUID>
   <targetServer>8.0.3</targetServer>
-  <Dependencies>
-    <Dependency>
-      <Name>input_sample</Name>
-      <Type>schema</Type>
-      <GUID>0FAACB35B7C77B6DD07A0D310869E868</GUID>
-      <Path>/Bavaria_EAI/Resources/input_sample.xsd/input_sample.xsd</Path>
-      <UsageCount>1</UsageCount>
-    </Dependency>
-  </Dependencies>
+  <Dependencies/>
 </iwresource:IWResource>

@@ -9,7 +9,7 @@
       </graphicsAlgorithm>
       <anchors xsi:type="pi:ChopboxAnchor"/>
     </children>
-    <children xsi:type="pi:ContainerShape" visible="true" active="true">
+    <children xsi:type="pi:ContainerShape" active="true">
       <properties key="TEST_RUN_ICON" value="true"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="32" height="32" x="10" y="10"/>
       <children xsi:type="pi:ContainerShape" visible="true" active="true">

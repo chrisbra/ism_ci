@@ -75,7 +75,7 @@
     </Template>
     <Inputs>
         <TransformationFile encoding="UTF-8" >input_sample.xml</TransformationFile>
-        <StructureFile schemaRoot="#excel"  display="../../../Bavaria_EAI/Resources/input_sample.xsd/input_sample.xsd"  guid="0FAACB35B7C77B6DD07A0D310869E868"  type="xsd"  encoding="UTF-8" >../../schemas/0FAACB35B7C77B6DD07A0D310869E868/input_sample.xsd</StructureFile>
+        <StructureFile type="xml"  encoding="UTF-8" >input_sample.xml</StructureFile>
     </Inputs>
     <Output>
         <StructureFile type="xml"  encoding="UTF-8" >target_invoice.xml</StructureFile>

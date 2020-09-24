@@ -10,5 +10,6 @@
     <Feature Code="core" UsageCount="15"/>
     <Feature Code="saperp" UsageCount="4"/>
     <Feature Code="mscrm" UsageCount="1"/>
+    <Feature Code="dqs" UsageCount="8"/>
   </Features>
 </iwresource:IWResource>
