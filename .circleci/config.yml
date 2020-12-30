@@ -6,4 +6,3 @@ jobs:
   steps:
     - checkout
     - run: echo "Hello World"
-    - run: ping -c 10 172.26.64.193
