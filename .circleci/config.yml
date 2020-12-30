@@ -1,6 +1,9 @@
 version: 2.1
 jobs:
   build:
+    machine:
+      image: 'ubuntu-2004:202010-01'
   steps:
     - checkout
+    - run: echo "Hello World"
     - run: ping -c 10 172.26.64.193
