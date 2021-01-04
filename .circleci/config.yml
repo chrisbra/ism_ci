@@ -26,7 +26,7 @@ jobs:
               popd &&
               sleep 20 &&
               curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism >/dev/null &&
-              project=$(basename $(git rev-parse --show-toplevel)) &&
+              project="ism_ci"
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
               mkdir -p "${dir}${project}" &&
               git archive master |  ( cd "${dir}${project}"; tar -x ) &&
