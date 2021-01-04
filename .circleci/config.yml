@@ -10,25 +10,22 @@ jobs:
     steps:
         - checkout
         - run:
-            name: Start iSM
-            command: |
-              cd ~/iway8 &&
-              sed -i.bak -e '/^ *su/{s/^[^"]*"//;s/"$//}' bin/startservice.sh &&
-              bin/startservice.sh base &&
-              sleep 30 &&
-              cd -
-        - run:
-            name: "Debugging information"
+            name: Debugging information
             command: |
               whoami &&
               pwd &&
               ps -ef &&
               pwd &&
               git ls-files && 
-              curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism
         - run:
-            name: "Setup Deployment"
+            name: Start iSM and deploy
             command: |
+              cd ~/iway8 &&
+              sed -i.bak -e '/^ *su/{s/^[^"]*"//;s/"$//}' bin/startservice.sh &&
+              bin/startservice.sh base &&
+              sleep 30 &&
+              cd -
+              curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism &&
               project=$(basename $(git rev-parse --show-toplevel)) &&
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
               mkdir -p "${dir}${project}" &&
