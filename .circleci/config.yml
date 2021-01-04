@@ -1,9 +1,21 @@
 version: 2.1
+
 jobs:
-  build:
-    machine:
-      image: 'ubuntu-2004:202010-01'
+  build: # The first job
+    docker:
+      - image: chrisbra/ibi:ism_project_v2
+        auth:
+            username: chrisbra
+            password: $DOCKERHUB_PASSWORD
     steps:
-      - checkout
-      - run: echo "Hello World"
-      - run: ping -c 10 172.26.64.193
+        - checkout
+        - run: echo "Hello World"
+        - run: whoami
+        - run: ls /
+        - run: ls /home/*/
+        - run: hostname
+workflows:
+  version: 2
+  workflow_one: # name of the workflow
+    jobs: # list the jobs to be running
+      - build
