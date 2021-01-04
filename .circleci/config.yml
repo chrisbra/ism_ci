@@ -26,6 +26,16 @@ jobs:
         - run: ls /home/*/
         - run: hostname
         - run: ps -ef
+        - run: pwd
+        - run: git ls-files
+        - run: |
+          bash <<EOF
+          project=$(basename $(git rev-parse --show-toplevel))
+          dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/"
+          mkdir -p "${dir}${project}"
+          git archive master |  ( cd "${dir}${project}"; tar -x )
+          cd "${dir}/../configurations" && git clone --depth=1 https://github.com/chrisbra/ci_configuration ismci
+          EOF
 
 workflows:
   version: 2
