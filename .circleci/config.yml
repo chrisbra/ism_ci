@@ -39,6 +39,7 @@ jobs:
               popd &&
               pushd "${dir}/.." &&
               sh build.sh BUILDAPP ismci &&
+              echo "DONE"
 
 workflows:
   version: 2
