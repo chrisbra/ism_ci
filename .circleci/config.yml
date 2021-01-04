@@ -9,6 +9,7 @@ jobs:
             password: $DOCKERHUB_PASSWORD
     steps:
         - checkout
+        - run: bash -c "cd ~/iway8 && ./iway8.sh base &"
         - run: echo "Hello World"
         - run: whoami
         - run: ls /
