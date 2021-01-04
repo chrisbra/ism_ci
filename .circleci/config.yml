@@ -24,6 +24,7 @@ jobs:
               sed -i.bak -e '/^ *su/{s/^[^"]*"//;s/"$//}' bin/startservice.sh &&
               bin/startservice.sh base &&
               cd - &&
+              sleep 20 &&
               curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism &&
               project=$(basename $(git rev-parse --show-toplevel)) &&
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
