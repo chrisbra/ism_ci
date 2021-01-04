@@ -1,7 +1,16 @@
 version: 2.1
 
 jobs:
-  build: # The first job
+  setup_ism: # The first job
+    docker:
+      - image: chrisbra/ibi:ism_project_v2
+        auth:
+            username: chrisbra
+            password: $DOCKERHUB_PASSWORD
+    steps:
+        - run: bash -c "cd ~/iway8 && ( ./iway8.sh base & ); sleep 25"
+
+  test: # Run iSM Test Suite
     docker:
       - image: chrisbra/ibi:ism_project_v2
         auth:
@@ -9,14 +18,18 @@ jobs:
             password: $DOCKERHUB_PASSWORD
     steps:
         - checkout
-        - run: bash -c "cd ~/iway8 && ./iway8.sh base"
         - run: echo "Hello World"
         - run: whoami
         - run: ls /
         - run: ls /home/*/
         - run: hostname
+        - run: ps -ef
+
 workflows:
   version: 2
   workflow_one: # name of the workflow
     jobs: # list the jobs to be running
-      - build
+      - setup_ism
+      - test:
+          requires:
+            - setup_ism
