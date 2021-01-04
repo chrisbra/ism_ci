@@ -25,16 +25,17 @@ jobs:
               bin/startservice.sh base &&
               cd - &&
               sleep 20 &&
-              curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism &&
-              curl -L --user "iway:iway" http://localhost:9999/ism &&
+              curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism >/dev/null &&
               project=$(basename $(git rev-parse --show-toplevel)) &&
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
               mkdir -p "${dir}${project}" &&
               git archive master |  ( cd "${dir}${project}"; tar -x ) &&
+              echo "ls ism_ci project" &&
               ls "${dir}${project}" &&
               cd "${dir}/../configurations" &&
-              git clone --depth=1 https://github.com/chrisbra/ci_configuration ismci &&
-              ls ./ismci
+              git clone --quiet --depth=1 https://github.com/chrisbra/ci_configuration ismci &&
+              echo "ls ismci configuration" &&
+              ls ./ismci/
 
 workflows:
   version: 2
