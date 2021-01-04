@@ -8,41 +8,35 @@ jobs:
             username: chrisbra
             password: $DOCKERHUB_PASSWORD
     steps:
-        - run: bash -c "cd ~/iway8 && ./iway8.sh base & "
-        - run: sleep 600 # 10 minutes to run before shutting down
-
-  test: # Run iSM Test Suite
-    docker:
-      - image: chrisbra/ibi:ism_project_v2
-        auth:
-            username: chrisbra
-            password: $DOCKERHUB_PASSWORD
-    steps:
         - checkout
-        - run: sleep 15 # Give the iSM Service some time to start
-        - run: echo "Hello World"
-        - run: whoami
-        - run: ls /
-        - run: ls /home/*/
-        - run: hostname
-        - run: ps -ef
-        - run: pwd
-        - run: git ls-files
-        - run: |
-          bash <<EOF
-          project=$(basename $(git rev-parse --show-toplevel))
-          dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/"
-          mkdir -p "${dir}${project}"
-          git archive master |  ( cd "${dir}${project}"; tar -x )
-          cd "${dir}/../configurations" && git clone --depth=1 https://github.com/chrisbra/ci_configuration ismci
-          EOF
+        - run:
+          name: Start iSM
+          command: |
+            cd ~/iway8 &&
+            sed -i.bak -e '/^ *su/{s/^[^"]*"//;s/"$//}' bin/startservice.sh &&
+            bin/startservice.sh base &&
+            sleep 30 &&
+            cd -
+        - run:
+          name: "Debugging information"
+          command: |
+            whoami &&
+            pwd &&
+            ps -ef &&
+            pwd &&
+            git ls-files && 
+            curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism
+        - run:
+          name: "Setup Deployment"
+          command: |
+            project=$(basename $(git rev-parse --show-toplevel)) &&
+            dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
+            mkdir -p "${dir}${project}" &&
+            git archive master |  ( cd "${dir}${project}"; tar -x ) &&
+            cd "${dir}/../configurations" && git clone --depth=1 https://github.com/chrisbra/ci_configuration ismci
 
 workflows:
   version: 2
   workflow_one: # name of the workflow
     jobs: # list the jobs to be running
       - setup_ism
-      - test
-        # disabled, can be run concurrently
-        #          requires:
-        #            - setup_ism
