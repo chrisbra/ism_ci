@@ -26,11 +26,15 @@ jobs:
               cd - &&
               sleep 20 &&
               curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism &&
+              curl -L --user "iway:iway" http://localhost:9999/ism &&
               project=$(basename $(git rev-parse --show-toplevel)) &&
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
               mkdir -p "${dir}${project}" &&
               git archive master |  ( cd "${dir}${project}"; tar -x ) &&
-              cd "${dir}/../configurations" && git clone --depth=1 https://github.com/chrisbra/ci_configuration ismci
+              ls "${dir}${project}" &&
+              cd "${dir}/../configurations" &&
+              git clone --depth=1 https://github.com/chrisbra/ci_configuration ismci &&
+              ls ./ismci
 
 workflows:
   version: 2
