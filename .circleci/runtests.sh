@@ -51,7 +51,7 @@ EOF
   else
 		cat <<EOF >> $TESTRESULT
 	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DUATION"/>
-		<failure message="git diff returned an error between expected and actual "$1" file">
+		<failure message="git diff returned an error between expected and actual $1 file">
 $DIFFERENCE
 		</failure>
 	</testcase>
@@ -130,7 +130,7 @@ write_test_result_start
 # run the actual tests
 run_tests
 
-Finish the XML file
+# Finish the XML file
 write_test_result_end
 
 exit $exitcode
