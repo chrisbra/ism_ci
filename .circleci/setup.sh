@@ -13,7 +13,7 @@ export yellow=$(tput -T xterm setaf 3)
 export reset=$(tput -T xterm sgr0)
 
 print_status () {
-	if [ $1 -eq 0 ];
+	if [ $1 -eq 0 ]; then
 		printf "${green}[OK]${reset}\n"
 	else
 		printf "${red}[FAILED]${reset}\n"
