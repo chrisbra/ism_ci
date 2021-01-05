@@ -6,7 +6,7 @@ set -eo pipefail
 project="ism_ci"
 config="ismci"
 dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/"
-iwayhome="/home/ibuser/iway8"
+iwayhome="/home/ibuser/iway8/"
 
 LOGFILE="/tmp/CI_LOGFILE_$$.log"
 
@@ -39,53 +39,55 @@ startup_ism () {
 }
 
 validate_ism_access () {
-	printf "${blue}Trying to access iSM Webconsole.....\t\t"
+	printf "${blue}Trying to access iSM Webconsole...\t\t"
 	curl -L -s --user "iway:iway" http://localhost:9999/ism >/dev/null
 	print_status $?
 }
 
 
 copy_project_to_iwaysdk () {
-  printf "${blue}Copying %s project to iwaysdk build directory\t" "$project"
+  printf "${blue}Copying %s project to iway build dir...\t" "$project"
 	ln -s ~/project/ "${dir}${project}"
 	print_status $?
 }
 
 checkout_iwaysdk_configuration () {
 	cd "${dir}/../configurations"
-	printf "${blue}Checking out iwaysdk Configuration.....\t\t"
+	printf "${blue}Checking out iwaysdk Configuration...\t\t"
 	git clone --quiet --depth=1 https://github.com/chrisbra/ci_configuration ismci
 	print_status $?
 }
 
 patching_iwaysdk () {
 	cd "${dir}/.."
-	printf "${blue}Patching iwaysdk build.sh .....\t\t\t"
+	printf "${blue}Patching iwaysdk build.sh ...\t\t\t"
 	sed -i.bak -e 's/exit 0/exit \$?/' -e 's/ant \(start\|stop\) /ant \1app /' build.sh
 	print_status $?
-	printf "${blue}make iwaySDK executable .....\t\t\t"
+	printf "${blue}make iwaySDK executable ...\t\t\t"
 	chmod +x build.sh
 	print_status $?
 }
 
 build_deploy_start () {
 	cd "${dir}/.." > /dev/null
-	printf "${blue}Building %s project for iSM .....\t\t" "$project"
+	printf "${blue}Building %s project for iSM ...\t\t" "$project"
 	sh build.sh BUILDAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Deploying %s project for iSM .....\t\t" "$project"
+	printf "${blue}Deploying %s project for iSM ...\t\t" "$project"
 	sh build.sh DEPLOYAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Starting %s app for iSM .....\t\t" "$project"
+	printf "${blue}Starting %s app for iSM ...\t\t" "$project"
 	sh build.sh STARTAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
 }
 
 setup_project_files () {
-	printf "${blue}Creating directory structure for ism project.....\t"
+	set -x
+	printf "${blue}Creating directory structure for ism project...\t"
 	mkdir -p "${iwayhome}/processing" && 
 	mkdir -p "${iwayhome}/processing/{input,archive,output}" &&
 	mkdir -p "${iwayhome}/processing/output/status"
+	set +x
 	print_status $?
 }
 
