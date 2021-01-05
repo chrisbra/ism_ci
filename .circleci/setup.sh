@@ -29,7 +29,7 @@ validate_ism_access () {
 
 
 copy_project_to_iwaysdk () {
-  printf "${blue}Copying %s project to iway build dir...\t" "$project"
+  printf "${blue}Copying ${yellow}%s${blue} project to iway build dir...\t" "$project"
 	ln -s ~/project/ "${dir}${project}"
 	print_status $?
 }
@@ -53,13 +53,13 @@ patching_iwaysdk () {
 
 build_deploy_start () {
 	cd "${dir}/.." > /dev/null
-	printf "${blue}Building %s project for iSM ...\t\t" "$project"
+	printf "${blue}Building ${yellow}%s${blue} project for iSM ...\t\t" "$project"
 	sh build.sh BUILDAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Deploying %s project for iSM ...\t\t" "$project"
+	printf "${blue}Deploying ${yellow}%s{$blue} project for iSM ...\t\t" "$project"
 	sh build.sh DEPLOYAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Starting %s app for iSM ...\t\t\t" "$project"
+	printf "${blue}Starting ${yellow}%s{$blue} pp for iSM ...\t\t\t" "$project"
 	sh build.sh STARTAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
 }
