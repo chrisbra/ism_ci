@@ -37,16 +37,15 @@ preprocess_files () {
 
 diff_result () {
 	preprocess_files "$2" "$3"
-	printf "  ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
+	printf "    ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
 	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
 	rc=$?
-	print_status $rc
-	set -x
 	if [ $rc -gt 0 ]; then
-		printf "Difference\n%s" "$DIFFERENCE"
+		printf "Difference\n---------\n%s\n---------\n" "$DIFFERENCE"
 		exit 1
 	fi
-	set +x
+	# do not abort yet
+	print_status $rc || true
 }
 
 for testdir in $FILES/*; do
