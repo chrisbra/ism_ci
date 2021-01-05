@@ -16,6 +16,6 @@
     </Dependency>
   </Dependencies>
   <Features>
-    <Feature Code="core" UsageCount="12"/>
+    <Feature Code="core" UsageCount="13"/>
   </Features>
 </iwresource:IWResource>

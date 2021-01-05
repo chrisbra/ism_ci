@@ -29,7 +29,7 @@
       <Parameter name="localtrans" value="false"/>
       <Parameter name="xalog" value="true"/>
       <Parameter name="file" value="_sreg(iwayhome)processing/input/"/>
-      <Parameter name="destination" value="_sreg(iwayhome)processing/output/*.xml"/>
+      <Parameter name="destination" value="_sreg(iwayhome)processing/output/status/*.xml"/>
       <Parameter name="removal" value="_sreg(iwayhome)processing/archive/_sreg(filename)"/>
     </rListener>
     <rPreparser className="com.ibi.preparsers.XDReadExcelPreParser" description="Reads Excel workbook sheet to XML" name="preparser.1">

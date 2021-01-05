@@ -230,7 +230,7 @@
                 </group>
                 <group name="Target">
                   <propertyitem description="The target directory of the output file." name="directory" required="true" value="_concat(_sreg(iwayhome), 'processing/output/')"/>
-                  <propertyitem description="The output target file name; supports '*' which expands to a file timestamp." name="pattern" required="true" value="_concat(_sreg(user_file_in), '_*.xml')"/>
+                  <propertyitem description="The output target file name; supports '*' which expands to a file timestamp." name="pattern" required="true" value="_concat(_sreg(user_file_in), '.xml')"/>
                 </group>
                 <group name="Target Settings">
                   <propertyitem description="Encoding to apply to the target output file being written. Does not apply when output is bas64." name="outenc" required="false" value="UTF-8"/>
