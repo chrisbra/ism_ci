@@ -41,16 +41,17 @@ cat << EOF >> $TESTRESULT
 </testsuite>
 EOF
 sed -i -e "s/tests=\"###\"/tests=\"$TESTS\"/" $TESTRESULT
+cp $TESTRESULT ~/artifacts
 }
 
 write_test_result () {
 	if [ $2 -eq 0 ]; then
 		cat <<EOF >> $TESTRESULT
-	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DUATION"/>
+	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DURATION"/>
 EOF
   else
 		cat <<EOF >> $TESTRESULT
-	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DUATION"/>
+	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DURATION">
 		<failure message="git diff returned an error between expected and actual $1 file">
 		<![CDATA[
 $DIFFERENCE
