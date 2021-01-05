@@ -1,5 +1,7 @@
 #!/bin/bash
-set -eo pipefail
+#set -eo pipefail
+
+set -x
 
 # Setup some color variables
 export red=$(tput -T xterm setaf 1)
@@ -18,7 +20,7 @@ EXPECTED=$PWD/Resources/Tests/expected
 # Run the test cases
 
 setup_and_run () {
-		printf "${blue}$1{reset}\n"
+		printf "${blue}$1${reset}\n"
 }
 
 cleanup_ism_working_dir () {
