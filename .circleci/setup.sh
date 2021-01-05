@@ -86,6 +86,10 @@ setup_artifacts_dir () {
 	print_status $?
 }
 
+install_jq () {
+	echo "$SUDOPASSWD" | sudo -S bash -c 'apt -qq update && apt -qq install -y jq'
+}
+
 # Give iSM some time to startup
 sleep 10
 validate_ism_access
