@@ -74,7 +74,8 @@ setup_project_files () {
 	print_status $?
 }
 
-startup_ism
+#startup_ism
+sleep 20
 validate_ism_access
 copy_project_to_iwaysdk
 checkout_iwaysdk_configuration

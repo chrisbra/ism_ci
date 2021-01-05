@@ -18,10 +18,14 @@ jobs:
               pwd
               git ls-files
         - run:
+            name: Startup iSM
+            command: |
+              bash -c 'cd ~/iway8 && ./iway8.sh base'
+            background: true
+        - run:
             name: Start iSM and deploy
             command: |
               bash .circleci/setup.sh
-            background: true
         - run:
             name: Run Tests
             command: |
