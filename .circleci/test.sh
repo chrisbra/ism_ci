@@ -8,8 +8,8 @@ export blue=$(tput -T xterm setaf 4)
 export yellow=$(tput -T xterm setaf 3)
 export reset=$(tput -T xterm sgr0)
 
-INPUT=/home/iway8/processing/input/
-OUTPUT=/home/iway8/processing/output/
+INPUT=/home/ibuser/iway8/processing/input/
+OUTPUT=/home/ibuser/iway8/processing/output/
 
 FILES=$PWD/Resources/Tests/input
 EXPECTED=$PWD/Resources/Tests/expected
