@@ -23,7 +23,7 @@ jobs:
               bash -c 'cd ~/iway8 && ./iway8.sh base'
             background: true
         - run:
-            name: Start iSM and deploy
+            name: Prepare for Tests and Deploy
             command: |
               bash .circleci/setup.sh
         - run:

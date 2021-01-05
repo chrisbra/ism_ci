@@ -80,7 +80,7 @@ setup_test_result_dir () {
 	print_status $?
 }
 
-setup_test_result_dir () {
+setup_artifacts_dir () {
 	printf "${blue}Creating artifacts structure...\t\t"
 	mkdir ~/artifacts/
 	print_status $?
@@ -95,3 +95,4 @@ patching_iwaysdk
 setup_project_files
 build_deploy_start
 setup_test_result_dir
+setup_artifacts_dir
