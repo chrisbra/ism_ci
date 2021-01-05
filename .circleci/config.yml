@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+    slack: circleci/slack@4.2.0
 
 jobs:
   test_ism: # The first job
@@ -30,6 +32,10 @@ jobs:
             name: Run Tests
             command: |
               bash .circleci/runtests.sh
+        - slack/notify:
+            channel: ismci
+            event: fail
+            template: basic_fail_1
         - store_test_results:
             path: /home/ibuser/test-results
         - store_artifacts:
