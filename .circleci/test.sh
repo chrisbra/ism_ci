@@ -35,6 +35,7 @@ preprocess_files () {
 }
 
 diff_result () {
+	preprocess_files "$2" "$3"
 	printf "${blue}Diffing $1 files $(basename $2) $(basename $3)\t\t"
 	DIFFERENCE=$(git diff --no-index --no-ext-diff --exit-code $2 $3)
 	rc=$?
