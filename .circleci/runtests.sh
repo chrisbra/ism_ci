@@ -52,7 +52,9 @@ EOF
 		cat <<EOF >> $TESTRESULT
 	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DUATION"/>
 		<failure message="git diff returned an error between expected and actual $1 file">
+		<![CDATA[
 $DIFFERENCE
+		]]>
 		</failure>
 	</testcase>
 EOF
