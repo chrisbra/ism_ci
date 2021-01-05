@@ -82,12 +82,12 @@ build_deploy_start () {
 }
 
 setup_project_files () {
-	set -x
 	printf "${blue}Creating directory structure for ism project...\t"
 	mkdir -p "${iwayhome}/processing" && 
-	mkdir -p "${iwayhome}/processing/{input,archive,output}" &&
+	mkdir -p "${iwayhome}/processing/input" &&
+	mkdir -p "${iwayhome}/processing/archive" &&
+	mkdir -p "${iwayhome}/processing/output" &&
 	mkdir -p "${iwayhome}/processing/output/status"
-	set +x
 	print_status $?
 }
 
