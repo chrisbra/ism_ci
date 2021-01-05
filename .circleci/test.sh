@@ -56,7 +56,7 @@ for testdir in $FILES/*; do
 		i="0"
 		result="$(basename ${file} .xlsx)".xml
 		exp_output=$EXPECTED/$testcase/output/$result
-		result=$OUTPUT/$testcase/$result
+		result=$OUTPUT/$result
 		while [ ! -f $result ]; do
 			sleep 5s
 			i=$[$i+1]
@@ -73,7 +73,7 @@ for testdir in $FILES/*; do
 		# 1) The transformed Output File
 		diff_result "output" $result $exp_output
 		# 2) The Status File
-		diff_result "status" $OUTPUT/$testcase/status/* $exp_status
+		diff_result "status" $OUTPUT/status/* $exp_status
 		# 3) The archived File
 		diff_result "archive" $ARCHIVE/* $file
 	done

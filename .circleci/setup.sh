@@ -59,7 +59,7 @@ build_deploy_start () {
 	printf "${blue}Deploying %s project for iSM ...\t\t" "$project"
 	sh build.sh DEPLOYAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Starting %s app for iSM ...\t\t" "$project"
+	printf "${blue}Starting %s app for iSM ...\t\t\t" "$project"
 	sh build.sh STARTAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
 }
@@ -81,5 +81,3 @@ checkout_iwaysdk_configuration
 patching_iwaysdk
 setup_project_files
 build_deploy_start
-
-printf "${green}DONE${reset}\n"
