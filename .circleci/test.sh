@@ -10,8 +10,8 @@ INPUT=$IWAY8/processing/input/
 OUTPUT=$IWAY8/processing/output/
 ARCHIVE=$IWAY8/processing/archive/
 
-FILES=/home/ibuser/project/Resources/Tests/input
-EXPECTED=/home/ibuser/project/Resources/Tests/expected
+FILES=/home/ibuser/project/Resources/Tests/input/
+EXPECTED=/home/ibuser/project/Resources/Tests/expected/
 
 
 # Run the test cases
@@ -54,8 +54,8 @@ for testdir in $FILES/*; do
 		# Give iSM a chance to process it
 		i="0"
 		result="$(basename ${file} .xlsx)".xml
-		exp_output=$EXPECTED/output/$result
-		result=$OUTPUT/$result
+		exp_output=$EXPECTED/$testdir/output/$result
+		result=$OUTPUT/$testdir/$result
 		while [ ! -f $result ]; do
 			sleep 5s
 			i=$[$i+1]
@@ -67,12 +67,12 @@ for testdir in $FILES/*; do
 				printf "${red}Resulting File does not appear: ${result}"
 				exit 1
 		fi
-		exp_status=$EXPECTED/output/status/*
+		exp_status=$EXPECTED/$testdir/output/status/*
 		# We need to test 3 different cases here:
 		# 1) The transformed Output File
 		diff_result "output" $result $exp_output
 		# 2) The Status File
-		diff_result "status" $OUTPUT/status/* $exp_status
+		diff_result "status" $OUTPUT/$testdir/status/* $exp_status
 		# 3) The archived File
 		diff_result "archive" $ARCHIVE/* $file
 	done
