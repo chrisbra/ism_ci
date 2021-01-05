@@ -100,3 +100,4 @@ setup_project_files
 build_deploy_start
 setup_test_result_dir
 setup_artifacts_dir
+install_jq
