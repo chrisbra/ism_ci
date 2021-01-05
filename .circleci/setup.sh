@@ -45,7 +45,7 @@ print_status () {
 
 (
   printf "${blue}Copying %s project to iwaysdk build directory\t" "$project"
-	ln -s -t "$dir" ~/project/ "$project"
+	ln -s ~/project/ "${dir}${project}"
 	print_status $?
 )
 
