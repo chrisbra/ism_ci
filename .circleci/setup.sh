@@ -6,11 +6,11 @@ project="ism_ci"
 dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/"
 
 # Setup some color variables
-export red=$(tput setaf 1)
-export green=$(tput setaf 2)
-export blue=$(tput setaf 4)
-export yellow=$(tput setaf 3)
-export reset=$(tput sgr0)
+export red=$(tput -T xterm setaf 1)
+export green=$(tput -T xterm setaf 2)
+export blue=$(tput -T xterm setaf 4)
+export yellow=$(tput -T xterm setaf 3)
+export reset=$(tput -T xterm sgr0)
 
 function status(rc) {
 	if [ $1 -eq 0 ];
