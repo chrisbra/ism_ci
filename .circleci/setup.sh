@@ -1,73 +1,77 @@
 #!/bin/bash
 
-set -x
+#set -x
 
 project="ism_ci"
 dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/"
 
+# Setup some color variables
+export red=$(tput setaf 1)
+export green=$(tput setaf 2)
+export blue=$(tput setaf 4)
+export yellow=$(tput setaf 3)
+export reset=$(tput sgr0)
+
+function status(rc) {
+	if [ $1 -eq 0 ];
+		printf "${green}[OK]${reset}\n"
+	else
+		printf "${red}[FAILED]${reset}\n"
+		# TODO: Fail with error
+	fi
+}
+
 (
-  printf "\nStarting iSM Server Up\n"
+  printf "\n${blue}Starting iSM Server Up\n"
 	pushd ~/iway8
 	sed -i.bak -e '/^ *su/{s/^[^"]*"//;s/"$//}' bin/startservice.sh
-	bin/startservice.sh base
-	#popd
+	bin/startservice.sh base >/dev/null
 	sleep 20
 )
 
 (
-	printf "Trying to access iSM Webconsole.....\t"
+	printf "${blue}Trying to access iSM Webconsole.....\t"
 	curl -L -s --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism >/dev/null
 	if [ $? -eq 7 ]; then
-		printf "[FAILED]\n"
+		printf "${red}[FAILED]${reset}\n"
 	else
-		printf "[OK]\n"
+		printf "${green}[OK]${reset}\n"
 	fi
 )
 
 
-  printf "Copying %s project to iwaysdk build directory\n" "$project"
+(
+  printf "${blue}Copying %s project to iwaysdk build directory\n" "$project"
 	ln -s ~/project "${dir}${project}"
+	status($?)
+)
 
 (
-	printf "Checking out iwaysdk Configuration.....\t"
+	printf "${blue}Checking out iwaysdk Configuration.....\t"
 	pushd "${dir}/../configurations"
 	git clone --quiet --depth=1 https://github.com/chrisbra/ci_configuration ismci
-	if [ $? -eq 0 ]; then
-		printf "[OK]\n"
-	else
-		printf "[FAILED]\n"
-	fi
-	#popd
+	status($?)
 )
 
 (
-	printf "Patching iwaysdk build.sh .....\t"
+	printf "${blue}Patching iwaysdk build.sh .....\t"
 	pushd "${dir}/.."
 	sed -i.bak -e 's/exit 0/exit \$?/' build.sh
-	if [ $? -eq 0 ]; then
-		printf "[OK]\n"
-	else
-		printf "[FAILED]\n"
-	fi
-	printf "make iwaysdk executable .....\t"
+	status($?)
+	printf "${blue}make iwaysdk executable .....\t"
 	chmod +x build.sh
-	if [ $? -eq 0 ]; then
-		printf "[OK]\n"
-	else
-		printf "[FAILED]\n"
-	fi
+	status($?)
 )
 
 
 (
-	printf "Building %s project for iSM .....\t" "$project"
+	printf "${blue}Building %s project for iSM .....\t" "$project"
 	pushd "${dir}/.."
 	sh build.sh BUILDAPP ismci
-	if [ $? -eq 0 ]; then
-		printf "[OK]\n"
-	else
-		printf "[FAILED]\n"
-	fi
+	status($?)
+	printf "${blue}Deploying %s project for iSM .....\t" "$project"
+	sh build.sh DEPLOYAPP ismci
+	status($?)
 )
 
-echo "DONE"
+printf "${green}DONE${reset}"
