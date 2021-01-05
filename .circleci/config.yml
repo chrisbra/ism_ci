@@ -6,6 +6,7 @@ jobs:
   test_ism: # The first job
     docker:
       - image: chrisbra/ibi:ism_project_v2
+        user: root
         auth:
             username: chrisbra
             password: $DOCKERHUB_PASSWORD
