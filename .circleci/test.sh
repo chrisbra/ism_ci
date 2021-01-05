@@ -27,7 +27,7 @@ cleanup_ism_working_dir () {
 
 preprocess_files () {
 	# preprocess and remove timestamp
-	printf "${blue}preprocessing input files... \t\t"
+	printf "\t${blue}preprocessing input files... \t\t"
 	for file; do
 		sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' $file
 	done
@@ -47,14 +47,14 @@ diff_result () {
 }
 
 for testdir in $FILES/*; do
-	setup_and_run "Test case $testdir"
+	testcase="$(basename $testdir /)"
+	setup_and_run "Test case $testcase"
 	# There should only be one single file in the input directory,
 	# but we do not know how it is called, so use a loop :)
-	testcase="$(basename $testdir /)"
-	for file in $testdir/*; do
-		cp "$file" "$INPUT"
+	for inputfile in $testdir/*; do
+		cp "$inputfile" "$INPUT"
 		i="0"
-		result="$(basename ${file} .xlsx)".xml
+		result="$(basename ${inputfile} .xlsx)".xml
 		exp_output=$EXPECTED/$testcase/$result
 		result=$OUTPUT/$result
 		# Give iSM a chance to process it
@@ -77,7 +77,7 @@ for testdir in $FILES/*; do
 		# 2) The Status File
 		diff_result "status" $OUTPUT/status/* $exp_status
 		# 3) The archived File
-		diff_result "archive" $ARCHIVE/* $file
+		diff_result "archive" $ARCHIVE/* $inputfile
 	done
 	cleanup_ism_working_dir
 done
