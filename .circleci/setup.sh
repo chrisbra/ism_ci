@@ -81,3 +81,5 @@ checkout_iwaysdk_configuration
 patching_iwaysdk
 setup_project_files
 build_deploy_start
+
+sleep 300

@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -eo pipefail
+set -eo pipefail
 
 # Read in some common definitions
 . "$(dirname $0)"/library.sh

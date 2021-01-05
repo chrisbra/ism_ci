@@ -20,9 +20,8 @@ jobs:
         - run:
             name: Start iSM and deploy
             command: |
-              bash .circleci/setup.sh &&
-              echo "sleep 5 minutes" && 
-              sleep 300 &
+              bash .circleci/setup.sh
+            background: true
         - run:
             name: Run Tests
             command: |
