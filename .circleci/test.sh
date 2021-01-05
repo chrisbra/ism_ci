@@ -23,11 +23,12 @@ setup_and_run () {
 cleanup_ism_working_dir () {
 	find $INPUT -type f -delete
 	find $OUTPUT -type f -delete
+	find $ARCHIVE -type f -delete
 }
 
 preprocess_files () {
 	# preprocess and remove timestamp
-	printf "\t${blue}preprocessing input files... \t\t"
+	printf "    ${blue}preprocessing input files... \t\t"
 	for file; do
 		sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' $file
 	done
@@ -36,19 +37,21 @@ preprocess_files () {
 
 diff_result () {
 	preprocess_files "$2" "$3"
-	printf "${blue}Diffing $1 files $(basename $2) $(basename $3)\t\t"
-	DIFFERENCE=$(git diff --no-index --no-ext-diff --exit-code $2 $3)
+	printf "  ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
+	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
 	rc=$?
 	print_status $rc
+	set -x
 	if [ $rc -gt 0 ]; then
-		echo "$DIFFERENCE"
+		printf "Difference\n%s" "$DIFFERENCE"
 		exit 1
 	fi
+	set +x
 }
 
 for testdir in $FILES/*; do
 	testcase="$(basename $testdir /)"
-	setup_and_run "Test case $testcase"
+	setup_and_run "${testcase}) Test case"
 	# There should only be one single file in the input directory,
 	# but we do not know how it is called, so use a loop :)
 	for inputfile in $testdir/*; do
