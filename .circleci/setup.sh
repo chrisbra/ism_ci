@@ -9,7 +9,8 @@ dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/"
 iwayhome="/home/ibuser/iway8/"
 LOGFILE="/tmp/CI_LOGFILE_$$.log"
 
-. /home/ibuser/project/.circle/library.sh
+# Read in some common definitions
+. "$(dirname $0)"/library.sh
 
 startup_ism () {
   printf "\n${blue}Starting iSM Server Up...\t\t\t"

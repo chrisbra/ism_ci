@@ -1,7 +1,8 @@
 #!/bin/bash
 #set -eo pipefail
 
-. /home/ibuser/project/.circle/library.sh
+# Read in some common definitions
+. "$(dirname $0)"/library.sh
 
 IWAY8=/home/ibuser/iway8
 
