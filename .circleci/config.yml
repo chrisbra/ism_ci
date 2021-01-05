@@ -20,27 +20,7 @@ jobs:
         - run:
             name: Start iSM and deploy
             command: |
-              pushd ~/iway8 &&
-              sed -i.bak -e '/^ *su/{s/^[^"]*"//;s/"$//}' bin/startservice.sh &&
-              bin/startservice.sh base &&
-              popd &&
-              sleep 20 &&
-              curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism >/dev/null &&
-              project="ism_ci"
-              dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
-              ln -s ~/project "${dir}${project}" &&
-              echo "ls ism_ci project" &&
-              ls "${dir}${project}" &&
-              pushd "${dir}/../configurations" &&
-              git clone --quiet --depth=1 https://github.com/chrisbra/ci_configuration ismci &&
-              echo "ls ismci configuration" &&
-              ls ./ismci/ &&
-              popd &&
-              pushd "${dir}/.." &&
-              sed -i.bak -e 's/exit 0/exit \$?/' build.sh &&
-              chmod +x build.sh &&
-              sh build.sh BUILDAPP ismci &&
-              echo "DONE"
+              .circlei/setup.sh
 
 workflows:
   version: 2
