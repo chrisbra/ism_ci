@@ -41,7 +41,7 @@ diff_result () {
 	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
 	rc=$?
 	# do not yet abort
-	print_status $rc || true
+	( print_status $rc ) || true
 	if [ $rc -gt 0 ]; then
 		printf "Difference\n---------\n%s\n---------\n" "$DIFFERENCE"
 	fi
