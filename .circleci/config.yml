@@ -20,7 +20,8 @@ jobs:
         - run:
             name: Start iSM and deploy
             command: |
-              bash .circleci/setup.sh
+              bash .circleci/setup.sh &&
+              bash .circleci/test.sh
 
 workflows:
   version: 2
