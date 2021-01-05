@@ -65,7 +65,7 @@ print_status () {
 (
 	cd "${dir}/.."
 	printf "${blue}Patching iwaysdk build.sh .....\t"
-	sed -i.bak -e 's/exit 0/exit \$?/' -e 's/ant \(start\|stop\) /ant \1app ' build.sh
+	sed -i.bak -e 's/exit 0/exit \$?/' -e 's/ant \(start\|stop\) /ant \1app /' build.sh
 	print_status $?
 	printf "${blue}make iwaySDK executable .....\t"
 	chmod +x build.sh
