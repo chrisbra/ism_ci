@@ -1,8 +1,6 @@
 #!/bin/bash
 #set -eo pipefail
 
-set -x
-
 # Setup some color variables
 export red=$(tput -T xterm setaf 1)
 export green=$(tput -T xterm setaf 2)
@@ -13,8 +11,8 @@ export reset=$(tput -T xterm sgr0)
 INPUT=/home/ibuser/iway8/processing/input/
 OUTPUT=/home/ibuser/iway8/processing/output/
 
-FILES=$PWD/Resources/Tests/input
-EXPECTED=$PWD/Resources/Tests/expected
+FILES=/home/ibuser/project/Resources/Tests/input
+EXPECTED=/home/ibuser/project/Resources/Tests/expected
 
 
 # Run the test cases
@@ -24,13 +22,13 @@ setup_and_run () {
 }
 
 cleanup_ism_working_dir () {
-	find $INPUT -f -delete
-	find $OUTPUT -f -delete
+	find $INPUT -type f -delete
+	find $OUTPUT -type f -delete
 }
 
 diff_result () {
 	# preprocess and remove timestamp
-	printf "Diffing Processing $1 $2\t"
+	printf "Diffing resulting files $(basename $1) $(basename $2)\t\t"
 	for file; do
 		sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' $file
 	done
@@ -43,13 +41,13 @@ diff_result () {
 	fi
 }
 
+set -x
 for file in $FILES/*; do
 	setup_and_run "Test case 1"
-	cp $file $INPUT
+	cp "$file" "$INPUT"
 	# Give iSM a chance to process it
 	i="0"
-	result=${file%%.xls}.xml
-	result=${result##/*/}
+	result="$(basename ${file} .xlsx)".xml
 	exp_output=$EXPECTED/output/$result
 	result=$OUTPUT/$result
 	while [ ! -f $result ]; do
@@ -65,7 +63,8 @@ for file in $FILES/*; do
 	fi
 	exp_status=$EXPECTED/output/status/*
 	# Get 2 resulting files: Output and Status
-	diff_result $result $temp
-	diff_result $OUTPUT/status/*
-	cleanup_ism_working_dir
+	diff_result $result $exp_output
+	diff_result $OUTPUT/status/* $exp_status
+	# TODO enable later again
+	#cleanup_ism_working_dir
 done
