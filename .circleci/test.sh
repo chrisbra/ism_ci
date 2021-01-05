@@ -12,6 +12,7 @@ ARCHIVE=$IWAY8/processing/archive/
 
 FILES=/home/ibuser/project/Resources/Tests/input/
 EXPECTED=/home/ibuser/project/Resources/Tests/expected/
+exitcode=0
 
 
 # Run the test cases
@@ -44,6 +45,7 @@ diff_result () {
 	( print_status $rc ) || true
 	if [ $rc -gt 0 ]; then
 		printf "Difference\n---------\n%s\n---------\n" "$DIFFERENCE"
+		exitcode=$[$exitcode + $rc]
 	fi
 }
 
@@ -82,3 +84,5 @@ for testdir in $FILES/*; do
 	done
 	cleanup_ism_working_dir
 done
+
+exit $exitcode
