@@ -71,6 +71,7 @@ preprocess_files () {
 diff_result () {
 	preprocess_files "$2" "$3"
 	printf "    ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
+	set -x
 	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
 	rc=$?
 	# do not yet abort
@@ -80,6 +81,7 @@ diff_result () {
 		exitcode=$[$exitcode + $rc]
 	fi
 	write_test_result $1 $rc
+	set +x
 }
 
 run_tests () {
