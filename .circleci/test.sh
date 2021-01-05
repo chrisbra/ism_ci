@@ -124,8 +124,13 @@ run_tests () {
 	done
 }
 
+# Fake writing Junit XML file
+# see https://stackoverflow.com/questions/4922867/what-is-the-junit-xml-format-specification-that-hudson-supports
 write_test_result_start
+# run the actual tests
 run_tests
+
+Finish the XML file
 write_test_result_end
 
 exit $exitcode
