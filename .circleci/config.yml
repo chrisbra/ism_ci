@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  setup_ism: # The first job
+  test_ism: # The first job
     docker:
       - image: chrisbra/ibi:ism_project_v2
         auth:
@@ -37,4 +37,4 @@ workflows:
   version: 2
   workflow_one: # name of the workflow
     jobs: # list the jobs to be running
-      - setup_ism
+      - test_ism

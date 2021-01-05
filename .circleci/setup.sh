@@ -59,7 +59,7 @@ build_deploy_start () {
 	printf "${blue}Deploying ${yellow}%s${blue} project for iSM ...\t\t" "$project"
 	sh build.sh DEPLOYAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Starting ${yellow}%s${blue} project for iSM ...\t\t\t" "$project"
+	printf "${blue}Starting ${yellow}%s${blue} project for iSM ...\t\t" "$project"
 	sh build.sh STARTAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
 }

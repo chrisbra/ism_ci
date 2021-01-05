@@ -40,7 +40,7 @@ write_test_result_end () {
 cat << EOF >> $TESTRESULT
 </testsuite>
 EOF
-set -i -e "s/tests=\"###\"/tests=\"$TESTS\"/" $TESTRESULT
+sed -i -e "s/tests=\"###\"/tests=\"$TESTS\"/" $TESTRESULT
 }
 
 write_test_result () {
