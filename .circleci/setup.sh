@@ -12,7 +12,7 @@ export blue=$(tput -T xterm setaf 4)
 export yellow=$(tput -T xterm setaf 3)
 export reset=$(tput -T xterm sgr0)
 
-function status(rc) {
+print_status () {
 	if [ $1 -eq 0 ];
 		printf "${green}[OK]${reset}\n"
 	else
@@ -43,24 +43,24 @@ function status(rc) {
 (
   printf "${blue}Copying %s project to iwaysdk build directory\n" "$project"
 	ln -s ~/project "${dir}${project}"
-	status($?)
+	print_status $?
 )
 
 (
 	printf "${blue}Checking out iwaysdk Configuration.....\t"
 	pushd "${dir}/../configurations"
 	git clone --quiet --depth=1 https://github.com/chrisbra/ci_configuration ismci
-	status($?)
+	print_status $?
 )
 
 (
 	printf "${blue}Patching iwaysdk build.sh .....\t"
 	pushd "${dir}/.."
 	sed -i.bak -e 's/exit 0/exit \$?/' build.sh
-	status($?)
+	print_status $?
 	printf "${blue}make iwaysdk executable .....\t"
 	chmod +x build.sh
-	status($?)
+	print_status $?
 )
 
 
@@ -68,10 +68,10 @@ function status(rc) {
 	printf "${blue}Building %s project for iSM .....\t" "$project"
 	pushd "${dir}/.."
 	sh build.sh BUILDAPP ismci
-	status($?)
+	print_status $?
 	printf "${blue}Deploying %s project for iSM .....\t" "$project"
 	sh build.sh DEPLOYAPP ismci
-	status($?)
+	print_status $?
 )
 
 printf "${green}DONE${reset}"
