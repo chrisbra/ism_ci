@@ -28,9 +28,7 @@ jobs:
               curl -L --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism >/dev/null &&
               project="ism_ci"
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
-              mkdir -p "${dir}${project}" &&
               ln -s ~/project "${dir}${project}" &&
-              echo 'disabled: git archive master |  ( cd "${dir}${project}"; tar -x )' &&
               echo "ls ism_ci project" &&
               ls "${dir}${project}" &&
               pushd "${dir}/../configurations" &&
