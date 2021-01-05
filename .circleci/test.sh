@@ -48,6 +48,8 @@ diff_result () {
 for testdir in $FILES/*; do
 	cd testdir
 	setup_and_run "Test case $testdir"
+	# There should only be one single file in the input directory,
+	# but we do not know how it is called, so use a loop :)
 	for file in testdir/*; do
 		cp "$file" "$INPUT"
 		# Give iSM a chance to process it
@@ -74,5 +76,6 @@ for testdir in $FILES/*; do
 		diff_result "status" $OUTPUT/status/* $exp_status
 		# 3) The archived File
 		diff_result "archive" $ARCHIVE/* $file
-		cleanup_ism_working_dir
+	done
+	cleanup_ism_working_dir
 done
