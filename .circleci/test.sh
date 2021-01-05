@@ -77,5 +77,6 @@ for testdir in $FILES/*; do
 		# 3) The archived File
 		diff_result "archive" $ARCHIVE/* $file
 	done
+	cd ..
 	cleanup_ism_working_dir
 done
