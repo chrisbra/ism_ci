@@ -27,7 +27,7 @@
                   <return>$complete
                      <agent key="3" flowcharttype="FLOWCHART_STARTUP_FILE" oclass="agent" xdebuglow="1" xdebughigh="10" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_save file" active="true">com.ibi.agents.XDFileEmitAgent
                         <parm name="directory">_concat(_sreg(iwayhome), &apos;processing/output/&apos;)</parm>
-                        <parm name="pattern">_concat(_sreg(user_file_in), &apos;_*.xml&apos;)</parm>
+                        <parm name="pattern">_concat(_sreg(user_file_in), &apos;.xml&apos;)</parm>
                         <parm name="outenc">UTF-8</parm>
                         <parm name="b64">false</parm>
                         <parm name="append">false</parm>
