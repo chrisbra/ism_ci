@@ -11,12 +11,12 @@
       <Name>p_RCV</Name>
       <Type>process</Type>
       <GUID>0C2BB369DB0C8CFC78952A9F36D69C20</GUID>
-      <Path>/ism_CI/Flows/p_RCV.iwp/p_RCV.iwp</Path>
+      <Path>/ism_ci/Flows/p_RCV.iwp/p_RCV.iwp</Path>
       <UsageCount>1</UsageCount>
     </Dependency>
   </Dependencies>
   <Features>
-    <Feature Code="core" UsageCount="4"/>
-    <Feature Code="excel" UsageCount="5"/>
+    <Feature Code="core" UsageCount="6"/>
+    <Feature Code="excel" UsageCount="6"/>
   </Features>
 </iwresource:IWResource>

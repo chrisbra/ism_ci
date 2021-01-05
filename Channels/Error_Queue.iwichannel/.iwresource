@@ -11,7 +11,7 @@
       <Name>p_Error</Name>
       <Type>process</Type>
       <GUID>BB1B1D6018FA12D8CDA65EAF727A338E</GUID>
-      <Path>/ism_CI/Flows/p_Error.iwp/p_Error.iwp</Path>
+      <Path>/ism_ci/Flows/p_Error.iwp/p_Error.iwp</Path>
       <UsageCount>1</UsageCount>
     </Dependency>
   </Dependencies>

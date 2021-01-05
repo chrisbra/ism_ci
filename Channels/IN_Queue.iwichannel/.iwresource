@@ -11,7 +11,7 @@
       <Name>p_IN</Name>
       <Type>process</Type>
       <GUID>CF2437FF955FB19A782CC1DC178CAEF2</GUID>
-      <Path>/ism_CI/Flows/p_IN.iwp/p_IN.iwp</Path>
+      <Path>/ism_ci/Flows/p_IN.iwp/p_IN.iwp</Path>
       <UsageCount>2</UsageCount>
     </Dependency>
   </Dependencies>

@@ -11,7 +11,7 @@
       <Name>p_OUT</Name>
       <Type>process</Type>
       <GUID>56D0F930E382734E8DCFA819C15784DC</GUID>
-      <Path>/ism_CI/Flows/p_OUT.iwp/p_OUT.iwp</Path>
+      <Path>/ism_ci/Flows/p_OUT.iwp/p_OUT.iwp</Path>
       <UsageCount>1</UsageCount>
     </Dependency>
   </Dependencies>
