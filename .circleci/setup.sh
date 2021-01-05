@@ -38,7 +38,7 @@ print_status () {
 
 (
 	printf "${blue}Trying to access iSM Webconsole.....\t"
-	curl -L -s --user "${IWAY_USER}:${IWAY_PASS}" http://localhost:9999/ism
+	curl -L -s --user "iway:iway" http://localhost:9999/ism >/dev/null
 	printf "\n-------\nResult: %s\n--------\n" $?
 	
 	if [ $? -eq 7 ]; then
