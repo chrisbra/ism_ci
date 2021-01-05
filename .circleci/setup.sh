@@ -59,7 +59,7 @@ build_deploy_start () {
 	printf "${blue}Deploying ${yellow}%s${blue} project for iSM ...\t\t" "$project"
 	sh build.sh DEPLOYAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
-	printf "${blue}Starting ${yellow}%s${blue} pp for iSM ...\t\t\t" "$project"
+	printf "${blue}Starting ${yellow}%s${blue} project for iSM ...\t\t\t" "$project"
 	sh build.sh STARTAPP "$config" >"$LOGFILE" 2>&1
 	print_status $?
 }
@@ -74,13 +74,18 @@ setup_project_files () {
 	print_status $?
 }
 
+setup_test_result_dir () {
+	printf "${blue}Creating test result structure...\t\t"
+	mkdir -p ~/test-results/xml
+	print_status $?
+}
 #startup_ism
-sleep 20
+# Give iSM some time to startup
+sleep 10
 validate_ism_access
 copy_project_to_iwaysdk
 checkout_iwaysdk_configuration
 patching_iwaysdk
 setup_project_files
 build_deploy_start
-
-sleep 300
+setup_test_result_dir

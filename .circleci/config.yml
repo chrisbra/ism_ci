@@ -30,6 +30,8 @@ jobs:
             name: Run Tests
             command: |
               bash .circleci/test.sh
+        - store_test_results:
+            path: /home/ibuser/test-results
 
 workflows:
   version: 2
