@@ -29,7 +29,8 @@ jobs:
               project="ism_ci"
               dir="/home/ibuser/iwaySDK/8.0.4/build2/projects/" &&
               mkdir -p "${dir}${project}" &&
-              git archive master |  ( cd "${dir}${project}"; tar -x ) &&
+              ln -s ~/project "${dir}${project}" &&
+              echo 'disabled: git archive master |  ( cd "${dir}${project}"; tar -x )' &&
               echo "ls ism_ci project" &&
               ls "${dir}${project}" &&
               pushd "${dir}/../configurations" &&
@@ -38,6 +39,8 @@ jobs:
               ls ./ismci/ &&
               popd &&
               pushd "${dir}/.." &&
+              sed -i.bak -e 's/exit 0/exit \$?/' build.sh &&
+              chmod +x build.sh &&
               sh build.sh BUILDAPP ismci &&
               echo "DONE"
 
