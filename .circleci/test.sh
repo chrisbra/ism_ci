@@ -40,12 +40,12 @@ diff_result () {
 	printf "    ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
 	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
 	rc=$?
+	# do not abort yet
+	( print_status $rc ) || true
 	if [ $rc -gt 0 ]; then
 		printf "Difference\n---------\n%s\n---------\n" "$DIFFERENCE"
 		exit 1
 	fi
-	# do not abort yet
-	print_status $rc || true
 }
 
 for testdir in $FILES/*; do
