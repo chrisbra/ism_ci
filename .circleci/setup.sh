@@ -39,13 +39,7 @@ print_status () {
 (
 	printf "${blue}Trying to access iSM Webconsole.....\t"
 	curl -L -s --user "iway:iway" http://localhost:9999/ism >/dev/null
-	printf "\n-------\nResult: %s\n--------\n" $?
-	
-	if [ $? -eq 7 ]; then
-		printf "${red}[FAILED]${reset}\n"
-	else
-		printf "${green}[OK]${reset}\n"
-	fi
+	print_status $?
 )
 
 
