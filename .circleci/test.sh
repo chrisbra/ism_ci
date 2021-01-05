@@ -49,13 +49,14 @@ for testdir in $FILES/*; do
 	setup_and_run "Test case $testdir"
 	# There should only be one single file in the input directory,
 	# but we do not know how it is called, so use a loop :)
+	testcase="$(basename $testdir)"
 	for file in $testdir/*; do
 		cp "$file" "$INPUT"
 		# Give iSM a chance to process it
 		i="0"
 		result="$(basename ${file} .xlsx)".xml
-		exp_output=$EXPECTED/$testdir/output/$result
-		result=$OUTPUT/$testdir/$result
+		exp_output=$EXPECTED/$testcase/output/$result
+		result=$OUTPUT/$testcase/$result
 		while [ ! -f $result ]; do
 			sleep 5s
 			i=$[$i+1]
@@ -67,12 +68,12 @@ for testdir in $FILES/*; do
 				printf "${red}Resulting File does not appear: ${result}"
 				exit 1
 		fi
-		exp_status=$EXPECTED/$testdir/output/status/*
+		exp_status=$EXPECTED/$testcase/output/status/*
 		# We need to test 3 different cases here:
 		# 1) The transformed Output File
 		diff_result "output" $result $exp_output
 		# 2) The Status File
-		diff_result "status" $OUTPUT/$testdir/status/* $exp_status
+		diff_result "status" $OUTPUT/$testcase/status/* $exp_status
 		# 3) The archived File
 		diff_result "archive" $ARCHIVE/* $file
 	done
