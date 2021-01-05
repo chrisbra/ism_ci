@@ -43,7 +43,7 @@ EOF
 set -i -e "s/tests=\"###\"/tests=\"$TESTS\"/" $TESTRESULT
 }
 
-write_test_results () {
+write_test_result () {
 	if [ $2 -eq 0 ]; then
 		cat <<EOF >> $TESTRESULT
 	<testcase name="testcase $testcase $1" classname="iSM.transformation" time="$DUATION"/>
