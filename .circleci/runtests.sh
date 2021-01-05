@@ -69,6 +69,9 @@ preprocess_files () {
 }
 
 diff_result () {
+	# $1: Type Output/Status/Archive
+	# $2: Actual file
+	# $3: Expected file
 	preprocess_files "$2" "$3"
 	printf "    ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
 	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
@@ -77,6 +80,9 @@ diff_result () {
 	( print_status $rc ) || true
 	if [ $rc -gt 0 ]; then
 		printf "Difference\n---------\n%s\n---------\n" "$DIFFERENCE"
+		# copy file to artifacts storage
+		# to be examined later
+		cp "$2" ~/artifacts
 		exitcode=$[$exitcode + $rc]
 	fi
 	write_test_result $1 $rc

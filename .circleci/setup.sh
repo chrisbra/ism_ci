@@ -79,7 +79,13 @@ setup_test_result_dir () {
 	mkdir -p ~/test-results/xml
 	print_status $?
 }
-#startup_ism
+
+setup_test_result_dir () {
+	printf "${blue}Creating artifacts structure...\t\t"
+	mkdir ~/artifacts/
+	print_status $?
+}
+
 # Give iSM some time to startup
 sleep 10
 validate_ism_access

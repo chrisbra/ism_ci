@@ -32,6 +32,8 @@ jobs:
               bash .circleci/runtests.sh
         - store_test_results:
             path: /home/ibuser/test-results
+        - store_artifacts:
+            path: /home/ibuser/artifacts
 
 workflows:
   version: 2
