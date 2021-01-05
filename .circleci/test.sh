@@ -32,16 +32,15 @@ diff_result () {
 	for file; do
 		sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' $file
 	done
-	OUTPUT=$(git diff --no-index --no-ext-diff --exit-code $1 $2)
+	DIFFERENCE=$(git diff --no-index --no-ext-diff --exit-code $1 $2)
 	if [ $? -gt 0 ]; then
 		printf "${red}[FAILED]${reset}\n"
-		echo $OUTPUT
+		echo "$DIFFERENCE"
 	else
 		printf "${green}[OK]${reset}\n"
 	fi
 }
 
-set -x
 for file in $FILES/*; do
 	setup_and_run "Test case 1"
 	cp "$file" "$INPUT"
