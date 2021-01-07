@@ -67,6 +67,7 @@
                 <model:propertyitem description="" name="user_source" value="LOGA"/>
                 <model:propertyitem description="" name="user_file_in" value="_sreg(basename)"/>
                 <model:propertyitem description="" name="user_mandant" value="_substr(_sreg(parent), 38)"/>
+                <model:propertyitem description="" name="user_mwst" value="yes"/>
               </model:group>
             </model:properties>
           </model:user>

@@ -37,6 +37,7 @@
                         <parm name="user_source">LOGA</parm>
                         <parm name="user_file_in">_sreg(basename)</parm>
                         <parm name="user_mandant">_substr(_sreg(parent), 38)</parm>
+                        <parm name="user_mwst">yes</parm>
                         <return>success
                            <agent key="9" flowcharttype="FLOWCHART_TRANSFORM" oclass="agent" xdebuglow="1" xdebughigh="99999" xdebugoffset="0" xdebuglen="4096" xdebug="std" xid="agent_EXCEL to XML" active="true">com.ibi.agents.XDTransformAgent
                               <parm name="engine">iway</parm>
