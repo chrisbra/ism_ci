@@ -345,7 +345,6 @@
                   <propertyitem description="" name="user_source" value="LOGA"/>
                   <propertyitem description="" name="user_file_in" value="_sreg(basename)"/>
                   <propertyitem description="" name="user_mandant" value="_substr(_sreg(parent), 38)"/>
-                  <propertyitem description="" name="user_mwst" value="yes"/>
                 </group>
               </properties>
             </user>

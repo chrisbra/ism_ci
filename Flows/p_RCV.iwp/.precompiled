@@ -44,6 +44,12 @@
                 <model:propertyitem name="replytoreqns" value="*"/>
                 <model:propertyitem name="queue" value="IN"/>
               </model:group>
+              <model:registers name="Pre-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.3.ex.st.time" scope="message" usage="user" value="_timer(nanoseconds)"/>
+              </model:registers>
+              <model:registers name="Post-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.3.ex.time" scope="message" usage="user" value="_isub(_timer(nanoseconds),_sreg(dbg.3.ex.st.time))"/>
+              </model:registers>
             </model:properties>
           </model:user>
         </model:object>
@@ -67,8 +73,13 @@
                 <model:propertyitem description="" name="user_source" value="LOGA"/>
                 <model:propertyitem description="" name="user_file_in" value="_sreg(basename)"/>
                 <model:propertyitem description="" name="user_mandant" value="_substr(_sreg(parent), 38)"/>
-                <model:propertyitem description="" name="user_mwst" value="yes"/>
               </model:group>
+              <model:registers name="Pre-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.4.ex.st.time" scope="message" usage="user" value="_timer(nanoseconds)"/>
+              </model:registers>
+              <model:registers name="Post-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.4.ex.time" scope="message" usage="user" value="_isub(_timer(nanoseconds),_sreg(dbg.4.ex.st.time))"/>
+              </model:registers>
             </model:properties>
           </model:user>
         </model:object>
@@ -78,6 +89,12 @@
               <model:group name="Settings">
                 <model:propertyitem description="Maximum number of times a CATCH will be effected per 'forward' entry." name="maxerr" required="false" value="1"/>
               </model:group>
+              <model:registers name="Pre-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.5.ex.st.time" scope="message" usage="user" value="_timer(nanoseconds)"/>
+              </model:registers>
+              <model:registers name="Post-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.5.ex.time" scope="message" usage="user" value="_isub(_timer(nanoseconds),_sreg(dbg.5.ex.st.time))"/>
+              </model:registers>
             </model:properties>
           </model:user>
         </model:object>
@@ -111,6 +128,12 @@
               <model:group name="Error Handling">
                 <model:propertyitem description="Whether output document emitted should be the original input document (original) or a status document (status)" name="stat" required="false" value="status"/>
               </model:group>
+              <model:registers name="Pre-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.9.ex.st.time" scope="message" usage="user" value="_timer(nanoseconds)"/>
+              </model:registers>
+              <model:registers name="Post-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.9.ex.time" scope="message" usage="user" value="_isub(_timer(nanoseconds),_sreg(dbg.9.ex.st.time))"/>
+              </model:registers>
             </model:properties>
           </model:user>
         </model:object>
@@ -126,6 +149,12 @@
                 <model:propertyitem description="Do not trace this exception.  This is useful for cases in which the trace log is being monitored by an external program for errors." name="nomsg" required="false" value="false"/>
                 <model:propertyitem description="When set, a transaction log entry (XALOG) is written with its message.  This causes a message to appear in the transaction log analysis." name="xamsg" required="false" value="false"/>
               </model:group>
+              <model:registers name="Pre-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.10.ex.st.time" scope="message" usage="user" value="_timer(nanoseconds)"/>
+              </model:registers>
+              <model:registers name="Post-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.10.ex.time" scope="message" usage="user" value="_isub(_timer(nanoseconds),_sreg(dbg.10.ex.st.time))"/>
+              </model:registers>
             </model:properties>
           </model:user>
         </model:object>
@@ -148,6 +177,12 @@
                 <model:propertyitem name="replytoreqns" value="*"/>
                 <model:propertyitem name="queue" value="ERROR"/>
               </model:group>
+              <model:registers name="Pre-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.11.ex.st.time" scope="message" usage="user" value="_timer(nanoseconds)"/>
+              </model:registers>
+              <model:registers name="Post-Execution">
+                <model:propertyitem active="true" hidden="true" name="dbg.11.ex.time" scope="message" usage="user" value="_isub(_timer(nanoseconds),_sreg(dbg.11.ex.st.time))"/>
+              </model:registers>
             </model:properties>
           </model:user>
         </model:object>
