@@ -2,5 +2,8 @@
 Transforms/*.gxp/test_transform_result
 Flows/*/test_process_flow_result
 
+# auto.iia from testing single flows
+Flows/*/auto.iia
+
 # iIT started iSM server within the project
 server/
