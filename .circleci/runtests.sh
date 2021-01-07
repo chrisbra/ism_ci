@@ -66,15 +66,15 @@ preprocess_files () {
 	# preprocess files:
 	# for XML files, pretty print them
 	# remove timestamp by a fixed string
-	printf "    ${blue}preprocessing input files... \t\t"
 	for file; do
 		if [[ $file =~ \.xml$ ]]; then
-			printf "    ${blue}pretty printing %s ... \t\t" $(basename $file)
+			printf "\n    ${blue}pretty printing %s ..." $(basename $file)
 			xmllint --format --output "$file.new" "$file" &&
 			mv "${file}.new" "$file" &&
 			sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' "$file"
 		fi
 	done
+	printf "    ${blue}preprocessing input files...\t\t"
 	print_status $?
 }
 
