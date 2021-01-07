@@ -70,8 +70,8 @@ preprocess_files () {
 	for file; do
 		if [[ $file =~ \.xml$ ]]; then
 			printf "    ${blue}pretty printing %s ... \t\t" $(basename $file)
-			xmllint --format --output "$file.new" "$file"
-			mv "${file}.new" "$file"
+			xmllint --format --output "$file.new" "$file" &&
+			mv "${file}.new" "$file" &&
 			sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' "$file"
 		fi
 	done
