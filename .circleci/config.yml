@@ -5,7 +5,7 @@ orbs:
 jobs:
   test_ism: # The first job
     docker:
-      - image: chrisbra/ibi:ism_project_v2
+      - image: chrisbra/ibi:ism_project_v3
         auth:
             username: chrisbra
             password: $DOCKERHUB_PASSWORD
