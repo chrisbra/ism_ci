@@ -84,7 +84,8 @@ diff_result () {
 	# $3: Expected file
 	preprocess_files "$2" "$3"
 	printf "    ${blue}Diffing ${yellow}$1${blue} files $(basename $2) $(basename $3)\t\t"
-	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $2 $3)"
+	# diff needs the files in the order `orig` `new`, so switch arguments
+	DIFFERENCE="$(git diff --no-index --no-ext-diff --exit-code $3 $2)"
 	rc=$?
 	# do not yet abort
 	( print_status $rc ) || true
