@@ -74,7 +74,6 @@ preprocess_files () {
 			mv "${file}.new" "$file" &&
 			sed -i -e 's#<timestamp>.*</timestamp>#<timestamp>TIMESTAMP</timestamp>#' "$file" &&
 			print_status $?
-			printf "\n"
 		fi
 	done
 }
