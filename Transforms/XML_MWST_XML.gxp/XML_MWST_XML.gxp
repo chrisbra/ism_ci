@@ -54,7 +54,7 @@
                                         <MapRule  output="fundlg1"  input="invoice/lineitem/item/fundlg1" />
                                         <MapRule  output="accruallg1"  input="invoice/lineitem/item/accruallg1" />
                                         <MapRule  output="grossamtlg1"  input="invoice/lineitem/item/grossamtlg1" />
-                                        <MapRule  output="vatplg1"  input="@IF(@SREG_EXISTS('user_mwst') == 'false','20','7')" />
+                                        <MapRule  output="vatplg1"  input="@IF(@SREG_EXISTS('user_mwst') == 'false','19','7')" />
                                         <MapRule  output="txt1lg1"  input="invoice/lineitem/item/txt1lg1" />
                                         <MapRule  output="txt2lg1"  input="invoice/lineitem/item/txt2lg1" />
                                         <MapRule  output="zdvlg1"  input="invoice/lineitem/item/zdvlg1" />
