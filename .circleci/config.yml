@@ -12,14 +12,6 @@ jobs:
     steps:
         - checkout
         - run:
-            name: Debugging information
-            command: |
-              whoami
-              pwd
-              ps -ef
-              pwd
-              git ls-files
-        - run:
             name: Startup iSM
             command: |
               bash -c 'cd ~/iway8 && ./iway8.sh base'
