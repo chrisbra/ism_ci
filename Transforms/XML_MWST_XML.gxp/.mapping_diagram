@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mappingbuilder="http://iwtrans.iwaysoftware.com/mappingbuilder" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_GNbuoFVsEeu7xdmlSK0BCg" type="MappingBuilder" name=".mapping_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_GNsNUFVsEeu7xdmlSK0BCg" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_GN620FVsEeu7xdmlSK0BCg" type="5002"/>
+    <children xmi:type="notation:Node" xmi:id="_GN8sAFVsEeu7xdmlSK0BCg" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_GN9TEFVsEeu7xdmlSK0BCg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GN9TEVVsEeu7xdmlSK0BCg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GN9TElVsEeu7xdmlSK0BCg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_GNsNUVVsEeu7xdmlSK0BCg" fontName="Segoe UI"/>
+    <element xmi:type="mappingbuilder:Function" href=".mapping_model#//@map/@function"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GNsNUlVsEeu7xdmlSK0BCg"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_GNbuoVVsEeu7xdmlSK0BCg"/>
+  <element xmi:type="mappingbuilder:Map" href=".mapping_model#//@map"/>
+</notation:Diagram>

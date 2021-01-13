@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappingbuilder:DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mappingbuilder="http://iwtrans.iwaysoftware.com/mappingbuilder">
+  <map>
+    <function description="Parameter list: (condition, THEN, ELSE).&#xA;If the condition (&lt;left_operand>&lt;operator>&lt;right_operand>) is true, it will return the THEN option, otherwise it will return the ELSE option." index="0" label="@IF" name="IF" type="2">
+      <parameter index="0" label="left_operand"/>
+      <parameter index="1" label="operator"/>
+      <parameter index="2" label="right_operand"/>
+      <parameter index="3" label="THEN"/>
+      <parameter index="4" label="ELSE"/>
+      <functionField description="Parameter list: (sreg_name).&#xA;Checks if Managers' special register is defined and&#xA;returns a Boolean true or false. Executed if transform is run on the server." index="0" label="@SREG_EXISTS" name="SREG_EXISTS" type="2">
+        <parameter index="0" label="sreg_name"/>
+        <functionField index="0" label="user_mwst" name="" type="4"/>
+      </functionField>
+      <functionField index="1" label="==" name="" type="4"/>
+      <functionField index="2" label="false" name="" type="4"/>
+      <functionField index="3" label="19" name="" type="4"/>
+      <functionField index="4" label="7" name="" type="4"/>
+    </function>
+  </map>
+</mappingbuilder:DocumentRoot>
