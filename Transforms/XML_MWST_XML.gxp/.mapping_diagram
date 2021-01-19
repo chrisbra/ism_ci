@@ -12,5 +12,5 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GNsNUlVsEeu7xdmlSK0BCg"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_GNbuoVVsEeu7xdmlSK0BCg"/>
-  <element xmi:type="mappingbuilder:Map" href=".mapping_model#//@map"/>
+  <element xmi:type="mappingbuilder:Map" href="/ism_ci/Transforms/XML_MWST_XML.gxp/.mapping_model#//@map"/>
 </notation:Diagram>
