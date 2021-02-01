@@ -16,7 +16,7 @@
     </Dependency>
   </Dependencies>
   <Features>
-    <Feature Code="core" UsageCount="14"/>
-    <Feature Code="excel" UsageCount="11"/>
+    <Feature Code="core" UsageCount="11"/>
+    <Feature Code="excel" UsageCount="9"/>
   </Features>
 </iwresource:IWResource>
